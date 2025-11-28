@@ -13,7 +13,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-    scroll-behavior: smooth; /* LA CLAVE DE LA INTUITIVIDAD */
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -61,18 +61,17 @@ body.no-js-cursor { cursor: auto; }
     z-index: 100; border-bottom: 1px solid rgba(100, 255, 218, 0.05);
 }
 
-/* LOGO COMO BOTÓN HOME */
 .logo { 
     font-family: var(--font-mono); 
     color: var(--accent-color); 
     font-weight: 700; 
     font-size: 1.2rem;
-    text-decoration: none; /* Quita subrayado */
+    text-decoration: none; 
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .logo:hover {
-    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Brillo al pasar el ratón */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); 
 }
 
 .nav-links { list-style: none; display: flex; gap: 30px; font-family: var(--font-mono); font-size: 0.8rem; }
@@ -160,4 +159,35 @@ body.no-js-cursor { cursor: auto; }
     .image-frame { margin: 30px auto 0; }
     .cursor-dot, .cursor-outline { display: none; } 
     body { cursor: auto; }
+}
+
+/* --- ESTILOS NUEVOS PARA LOS GIFS --- */
+.terminal-frame {
+    background-color: #020c1b; 
+    border-radius: 6px;
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7); 
+    margin: 25px 0;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #1d1d1d;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.project-gif {
+    width: 100%;       
+    height: auto;      
+    display: block;    
+    opacity: 0.9;      
+    transition: opacity 0.3s;
+}
+
+.project-gif:hover {
+    opacity: 1;        
 }
