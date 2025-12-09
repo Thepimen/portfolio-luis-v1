@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Lázaro | Cybersecurity & Dev</title>
     
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
@@ -40,7 +41,7 @@
                 <h2 id="typewriter"></h2>
                 
                 <p class="description">
-                    I am a developer based in <span class="highlight">Madrid</span> specialized in <span class="highlight">Offensive Security</span> & <span class="highlight">Data Architecture</span>. I leverage <strong>C</strong> and <strong>Python</strong> to build secure, low-level systems.
+                    Desarrollador con base en <span class="highlight">Madrid</span> especializado en <span class="highlight">Seguridad Ofensiva</span> y <span class="highlight">Arquitectura de Datos</span>. Utilizo <strong>C</strong> y <strong>Python</strong> para construir sistemas seguros de bajo nivel.
                 </p>
                 
                 <div class="hero-btns">
@@ -73,17 +74,23 @@
             <h2 class="section-title"><span class="green-text">02.</span> System Architecture</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <i class="fas fa-microchip skill-icon"></i>
+                    <div class="card-header">
+                        <i class="fas fa-microchip skill-icon"></i>
+                    </div>
                     <h3>Low-Level & Security</h3>
                     <p class="skill-list">C • Python (Scapy) • Linux Kernel • TCP/IP • Java</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-terminal skill-icon"></i>
+                    <div class="card-header">
+                        <i class="fas fa-terminal skill-icon"></i>
+                    </div>
                     <h3>Data Intelligence</h3>
                     <p class="skill-list">Pandas • NumPy • SQL • Data Mining</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-globe skill-icon"></i>
+                    <div class="card-header">
+                        <i class="fas fa-globe skill-icon"></i>
+                    </div>
                     <h3>Web Technologies</h3>
                     <p class="skill-list">HTML5 • CSS3 • JavaScript • React</p>
                 </div>
@@ -98,7 +105,7 @@
                     <p class="project-overline">Network Security / Python</p>
                     <h3 class="project-title">PySniff: Raw Socket Analyzer</h3>
                     <div class="project-description">
-                        <p>A CLI tool built to capture and analyze network traffic in real-time. Implements <strong>raw sockets</strong> to dissect TCP/IP headers, detecting potential packet anomalies.</p>
+                        <p>Herramienta CLI construida para capturar y analizar tráfico de red en tiempo real. Implementa <strong>raw sockets</strong> para disecar cabeceras TCP/IP, detectando anomalías potenciales.</p>
                     </div>
 
                     <div class="terminal-frame">
@@ -125,7 +132,7 @@
                     <p class="project-overline">System Programming / C</p>
                     <h3 class="project-title">Secure MemoryAllocator</h3>
                     <div class="project-description">
-                        <p>A custom implementation of `malloc` in <strong>C</strong> aimed at preventing buffer overflow attacks. Focuses on safe pointer arithmetic and heap management.</p>
+                        <p>Implementación personalizada de `malloc` en <strong>C</strong> diseñada para prevenir ataques de desbordamiento de búfer (buffer overflow). Enfocada en aritmética de punteros segura.</p>
                     </div>
 
                     <div class="terminal-frame">
@@ -148,13 +155,53 @@
             </article>
         </section>
 
-        <section id="contact" class="container section-padding center-text hidden-section">
-            <h2 class="section-title">04. What's Next?</h2>
-            <h1 class="big-title">Initialize Handshake</h1>
-            <p class="contact-desc">
-                Currently open to security audits, backend development, or data engineering roles in Madrid.
-            </p>
-            <a href="mailto:luislazaropimentel@gmail.com" class="btn primary-btn big-btn">Send Encrypted Message</a>
+        <section id="contact" class="container section-padding hidden-section">
+            <h2 class="section-title"><span class="green-text">04.</span> Uplink / Contact</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h1 class="big-title">Initialize<br>Handshake</h1>
+                    <p class="contact-desc">
+                        Actualmente abierto a auditorías de seguridad, desarrollo backend o roles de ingeniería de datos.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-phone-alt green-text"></i>
+                            <span>+34 626 015 723</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope green-text"></i>
+                            <span>luislazaropimentel@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt green-text"></i>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/luislazaropimentel@gmail.com" method="POST">
+                    <div class="form-header">
+                        <span class="mono-text">New Message_</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="name" class="mono-text">/Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="mono-text">/Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo">
+                    </div>
+                    <div class="input-group">
+                        <label for="message" class="mono-text">/Message_Content</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="http://tupaginaweb.com"> <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit" class="btn primary-btn full-width">Transmit Data <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </section>
     </main>
 
