@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,37 +16,115 @@
 <body>
 
     <div id="vanta-bg"></div>
-
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
+
+    <div id="cmd-palette" class="cmd-overlay hidden">
+        <div class="cmd-modal">
+            <div class="cmd-header">
+                <i class="fas fa-search"></i>
+                <input type="text" id="cmd-input" placeholder="Type a command (e.g., 'Download CV', 'Email')..." autocomplete="off">
+                <span class="cmd-shortcut">ESC to close</span>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item" data-action="cv">
+                    <i class="fas fa-file-download"></i>
+                    <span>Download Resume / CV</span>
+                    <span class="cmd-key">↵</span>
+                </div>
+                <div class="cmd-item" data-action="email">
+                    <i class="fas fa-copy"></i>
+                    <span>Copy Email Address</span>
+                    <span class="cmd-key">↵</span>
+                </div>
+                <div class="cmd-item" data-action="projects">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Go to Projects</span>
+                    <span class="cmd-key">↵</span>
+                </div>
+                <div class="cmd-item" data-action="contact">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Go to Contact</span>
+                    <span class="cmd-key">↵</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="qr-modal" class="cmd-overlay hidden" style="z-index: 10002;">
+        <div class="cmd-modal center-text" style="padding: 40px; max-width: 400px; text-align: center;">
+            <h3 class="green-text mono-text">Scan to Mobile_</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.9rem;">
+                Take this portfolio with you.
+            </p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/Thepimen" 
+                 alt="Portfolio QR" 
+                 style="border: 4px solid white; border-radius: 8px; margin-bottom: 20px;">
+            <br>
+            <button id="close-qr" class="btn secondary-btn" style="margin: 0 auto;">Close Connection</button>
+        </div>
+    </div>
+
+    <div id="toast-notification" class="toast hidden">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Action Successful</span>
+    </div>
+
+    <button id="mobile-cmd-btn" class="mobile-cmd-trigger">
+        <i class="fas fa-terminal"></i>
+    </button>
 
     <nav class="navbar">
         <a href="#" class="logo">&lt;LuisLazaro /&gt;</a>
         
-        <ul class="nav-links">
-            <li><a href="#about"><span class="green-text">01.</span> /root</a></li>
-            <li><a href="#skills"><span class="green-text">02.</span> /stack</a></li>
-            <li><a href="#projects"><span class="green-text">03.</span> /deployments</a></li>
-            <li><a href="#contact" class="btn-highlight">Initialize_Comm</a></li>
-        </ul>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#about"><span class="green-text">01.</span> <span class="lang" data-en="/root" data-es="/origen">/root</span></a></li>
+                <li><a href="#skills"><span class="green-text">02.</span> <span class="lang" data-en="/stack" data-es="/tecnologias">/stack</span></a></li>
+                <li><a href="#projects"><span class="green-text">03.</span> <span class="lang" data-en="/deployments" data-es="/proyectos">/deployments</span></a></li>
+            </ul>
+
+            <div class="lang-switch-wrapper">
+                <span class="lang-label">EN</span>
+                <label class="switch">
+                    <input type="checkbox" id="language-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="lang-label">ES</span>
+            </div>
+
+            <button id="qr-trigger" class="btn-icon" title="Share Profile">
+                <i class="fas fa-qrcode"></i>
+            </button>
+
+            <a href="#contact" class="btn-highlight mobile-hide">Initialize_Comm</a>
+        </div>
     </nav>
 
     <main>
         <section class="hero container">
             <div class="hero-content">
-                <p class="mono-text green-text">System Status: Online</p>
+                <p class="mono-text green-text lang" data-en="System Status: Online" data-es="Estado del Sistema: En línea">System Status: Online</p>
                 
                 <h1 class="glitch-effect" data-text="Luis Lázaro.">Luis Lázaro.</h1>
-                
                 <h2 id="typewriter"></h2>
                 
-                <p class="description">
-                    Desarrollador con base en <span class="highlight">Madrid</span> especializado en <span class="highlight">Seguridad Ofensiva</span> y <span class="highlight">Arquitectura de Datos</span>. Utilizo <strong>C</strong> y <strong>Python</strong> para construir sistemas seguros de bajo nivel.
+                <p class="description lang" 
+                   data-en="Madrid-based Developer specialized in <span class='highlight'>Cybersecurity</span> and <span class='highlight'>Data Engineering</span>. I build secure, high-performance systems using <strong>C</strong>, <strong>Python</strong>, and <strong>Docker</strong>."
+                   data-es="Desarrollador en <span class='highlight'>Madrid</span> especializado en <span class='highlight'>Ciberseguridad</span> e <span class='highlight'>Ingeniería de Datos</span>. Construyo sistemas seguros de alto rendimiento usando <strong>C</strong>, <strong>Python</strong> y <strong>Docker</strong>.">
+                   Madrid-based Developer specialized in <span class="highlight">Cybersecurity</span> and <span class="highlight">Data Engineering</span>. I build secure, high-performance systems using <strong>C</strong>, <strong>Python</strong>, and <strong>Docker</strong>.
                 </p>
                 
                 <div class="hero-btns">
-                    <a href="#projects" class="btn primary-btn">Execute Projects_</a>
-                    <a href="https://github.com/Thepimen" target="_blank" class="btn secondary-btn"><i class="fab fa-github"></i> GitHub Repo</a>
+                    <a href="#projects" class="btn primary-btn lang" data-en="Execute Projects_" data-es="Ver Proyectos_">Execute Projects_</a>
+                    <a href="assets/cv.pdf" target="_blank" class="btn secondary-btn" id="download-cv-btn" download>
+                        <i class="fas fa-file-download"></i> <span class="lang" data-en="Download CV" data-es="Descargar CV">Download CV</span>
+                    </a>
+                </div>
+
+                <div class="scrolldown-hint">
+                    <span class="mono-text">SCROLL</span>
+                    <i class="fas fa-chevron-down green-text"></i>
                 </div>
             </div>
         </section>
@@ -59,8 +137,7 @@
                         <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
                         <span class="terminal-title">root@madrid-server:~</span>
                     </div>
-                    <div class="terminal-body" id="terminal-text">
-                        </div>
+                    <div class="terminal-body" id="terminal-text"></div>
                 </div>
                 <div class="profile-pic-wrapper">
                     <div class="image-frame">
@@ -68,31 +145,36 @@
                     </div>
                 </div>
             </div>
+            <div class="cmd-hint">
+                <span class="mono-text" style="opacity: 0.6; font-size: 0.8rem;">
+                    <i class="fas fa-keyboard"></i> Press <span class="key-badge">Ctrl</span> + <span class="key-badge">K</span> for Command Palette
+                </span>
+            </div>
         </section>
 
         <section id="skills" class="container section-padding hidden-section">
-            <h2 class="section-title"><span class="green-text">02.</span> System Architecture</h2>
+            <h2 class="section-title"><span class="green-text">02.</span> Tech Stack</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="card-header">
-                        <i class="fas fa-microchip skill-icon"></i>
-                    </div>
-                    <h3>Low-Level & Security</h3>
-                    <p class="skill-list">C • Python (Scapy) • Linux Kernel • TCP/IP • Java</p>
+                    <div class="card-header"><i class="fas fa-microchip skill-icon"></i></div>
+                    <h3 class="lang" data-en="Core & Systems" data-es="Sistemas y Núcleo">Core & Systems</h3>
+                    <p class="skill-list">
+                        <span class="highlight">C</span> • <span class="highlight">Java</span> • Python • Linux • Docker • Bash
+                    </p>
                 </div>
                 <div class="skill-card">
-                    <div class="card-header">
-                        <i class="fas fa-terminal skill-icon"></i>
-                    </div>
-                    <h3>Data Intelligence</h3>
-                    <p class="skill-list">Pandas • NumPy • SQL • Data Mining</p>
+                    <div class="card-header"><i class="fas fa-database skill-icon"></i></div>
+                    <h3 class="lang" data-en="Data & DBs" data-es="Datos y Bases de Datos">Data & DBs</h3>
+                    <p class="skill-list">
+                        MySQL • MariaDB • Pandas • NumPy • DBeaver • SQL
+                    </p>
                 </div>
                 <div class="skill-card">
-                    <div class="card-header">
-                        <i class="fas fa-globe skill-icon"></i>
-                    </div>
-                    <h3>Web Technologies</h3>
-                    <p class="skill-list">HTML5 • CSS3 • JavaScript • React</p>
+                    <div class="card-header"><i class="fas fa-code skill-icon"></i></div>
+                    <h3 class="lang" data-en="Web & Tools" data-es="Web y Herramientas">Web & Tools</h3>
+                    <p class="skill-list">
+                        HTML5 • CSS3 • JavaScript • Git • VS Code • React
+                    </p>
                 </div>
             </div>
         </section>
@@ -105,9 +187,12 @@
                     <p class="project-overline">Network Security / Python</p>
                     <h3 class="project-title">PySniff: Raw Socket Analyzer</h3>
                     <div class="project-description">
-                        <p>Herramienta CLI construida para capturar y analizar tráfico de red en tiempo real. Implementa <strong>raw sockets</strong> para disecar cabeceras TCP/IP, detectando anomalías potenciales.</p>
+                        <p class="lang" 
+                           data-en="CLI tool built to capture and analyze network traffic in real-time. Implements <strong>raw sockets</strong> to dissect TCP/IP headers."
+                           data-es="Herramienta CLI para capturar y analizar tráfico de red en tiempo real. Implementa <strong>raw sockets</strong> para disecar cabeceras TCP/IP.">
+                           CLI tool built to capture and analyze network traffic in real-time. Implements <strong>raw sockets</strong> to dissect TCP/IP headers.
+                        </p>
                     </div>
-
                     <div class="terminal-frame">
                         <div class="terminal-header">
                             <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
@@ -115,12 +200,7 @@
                         </div>
                         <img src="assets/GIF1.gif" alt="PySniff Demo Live" class="project-gif">
                     </div>
-
-                    <ul class="project-tech">
-                        <li>Python</li>
-                        <li>Scapy</li>
-                        <li>Raw Sockets</li>
-                    </ul>
+                    <ul class="project-tech"><li>Python</li><li>Scapy</li><li>Raw Sockets</li></ul>
                     <div class="project-links">
                         <a href="https://github.com/Thepimen/PySniff" target="_blank"><i class="fab fa-github"></i> View Source Code</a>
                     </div>
@@ -132,9 +212,12 @@
                     <p class="project-overline">System Programming / C</p>
                     <h3 class="project-title">Secure MemoryAllocator</h3>
                     <div class="project-description">
-                        <p>Implementación personalizada de `malloc` en <strong>C</strong> diseñada para prevenir ataques de desbordamiento de búfer (buffer overflow). Enfocada en aritmética de punteros segura.</p>
+                        <p class="lang" 
+                           data-en="Custom implementation of `malloc` in <strong>C</strong> designed to prevent buffer overflow attacks. Focused on secure pointer arithmetic."
+                           data-es="Implementación personalizada de `malloc` en <strong>C</strong> diseñada para prevenir ataques de desbordamiento de búfer. Aritmética de punteros segura.">
+                           Custom implementation of `malloc` in <strong>C</strong> designed to prevent buffer overflow attacks. Focused on secure pointer arithmetic.
+                        </p>
                     </div>
-
                     <div class="terminal-frame">
                         <div class="terminal-header">
                             <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
@@ -142,12 +225,7 @@
                         </div>
                         <img src="assets/GIF2.gif" alt="Secure Allocator Demo Live" class="project-gif">
                     </div>
-
-                    <ul class="project-tech">
-                        <li>C Language</li>
-                        <li>Makefiles</li>
-                        <li>GDB Debugging</li>
-                    </ul>
+                    <ul class="project-tech"><li>C Language</li><li>Makefiles</li><li>GDB Debugging</li></ul>
                     <div class="project-links">
                         <a href="https://github.com/Thepimen/MemoryAllocator" target="_blank"><i class="fab fa-github"></i> View Source Code</a>
                     </div>
@@ -157,52 +235,64 @@
 
         <section id="contact" class="container section-padding hidden-section">
             <h2 class="section-title"><span class="green-text">04.</span> Uplink / Contact</h2>
-            
             <div class="contact-container">
                 <div class="contact-info">
                     <h1 class="big-title">Initialize<br>Handshake</h1>
-                    <p class="contact-desc">
-                        Actualmente abierto a auditorías de seguridad, desarrollo backend o roles de ingeniería de datos.
+                    <p class="contact-desc lang" 
+                       data-en="Currently open for security audits, backend development, or data engineering roles. Let's secure the future."
+                       data-es="Actualmente abierto a auditorías de seguridad, desarrollo backend o roles de ingeniería de datos. Aseguremos el futuro.">
+                       Currently open for security audits, backend development, or data engineering roles.
                     </p>
-                    
                     <div class="contact-details">
-                        <div class="detail-item">
-                            <i class="fas fa-phone-alt green-text"></i>
-                            <span>+34 626 015 723</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-envelope green-text"></i>
-                            <span>luislazaropimentel@gmail.com</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt green-text"></i>
-                            <span>Madrid, España</span>
-                        </div>
+                        <div class="detail-item"><i class="fas fa-phone-alt green-text"></i><span>+34 626 015 723</span></div>
+                        <div class="detail-item"><i class="fas fa-envelope green-text"></i><span>luislazaropimentel@gmail.com</span></div>
+                        <div class="detail-item"><i class="fas fa-map-marker-alt green-text"></i><span>Madrid, España</span></div>
                     </div>
                 </div>
-
                 <form class="contact-form" action="https://formsubmit.co/luislazaropimentel@gmail.com" method="POST">
-                    <div class="form-header">
-                        <span class="mono-text">New Message_</span>
+                    <div class="form-header"><span class="mono-text">New Message_</span></div>
+                    <div class="input-group">
+                        <label for="name" class="mono-text lang" data-en="/Name" data-es="/Nombre">/Name</label>
+                        <input type="text" id="name" name="name" required placeholder="User_ID">
                     </div>
                     <div class="input-group">
-                        <label for="name" class="mono-text">/Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+                        <label for="email" class="mono-text lang" data-en="/Email" data-es="/Correo">/Email</label>
+                        <input type="email" id="email" name="email" required placeholder="email@address.com">
                     </div>
                     <div class="input-group">
-                        <label for="email" class="mono-text">/Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo">
+                        <label for="message" class="mono-text lang" data-en="/Message_Content" data-es="/Contenido_Mensaje">/Message_Content</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Payload..."></textarea>
                     </div>
-                    <div class="input-group">
-                        <label for="message" class="mono-text">/Message_Content</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn primary-btn full-width">Transmit Data <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn primary-btn full-width lang" data-en="Transmit Data" data-es="Transmitir Datos">Transmit Data <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </section>
     </main>
+
+    <div class="tech-marquee-container">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <i class="fab fa-java" title="Java"></i>
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fab fa-docker" title="Docker"></i>
+                <i class="fas fa-database" title="SQL/MariaDB"></i>
+                <i class="fab fa-linux" title="Linux"></i>
+                <i class="fab fa-git-alt" title="Git"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-html5" title="HTML5"></i>
+            </div>
+            <div class="marquee-group">
+                <i class="fab fa-java" title="Java"></i>
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fab fa-docker" title="Docker"></i>
+                <i class="fas fa-database" title="SQL/MariaDB"></i>
+                <i class="fab fa-linux" title="Linux"></i>
+                <i class="fab fa-git-alt" title="Git"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-html5" title="HTML5"></i>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <p class="mono-text">Designed & Built by Luis Lázaro Pimentel <span class="green-text">_2025</span></p>
