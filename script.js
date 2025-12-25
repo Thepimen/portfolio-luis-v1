@@ -1,4 +1,3 @@
-// ACTUALIZACION MOVIL
 document.addEventListener('DOMContentLoaded', () => {
 
     // 0. LOADER FALSO
@@ -95,14 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         },
 
-        // --- MENÚ MÓVIL REPARADO ---
+        // --- MENÚ MÓVIL SIMPLE ---
         toggleMobileMenu: function() {
-            console.log("Toggle Menu Clicked"); // DEBUG LOG
             const menu = document.getElementById('mobile-menu');
             if (menu) {
                 menu.classList.toggle('active');
-            } else {
-                console.error("Mobile menu element not found");
             }
         }
     };
@@ -123,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER (Solo si no es táctil)
+    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER
     const dot = document.querySelector('.cursor-dot');
     const out = document.querySelector('.cursor-outline');
 

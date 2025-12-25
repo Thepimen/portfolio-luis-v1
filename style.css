@@ -66,6 +66,39 @@ ul { list-style: none; }
 .nav-icon { font-size: 1.2rem; color: #aaa; transition: 0.3s; }
 .nav-icon:hover { color: var(--white); transform: scale(1.1); }
 
+/* --- MENÚ MÓVIL ESTILOS (Integrado) --- */
+.mobile-menu-btn { 
+    display: none; 
+    background: transparent;
+    border: 1px solid rgba(0,243,255,0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 1.2rem; 
+    color: var(--cyan); 
+    cursor: pointer; 
+}
+.mobile-menu-overlay { 
+    position: fixed; inset: 0; 
+    background: #000;
+    z-index: 4000; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    transform: translateY(-100%); 
+    transition: 0.5s var(--ease);
+}
+.mobile-menu-overlay.active { transform: translateY(0); }
+.mobile-menu-close { 
+    position: absolute; top: 30px; right: 30px; 
+    background: none; border: none;
+    font-size: 2.5rem; color: var(--gray); cursor: pointer; 
+}
+.mobile-nav-links { display: flex; flex-direction: column; gap: 40px; text-align: center; }
+.mobile-nav-links li { 
+    font-family: var(--font-display); font-size: 2rem; 
+    font-weight: 700; color: var(--white); 
+    cursor: pointer; transition: 0.3s; 
+}
+.mobile-nav-links li:hover { color: var(--cyan); letter-spacing: 2px; }
+
 /* === TOGGLE IDIOMA === */
 .lang-toggle-wrapper { display: flex; align-items: center; gap: 8px; cursor: pointer; font-family: var(--font-mono); font-size: 0.8rem; color: #666; transition: 0.3s; }
 .lang-toggle-wrapper:hover { color: var(--white); }
@@ -238,7 +271,7 @@ body.loaded #preloader { opacity: 0; pointer-events: none; }
 .lightbox-frame:hover .corner { width: 30px; height: 30px; box-shadow: 0 0 10px var(--cyan); }
 
 /* ========================================= */
-/* ACTUALIZACION MOVIL DEFINITIVA            */
+/* RESPONSIVE DESIGN (MOBILE DEFINITIVO)     */
 /* ========================================= */
 @media (max-width: 900px) {
     /* 1. CURSOR Y SCROLL */
@@ -250,54 +283,58 @@ body.loaded #preloader { opacity: 0; pointer-events: none; }
     .container { padding: 0 20px; }
     .nav-container { padding: 0 20px; }
     .desktop-nav { display: none !important; } /* Ocultar menú normal */
-    .mobile-menu-btn { 
-        display: block !important; 
-        z-index: 99999;
-        position: relative;
+    
+    /* Mostrar botón hamburguesa */
+    .mobile-menu-btn { display: block !important; }
+    
+    .nav-actions {
+        gap: 15px; /* Espacio entre selector idioma, github y menú */
     }
     
     /* 3. HERO (HOME) */
-    .hero-container { min-height: 70vh; justify-content: center; }
-    .glitch-title { font-size: 3rem; word-wrap: break-word; line-height: 1.1; }
+    .hero-container { min-height: 80vh; justify-content: center; }
+    .glitch-title { font-size: clamp(2.5rem, 6vw, 4rem); word-wrap: break-word; line-height: 1.1; margin-bottom: 20px; }
     .hero-bg-text { display: none; }
-    .hero-subtitle { font-size: 1rem; margin-bottom: 20px; }
-    .hero-desc { font-size: 0.95rem; margin-bottom: 30px; }
+    .hero-subtitle { font-size: 1.1rem; margin-bottom: 30px; line-height: 1.5; }
+    .hero-desc { font-size: 1rem; margin-bottom: 40px; line-height: 1.8; }
     
-    .stats-bar { gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
-    .stat-val { font-size: 1.2rem; }
+    .stats-bar { gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
+    .stat-val { font-size: 1.3rem; }
     
-    .hero-cta { flex-direction: column; width: 100%; gap: 15px; }
-    .btn-mega { width: 100%; padding: 15px; }
+    .hero-cta { flex-direction: column; width: 100%; gap: 20px; }
+    .btn-mega { width: 100%; padding: 18px; }
     
     /* 4. SECCIONES (TITULOS) */
-    .section-title { font-size: 2.2rem; }
-    .section-idx { font-size: 4rem; top: -20px; }
+    .section-title { font-size: 2.2rem; margin-bottom: 20px; }
+    .section-idx { font-size: 4rem; top: -30px; opacity: 0.05; }
+    .section-head { margin-bottom: 40px; }
     
-    /* 5. GRID PROYECTOS (ESTO ES LO IMPORTANTE) */
-    .work-grid { gap: 50px; }
+    /* 5. GRID PROYECTOS */
+    .work-grid { gap: 80px; }
     .work-card, .work-card.reversed { 
         display: flex; 
         flex-direction: column; 
-        gap: 20px; 
+        gap: 30px; 
     }
-    .work-card.reversed { direction: ltr; } /* Resetear dirección texto */
+    .work-card.reversed { direction: ltr; }
     .work-card.reversed .work-details { direction: ltr; }
-    .work-details h3 { font-size: 1.8rem; }
-    .browser-mockup { margin-bottom: 15px; }
+    .work-details h3 { font-size: 2rem; margin-bottom: 15px; }
+    .work-details p { line-height: 1.8; font-size: 1rem; margin-bottom: 20px; }
+    .browser-mockup { margin-bottom: 10px; }
     
     /* 6. PERFIL Y CONTACTO */
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 60px; }
     .profile-card { position: static; text-align: center; }
-    .profile-frame { margin: 0 auto 20px; max-width: 250px; }
-    .about-name { font-size: 2.5rem; }
+    .profile-frame { margin: 0 auto 30px; max-width: 280px; }
+    .about-name { font-size: 3rem; margin-bottom: 15px; }
     
-    .contact-flex { grid-template-columns: 1fr; gap: 40px; }
-    .contact-form-box, .glass-panel { padding: 20px; }
+    .contact-flex { grid-template-columns: 1fr; gap: 60px; }
+    .contact-form-box, .glass-panel { padding: 30px; }
     
     /* 7. HUD Y DECORACION */
     .hud-corner { width: 15px; height: 15px; }
-    .top-left { top: 85px; left: 10px; }
-    .top-right { top: 85px; right: 10px; }
-    .bottom-left { bottom: 10px; left: 10px; }
-    .bottom-right { bottom: 10px; right: 10px; }
+    .top-left { top: 20px; left: 20px; } 
+    .top-right { top: 20px; right: 20px; }
+    .bottom-left { bottom: 20px; left: 20px; }
+    .bottom-right { bottom: 20px; right: 20px; }
 }
