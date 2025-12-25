@@ -1,3 +1,4 @@
+// ACTUALIZACION MOVIL
 document.addEventListener('DOMContentLoaded', () => {
 
     // 0. LOADER FALSO
@@ -82,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openLightbox: function(src) {
             const lightbox = document.getElementById('cyber-lightbox');
             const img = document.getElementById('lightbox-img');
-            
             img.src = src;
             lightbox.classList.add('active');
         },
@@ -90,10 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
         closeLightbox: function() {
             const lightbox = document.getElementById('cyber-lightbox');
             lightbox.classList.remove('active');
-            
             setTimeout(() => {
                 document.getElementById('lightbox-img').src = "";
             }, 300);
+        },
+
+        // --- MENÚ MÓVIL REPARADO ---
+        toggleMobileMenu: function() {
+            console.log("Toggle Menu Clicked"); // DEBUG LOG
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('active');
+            } else {
+                console.error("Mobile menu element not found");
+            }
         }
     };
 
@@ -113,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER
+    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER (Solo si no es táctil)
     const dot = document.querySelector('.cursor-dot');
     const out = document.querySelector('.cursor-outline');
 
