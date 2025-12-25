@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Luis Lázaro | System Architect</title>
     
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -28,9 +28,9 @@
     <div class="noise-overlay"></div>
     <div class="vignette"></div>
     
-    <div class="hud-corner top-left"></div>
-    <div class="hud-corner top-right"></div>
-    <div class="hud-corner bottom-left"></div>
+    <div class="hud-corner top-left desktop-only"></div>
+    <div class="hud-corner top-right desktop-only"></div>
+    <div class="hud-corner bottom-left desktop-only"></div>
     <div class="hud-corner bottom-right">
         <span class="sys-status">SYS: ONLINE</span>
     </div>
@@ -45,7 +45,7 @@
                 <span class="logo-text">LÁZARO<span class="accent">.DEV</span></span>
             </div>
 
-            <ul class="nav-links">
+            <ul class="nav-links desktop-nav">
                 <li class="nav-item active" data-target="home" onclick="router.navigate('home')">
                     <span class="nav-num">01</span> <span class="lang" data-en="HOME" data-es="INICIO">HOME</span>
                 </li>
@@ -69,9 +69,25 @@
                     <span class="lang-option es">ES</span>
                 </div>
                 <a href="https://github.com/Thepimen" target="_blank" class="nav-icon"><i class="fab fa-github"></i></a>
+                
+                <div class="mobile-menu-btn" onclick="ui.toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-close" onclick="ui.toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li onclick="router.navigate('home'); ui.toggleMobileMenu()">01 // <span class="lang" data-en="HOME" data-es="INICIO">HOME</span></li>
+            <li onclick="router.navigate('work'); ui.toggleMobileMenu()">02 // <span class="lang" data-en="PROJECTS" data-es="PROYECTOS">PROJECTS</span></li>
+            <li onclick="router.navigate('about'); ui.toggleMobileMenu()">03 // <span class="lang" data-en="PROFILE" data-es="PERFIL">PROFILE</span></li>
+            <li onclick="router.navigate('contact'); ui.toggleMobileMenu()">04 // <span class="lang" data-en="CONTACT" data-es="CONTACTO">CONTACT</span></li>
+        </ul>
+    </div>
 
     <main id="app">
         
@@ -131,6 +147,9 @@
             <div class="marquee-wrapper">
                 <div class="marquee-content">
                     JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦ 
+                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
+                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
+                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
                     JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
                     JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
                     JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
