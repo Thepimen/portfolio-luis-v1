@@ -1,118 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Luis Lázaro | System Architect</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal portfolio of Luis Lázaro, a Systems Developer and Cybersecurity Enthusiast specializing in low-level programming, secure systems, and high-performance backends.">
+    <meta name="keywords"
+        content="Luis Lazaro, Systems Architect, Cybersecurity, Software Developer, C Programming, Go, Python, Madrid">
+    <meta name="author" content="Luis Lázaro">
+    <meta property="og:title" content="Luis Lázaro | Systems Architect & Security Engineer">
+    <meta property="og:description"
+        content="Personal portfolio of Luis Lázaro. Architecting high-performance systems and building secure backend software.">
+    <meta property="og:image" content="assets/profile.png">
+    <meta property="og:type" content="website">
+
+    <title>Luis Lázaro | Systems Architect & Security Engineer</title>
+
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="loading">
 
-    <div id="preloader">
-        <div class="loader-content">
-            <div class="loader-bar"></div>
-            <div class="loader-text glitch" data-text="INITIALIZING SYSTEM...">INITIALIZING SYSTEM...</div>
-            <div class="loader-per">0%</div>
-        </div>
-    </div>
+<body>
 
     <div id="vanta-bg"></div>
     <div class="noise-overlay"></div>
     <div class="vignette"></div>
-    
+
     <div class="hud-corner top-left desktop-only"></div>
     <div class="hud-corner top-right desktop-only"></div>
     <div class="hud-corner bottom-left desktop-only"></div>
     <div class="hud-corner bottom-right">
-        <span class="sys-status">SYS: ONLINE</span>
+        <span class="sys-status">SYS_STATUS // SECURE</span>
     </div>
 
+    <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <nav class="crystal-nav">
+    <header class="crystal-nav">
         <div class="nav-container">
-            <div class="logo-container" onclick="router.navigate('home')">
+            <div class="logo-container" onclick="router.navigate('home')" role="button" aria-label="Go to Home">
                 <span class="logo-symbol">///</span>
                 <span class="logo-text">LÁZARO<span class="accent">.DEV</span></span>
             </div>
 
-            <ul class="nav-links desktop-nav">
-                <li class="nav-item active" data-target="home" onclick="router.navigate('home')">
-                    <span class="nav-num">01</span> <span class="lang" data-en="HOME" data-es="INICIO">HOME</span>
-                </li>
-                <li class="nav-item" data-target="work" onclick="router.navigate('work')">
-                    <span class="nav-num">02</span> <span class="lang" data-en="PROJECTS" data-es="PROYECTOS">PROJECTS</span>
-                </li>
-                <li class="nav-item" data-target="about" onclick="router.navigate('about')">
-                    <span class="nav-num">03</span> <span class="lang" data-en="PROFILE" data-es="PERFIL">PROFILE</span>
-                </li>
-                <li class="nav-item" data-target="contact" onclick="router.navigate('contact')">
-                    <span class="nav-num">04</span> <span class="lang" data-en="CONTACT" data-es="CONTACTO">CONTACT</span>
-                </li>
-            </ul>
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li class="nav-item active" data-target="home" onclick="router.navigate('home')">
+                        <span class="nav-num">01</span> <span class="lang" data-en="HOME" data-es="INICIO">HOME</span>
+                    </li>
+                    <li class="nav-item" data-target="work" onclick="router.navigate('work')">
+                        <span class="nav-num">02</span> <span class="lang" data-en="PROJECTS"
+                            data-es="PROYECTOS">PROJECTS</span>
+                    </li>
+                    <li class="nav-item" data-target="about" onclick="router.navigate('about')">
+                        <span class="nav-num">03</span> <span class="lang" data-en="PROFILE"
+                            data-es="PERFIL">PROFILE</span>
+                    </li>
+                    <li class="nav-item" data-target="contact" onclick="router.navigate('contact')">
+                        <span class="nav-num">04</span> <span class="lang" data-en="CONTACT"
+                            data-es="CONTACTO">CONTACT</span>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="nav-actions">
-                <div class="lang-toggle-wrapper" onclick="ui.toggleLang()">
+                <div class="lang-toggle-wrapper" onclick="ui.toggleLang()" role="button" aria-label="Toggle Language"
+                    tabindex="0">
                     <span class="lang-option en active">EN</span>
                     <div class="toggle-track">
                         <div class="toggle-pill"></div>
                     </div>
                     <span class="lang-option es">ES</span>
                 </div>
-                <a href="https://github.com/Thepimen" target="_blank" class="nav-icon"><i class="fab fa-github"></i></a>
-                
+
+                <a href="https://github.com/Thepimen" target="_blank" class="nav-icon" aria-label="GitHub Profile"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank" class="nav-icon"
+                    aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
                 <button class="mobile-menu-btn" onclick="ui.toggleMobileMenu()" aria-label="Open Menu">
-                    <i class="fas fa-bars"></i>
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
 
     <div class="mobile-menu-overlay" id="mobile-menu">
-        <button class="mobile-menu-close" onclick="ui.toggleMobileMenu()">
+        <button class="mobile-menu-close" onclick="ui.toggleMobileMenu()" aria-label="Close Menu">
             <i class="fas fa-times"></i>
         </button>
         <ul class="mobile-nav-links">
-            <li onclick="router.navigate('home'); ui.toggleMobileMenu()">01 // <span class="lang" data-en="HOME" data-es="INICIO">HOME</span></li>
-            <li onclick="router.navigate('work'); ui.toggleMobileMenu()">02 // <span class="lang" data-en="PROJECTS" data-es="PROYECTOS">PROJECTS</span></li>
-            <li onclick="router.navigate('about'); ui.toggleMobileMenu()">03 // <span class="lang" data-en="PROFILE" data-es="PERFIL">PROFILE</span></li>
-            <li onclick="router.navigate('contact'); ui.toggleMobileMenu()">04 // <span class="lang" data-en="CONTACT" data-es="CONTACTO">CONTACT</span></li>
+            <li onclick="router.navigate('home'); ui.toggleMobileMenu()">01 // <span class="lang" data-en="HOME"
+                    data-es="INICIO">HOME</span></li>
+            <li onclick="router.navigate('work'); ui.toggleMobileMenu()">02 // <span class="lang" data-en="PROJECTS"
+                    data-es="PROYECTOS">PROJECTS</span></li>
+            <li onclick="router.navigate('about'); ui.toggleMobileMenu()">03 // <span class="lang" data-en="PROFILE"
+                    data-es="PERFIL">PROFILE</span></li>
+            <li onclick="router.navigate('contact'); ui.toggleMobileMenu()">04 // <span class="lang" data-en="CONTACT"
+                    data-es="CONTACTO">CONTACT</span></li>
         </ul>
+        <div class="mobile-menu-socials">
+            <a href="https://github.com/Thepimen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
     </div>
 
     <main id="app">
-        
+
+        <!-- HOME SECTION -->
         <section id="view-home" class="view active-view">
             <div class="container hero-container">
                 <div class="status-pill fade-up">
                     <span class="status-light"></span>
-                    <span class="lang" data-en="AVAILABLE FOR WORK" data-es="DISPONIBLE PARA TRABAJAR">AVAILABLE FOR WORK</span>
+                    <span class="lang" data-en="AVAILABLE FOR SECURE TRANSMISSION"
+                        data-es="DISPONIBLE PARA TRANSMISIÓN SEGURA">AVAILABLE FOR SECURE TRANSMISSION</span>
                 </div>
 
                 <div class="hero-main-text">
                     <h1 class="glitch-title" data-text="LUIS LÁZARO">LUIS LÁZARO</h1>
-                    <div class="hero-bg-text lang" data-en="ENGINEER" data-es="INGENIERO">ENGINEER</div>
+                    <div class="hero-bg-text lang" data-en="SYSTEMS" data-es="SISTEMAS">SYSTEMS</div>
                 </div>
 
                 <h2 class="hero-subtitle fade-up delay-1">
-                    <span class="lang" data-en="Software Developer" data-es="Desarrollador Software">Software Developer</span> 
-                    <span class="separator">/</span> 
-                    <span class="lang" data-en="Security Enthusiast" data-es="Entusiasta de Seguridad">Security Enthusiast</span>
+                    <span class="lang" data-en="Systems Developer" data-es="Desarrollador de Sistemas">Systems
+                        Developer</span>
+                    <span class="separator">/</span>
+                    <span class="lang" data-en="Security Enthusiast" data-es="Entusiasta de la Seguridad">Security
+                        Enthusiast</span>
                 </h2>
-                
+
                 <p class="hero-desc fade-up delay-2 lang"
-                   data-en="I build <strong>high-performance</strong> backend systems and secure architectures. Bridging the gap between <strong>Low-Level C</strong> and modern web solutions."
-                   data-es="Construyo sistemas backend de <strong>alto rendimiento</strong> y arquitecturas seguras. Uniendo <strong>C de Bajo Nivel</strong> con soluciones web modernas.">
-                   I build <strong>high-performance</strong> backend systems and secure architectures. Bridging the gap between <strong>Low-Level C</strong> and modern web solutions.
+                    data-en="I architect <strong>high-performance backends</strong> and build secure, resilient software. Specializing in bridging the gap between low-level system efficiency and robust web applications."
+                    data-es="Diseño <strong>backends de alto rendimiento</strong> y desarrollo software seguro y resiliente. Especializado en conectar la eficiencia de bajo nivel con aplicaciones web robustas.">
+                    I architect <strong>high-performance backends</strong> and build secure, resilient software.
+                    Specializing in bridging the gap between low-level system efficiency and robust web applications.
                 </p>
 
                 <div class="stats-bar fade-up delay-3">
@@ -122,8 +156,8 @@
                     </div>
                     <div class="stat-sep"></div>
                     <div class="stat-item">
-                        <span class="stat-val">FULL</span>
-                        <span class="stat-key">STACK</span>
+                        <span class="stat-val">SYSTEMS</span>
+                        <span class="stat-key">C / GO / PY</span>
                     </div>
                     <div class="stat-sep"></div>
                     <div class="stat-item">
@@ -134,11 +168,13 @@
 
                 <div class="hero-cta fade-up delay-4">
                     <button class="btn-mega primary" onclick="router.navigate('work')">
-                        <span class="btn-text lang" data-en="VIEW WORK" data-es="VER PROYECTOS">VIEW WORK</span> <i class="fas fa-arrow-right"></i>
+                        <span class="btn-text lang" data-en="EXPLORE WORK" data-es="EXPLORAR SISTEMAS">EXPLORE
+                            WORK</span> <i class="fas fa-arrow-right"></i>
                         <div class="btn-fill"></div>
                     </button>
                     <button class="btn-mega secondary" onclick="router.navigate('contact')">
-                        <span class="btn-text lang" data-en="CONTACT ME" data-es="CONTÁCTAME">CONTACT ME</span>
+                        <span class="btn-text lang" data-en="ESTABLISH UPLINK" data-es="INICIAR CONEXIÓN">ESTABLISH
+                            UPLINK</span>
                         <div class="btn-fill"></div>
                     </button>
                 </div>
@@ -146,126 +182,299 @@
 
             <div class="marquee-wrapper">
                 <div class="marquee-content">
-                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦ 
-                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
-                    JAVA ✦ SPRING BOOT ✦ C++ ✦ PYTHON ✦ DOCKER ✦ LINUX KERNEL ✦ SQL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ GIT ✦
+                    GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ C / C++ ✦ REDIS ✦ PYTHON ✦ EXPRESS ✦
+                    WEBSOCKETS ✦ GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ C / C++ ✦ REDIS ✦ PYTHON
+                    ✦ EXPRESS ✦ WEBSOCKETS ✦
                 </div>
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
         <section id="view-work" class="view hidden-view">
             <div class="container padded">
                 <div class="section-head">
                     <span class="section-idx">02</span>
-                    <h2 class="section-title lang" data-en="DEPLOYMENTS" data-es="DESPLIEGUES">DEPLOYMENTS</h2>
+                    <h2 class="section-title lang" data-en="DEPLOYED SYSTEMS" data-es="SISTEMAS DESPLEGADOS">DEPLOYED
+                        SYSTEMS</h2>
                 </div>
 
-                <div class="scrollable-projects-wrapper">
-                    <div class="work-grid">
-                        
-                        <div class="work-card">
-                            <div class="work-visual">
-                                <div class="browser-mockup">
-                                    <div class="browser-bar">
-                                        <div class="window-btn red"></div>
-                                        <div class="window-btn yellow"></div>
-                                        <div class="window-btn green"></div>
-                                        <span class="addr">cluster_status — running</span>
-                                    </div>
-                                    <img src="assets/NanoKV.jpeg" alt="NanoKV Distributed DB" class="work-img" onclick="ui.openLightbox(this.src)">
+                <div class="work-grid">
+
+                    <!-- PROJECT 1: DBD RPG POO -->
+                    <article class="work-card">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">rpg-poo // dbd_combat_3vs3</span>
                                 </div>
+                                <img src="assets/dbd_rpg.png" alt="Dead by Daylight 3vs3 Turn-Based RPG" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
                             </div>
-                            <div class="work-details">
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-status game lang" data-en="CLASS INTERMODULAR" data-es="TRABAJO INTERMODULAR">CLASS INTERMODULAR</span>
+                            </div>
+                            <h3 class="work-title">Dead by Daylight 3vs3 RPG</h3>
+                            <p class="lang"
+                                data-en="A turn-based 3vs3 RPG combat engine themed around Dead by Daylight, developed as a collaborative intermodular project at Nebrija. Built to showcase clean Object-Oriented Programming (OOP) and design patterns, it features a Java Spring Boot 3.2 REST & WebSockets backend, and an interactive Next.js user interface."
+                                data-es="Motor de combate RPG táctico 3vs3 por turnos ambientado en Dead by Daylight, desarrollado como proyecto intermodular colaborativo en Nebrija. Diseñado para demostrar principios de POO y patrones de diseño, cuenta con un backend Java Spring Boot 3.2 (REST & WebSockets) y una interfaz Next.js.">
+                                A turn-based 3vs3 RPG combat engine themed around Dead by Daylight, developed as a collaborative
+                                intermodular project at Nebrija. Built to showcase clean Object-Oriented Programming (OOP)
+                                and design patterns, it features a Java Spring Boot 3.2 REST & WebSockets backend, and an
+                                interactive Next.js user interface.
+                            </p>
+                            <div class="tech-row">
+                                <span>Java (Spring Boot)</span><span>Next.js</span><span>WebSockets</span><span>OOP Patterns</span><span>MariaDB / JDBC</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/NoeCB/rpg-poo" target="_blank"
+                                    class="link-btn lang" data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: OMNILENS -->
+                    <article class="work-card reversed">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">omnilens.dev — active</span>
+                                </div>
+                                <img src="assets/omnilens.png" alt="OmniLens SaaS Platform" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
+                            </div>
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-status live">LIVE TELEMETRY</span>
+                            </div>
+                            <h3 class="work-title">OmniLens SaaS</h3>
+                            <p class="lang"
+                                data-en="A real-time telemetry analytics platform integrating OpenAI diagnostics. Designed with highly-responsive WebSockets for low-latency data pipelines and structured around an elegant, interactive glassmorphic dashboard."
+                                data-es="Plataforma de analítica de telemetría en tiempo real integrada con diagnóstico de OpenAI. Diseñada con WebSockets de alta velocidad para pipelines de baja latencia y un elegante panel glassmorphism.">
+                                A real-time telemetry analytics platform integrating OpenAI diagnostics. Designed with
+                                highly-responsive WebSockets for low-latency data pipelines and structured around an
+                                elegant, interactive glassmorphic dashboard.
+                            </p>
+                            <div class="tech-row">
+                                <span>React</span><span>Node.js</span><span>WebSockets</span><span>AI
+                                    Diagnostic</span><span>CSS Grid</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/Thepimen/OmniLens" target="_blank" class="link-btn lang"
+                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3: SHADOWAUDIT -->
+                    <article class="work-card">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">audit_worker_01 // nmap_scan</span>
+                                </div>
+                                <img src="assets/shadowaudit.png" alt="ShadowAudit Monorepo" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
+                            </div>
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
                                 <span class="work-year">2025</span>
-                                <h3 class="work-title">NanoKV Distributed DB</h3>
-                                <p class="lang" data-en="High-performance distributed key-value store featuring Sharding, Consistent Hashing, and Write-Ahead Log (WAL) persistence." 
-                                   data-es="Base de datos distribuida de alto rendimiento con Sharding, Hashing Consistente y persistencia mediante Write-Ahead Log (WAL).">
-                                   High-performance distributed key-value store.
-                                </p>
-                                <div class="tech-row">
-                                    <span>GO (GOLANG)</span><span>DISTRIBUTED SYSTEMS</span><span>SHARDING</span>
-                                </div>
-                                <a href="https://github.com/Thepimen/NanoKV" target="_blank" class="link-btn lang" data-en="GITHUB REPO" data-es="REPOSITORIO GITHUB">GITHUB REPO <i class="fas fa-external-link-alt"></i></a>
+                                <span class="work-status test">AUDITING PROTOCOL</span>
+                            </div>
+                            <h3 class="work-title">ShadowAudit Security Monorepo</h3>
+                            <p class="lang"
+                                data-en="An automated security auditing monorepo managing multi-stage Nmap scanners. Built with an Express gateway, a fast Redis queue, and distributed Python workers to capture, analyze, and report network vulnerabilities."
+                                data-es="Monorepo de auditoría de seguridad automatizada que gestiona escáneres Nmap multietapa. Construido con un gateway Express, una cola rápida en Redis y workers distribuidos en Python para captura de vulnerabilidades.">
+                                An automated security auditing monorepo managing multi-stage Nmap scanners. Built with
+                                an Express gateway, a fast Redis queue, and distributed Python workers to capture,
+                                analyze, and report network vulnerabilities.
+                            </p>
+                            <div class="tech-row">
+                                <span>Express</span><span>Redis Queues</span><span>Python Workers</span><span>Nmap
+                                    Engine</span><span>Docker</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/Thepimen/ShadowAudit" target="_blank" class="link-btn lang"
+                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
+                    </article>
 
-                        <div class="work-card reversed">
-                            <div class="work-visual">
-                                <div class="browser-mockup">
-                                    <div class="browser-bar">
-                                        <div class="window-btn red"></div>
-                                        <div class="window-btn yellow"></div>
-                                        <div class="window-btn green"></div>
-                                        <span class="addr">bash — pysniff.py</span>
-                                    </div>
-                                    <img src="assets/GIF1.gif" alt="PySniff" class="work-img" onclick="ui.openLightbox(this.src)">
+                    <!-- PROJECT 4: NANOKV -->
+                    <article class="work-card reversed">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">cluster_status // running</span>
                                 </div>
+                                <img src="assets/NanoKV.jpeg" alt="NanoKV Distributed DB" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
                             </div>
-                            <div class="work-details">
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
+                                <span class="work-year">2025</span>
+                                <span class="work-status database">STABLE RELEASE</span>
+                            </div>
+                            <h3 class="work-title">NanoKV Distributed DB</h3>
+                            <p class="lang"
+                                data-en="A light, high-performance distributed key-value store. Featuring consistent hashing and partition sharding to ensure balanced cluster distribution, and protected by a robust Write-Ahead Log (WAL) to guarantee crash-safe data persistence."
+                                data-es="Base de datos clave-valor distribuida ligera y de alto rendimiento. Implementa sharding y hashing consistente para una distribución equilibrada en el clúster, con recuperación robusta mediante Write-Ahead Log (WAL).">
+                                A light, high-performance distributed key-value store. Featuring consistent hashing and
+                                partition sharding to ensure balanced cluster distribution, and protected by a robust
+                                Write-Ahead Log (WAL) to guarantee crash-safe data persistence.
+                            </p>
+                            <div class="tech-row">
+                                <span>Go (Golang)</span><span>Distributed Systems</span><span>Consistent
+                                    Hashing</span><span>WAL</span><span>Network Sockets</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/Thepimen/NanoKV" target="_blank" class="link-btn lang"
+                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 5: PYSNIFF -->
+                    <article class="work-card">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">bash — traffic_analyzer.py</span>
+                                </div>
+                                <img src="assets/GIF1.gif" alt="PySniff Packets" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
+                            </div>
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
                                 <span class="work-year">2024</span>
-                                <h3 class="work-title">PySniff Analyzer</h3>
-                                <p class="lang" data-en="Production-grade CLI for network traffic analysis using Raw Sockets." data-es="CLI de grado producción para análisis de tráfico usando Raw Sockets.">Production-grade CLI for network traffic analysis.</p>
-                                <div class="tech-row">
-                                    <span>PYTHON</span><span>NETWORKING</span><span>SECURITY</span>
-                                </div>
-                                <a href="https://github.com/Thepimen/PySniff" target="_blank" class="link-btn lang" data-en="GITHUB REPO" data-es="REPOSITORIO GITHUB">GITHUB REPO <i class="fas fa-external-link-alt"></i></a>
+                                <span class="work-status network">STABLE CLI</span>
+                            </div>
+                            <h3 class="work-title">PySniff Network Analyzer</h3>
+                            <p class="lang"
+                                data-en="A production-ready CLI for real-time network traffic auditing. Accesses physical interfaces directly using Raw Sockets, parses layers from Ethernet frames down to application payload bytes, and detects unencrypted flows."
+                                data-es="Herramienta CLI para auditoría de tráfico en tiempo real. Accede a interfaces físicas directamente mediante Raw Sockets, analiza capas desde tramas Ethernet hasta payloads de aplicación y detecta transmisiones inseguras.">
+                                A production-ready CLI for real-time network traffic auditing. Accesses physical
+                                interfaces directly using Raw Sockets, parses layers from Ethernet frames down to
+                                application payload bytes, and detects unencrypted flows.
+                            </p>
+                            <div class="tech-row">
+                                <span>Python</span><span>Raw Sockets</span><span>Scapy</span><span>Threat
+                                    Auditing</span><span>System Interfaces</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/Thepimen/PySniff" target="_blank" class="link-btn lang"
+                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
+                    </article>
 
-                        <div class="work-card">
-                            <div class="work-visual">
-                                <div class="browser-mockup">
-                                    <div class="browser-bar">
-                                        <div class="window-btn red"></div>
-                                        <div class="window-btn yellow"></div>
-                                        <div class="window-btn green"></div>
-                                        <span class="addr">./memory_allocator</span>
-                                    </div>
-                                    <img src="assets/GIF2.gif" alt="Allocator" class="work-img" onclick="ui.openLightbox(this.src)">
+                    <!-- PROJECT 6: MEMORY ALLOCATOR -->
+                    <article class="work-card reversed">
+                        <div class="work-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="window-btn red"></div>
+                                    <div class="window-btn yellow"></div>
+                                    <div class="window-btn green"></div>
+                                    <span class="addr">./allocator_test</span>
                                 </div>
+                                <img src="assets/GIF2.gif" alt="Allocator Heap" class="work-img"
+                                    onclick="ui.openLightbox(this.src)">
                             </div>
-                            <div class="work-details">
+                        </div>
+                        <div class="work-details">
+                            <div class="work-meta">
                                 <span class="work-year">2023</span>
-                                <h3 class="work-title">Secure Allocator</h3>
-                                <p class="lang" data-en="Low-level memory manager (malloc/free) with heap overflow protection." data-es="Gestor de memoria de bajo nivel (malloc/free) con protección de heap.">Low-level memory manager with heap protection.</p>
-                                <div class="tech-row">
-                                    <span>C LANGUAGE</span><span>SYSTEMS</span><span>MEMORY</span>
-                                </div>
-                                <a href="https://github.com/Thepimen/MemoryAllocator" target="_blank" class="link-btn lang" data-en="GITHUB REPO" data-es="REPOSITORIO GITHUB">GITHUB REPO <i class="fas fa-external-link-alt"></i></a>
+                                <span class="work-status secure">LOW-LEVEL</span>
+                            </div>
+                            <h3 class="work-title">Secure C Memory Allocator</h3>
+                            <p class="lang"
+                                data-en="A customized heap memory manager implementing malloc, realloc, and free from scratch. Enhances system safety by placing validation guards and heap-boundary check canaries to detect overflow leaks during runtime."
+                                data-es="Gestor de memoria de pila personalizado que implementa malloc, realloc y free desde cero. Mejora la seguridad usando guardias de validación y canarios de límites de heap para mitigar desbordamientos.">
+                                A customized heap memory manager implementing malloc, realloc, and free from scratch.
+                                Enhances system safety by placing validation guards and heap-boundary check canaries to
+                                detect overflow leaks during runtime.
+                            </p>
+                            <div class="tech-row">
+                                <span>C Language</span><span>Memory Management</span><span>Low-Level OS</span><span>Heap
+                                    Vulnerability Mitigations</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/Thepimen/MemoryAllocator" target="_blank"
+                                    class="link-btn lang" data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
+                    </article>
 
-                        <div class="future-project-hint">
-                            <i class="fas fa-plus"></i> <span class="lang" data-en="More projects coming soon..." data-es="Más proyectos próximamente...">More projects coming soon...</span>
-                        </div>
-
+                    <div class="future-project-hint">
+                        <i class="fas fa-plus"></i> <span class="lang" data-en="More projects coming soon..."
+                            data-es="Más proyectos próximamente...">More projects coming soon...</span>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- PROFILE SECTION -->
         <section id="view-about" class="view hidden-view">
             <div class="container padded">
                 <div class="about-grid">
                     <div class="about-left">
                         <div class="profile-card">
                             <div class="profile-frame">
-                                <img src="assets/profile.png" alt="Luis" class="profile-pic">
+                                <img src="assets/profile.png" alt="Luis Lázaro profile picture" class="profile-pic">
                                 <div class="scan-line"></div>
                             </div>
                             <h2 class="about-name">Luis Lázaro</h2>
-                            <span class="about-role lang" data-en="Software Developer" data-es="Desarrollador de Software">Software Developer</span>
-                            
+                            <span class="about-role lang" data-en="Systems & Backend Developer"
+                                data-es="Desarrollador de Sistemas y Backend">Systems & Backend Developer</span>
+
                             <div class="about-actions-fixed">
-                                <a href="assets/cv.pdf" download class="btn-mega full-w primary">
-                                    <span class="btn-text lang" data-en="DOWNLOAD CV" data-es="DESCARGAR CV"><i class="fas fa-download"></i> DOWNLOAD CV</span>
+                                <a href="assets/cv.pdf" download class="btn-mega full-w primary"
+                                    aria-label="Download Curriculum Vitae">
+                                    <span class="btn-text lang" data-en="DOWNLOAD CV" data-es="DESCARGAR CV"><i
+                                            class="fas fa-download"></i> DOWNLOAD CV</span>
                                     <div class="btn-fill"></div>
                                 </a>
                                 <div class="socials-grid">
-                                    <a href="https://github.com/Thepimen" target="_blank" class="social-btn-big">
+                                    <a href="https://github.com/Thepimen" target="_blank" class="social-btn-big"
+                                        aria-label="GitHub Profile">
                                         <i class="fab fa-github"></i> <span>GITHUB</span>
                                     </a>
-                                    <a href="mailto:luislazaropimentel@gmail.com" class="social-btn-big">
+                                    <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank"
+                                        class="social-btn-big" aria-label="LinkedIn Profile">
+                                        <i class="fab fa-linkedin-in"></i> <span>LINKEDIN</span>
+                                    </a>
+                                    <a href="mailto:luislazaropimentel@gmail.com" class="social-btn-big"
+                                        aria-label="Email Contact">
                                         <i class="fas fa-envelope"></i> <span>EMAIL</span>
                                     </a>
                                 </div>
@@ -275,49 +484,69 @@
 
                     <div class="about-right">
                         <div class="info-block glass-panel">
-                            <h3 class="block-title"><i class="fas fa-stream"></i> <span class="lang" data-en="TIMELINE" data-es="TRAYECTORIA">TIMELINE</span></h3>
+                            <h3 class="block-title"><i class="fas fa-stream"></i> <span class="lang" data-en="TIMELINE"
+                                    data-es="TRAYECTORIA">TIMELINE</span></h3>
                             <div class="timeline">
                                 <div class="t-item active">
-                                    <span class="t-year lang" data-en="2025 - NOW" data-es="2025 - PRESENTE">2025 - NOW</span>
+                                    <span class="t-year lang" data-en="2025 - NOW" data-es="2025 - PRESENTE">2025 -
+                                        NOW</span>
                                     <h4>DAM (Multiplatform Dev)</h4>
                                     <span class="t-place">Universidad Nebrija</span>
-                                    <p class="lang" data-en="Full Stack Development & Mobile Architecture." data-es="Desarrollo Full Stack y Arquitectura Móvil.">Full Stack Development.</p>
+                                    <p class="lang"
+                                        data-en="Focussing on enterprise software architecture, full-stack pipelines, database safety, and native mobile system deployments."
+                                        data-es="Enfocado en arquitectura de software empresarial, pipelines full-stack, seguridad de bases de datos y despliegue móvil nativo.">
+                                        Focussing on enterprise software architecture, full-stack pipelines, database
+                                        safety, and native mobile system deployments.</p>
                                 </div>
                                 <div class="t-item">
                                     <span class="t-year">2023 - 2025</span>
                                     <h4>Software Engineering</h4>
                                     <span class="t-place">U-TAD</span>
-                                    <p class="lang" data-en="C Programming, Algorithms & Data Structures." data-es="Programación C, Algoritmos y Estructuras de Datos.">C Programming.</p>
+                                    <p class="lang"
+                                        data-en="Built deep foundational knowledge in low-level C development, complex algorithms, system virtualization, and discrete mathematics."
+                                        data-es="Desarrollo de conocimientos profundos en C de bajo nivel, análisis de algoritmos complejos, virtualización de sistemas y matemáticas discretas.">
+                                        Built deep foundational knowledge in low-level C development, complex
+                                        algorithms, system virtualization, and discrete mathematics.</p>
                                 </div>
                                 <div class="t-item">
-                                    <span class="t-year lang" data-en="2023 - NOW" data-es="2023 - PRESENTE">2023 - NOW</span>
+                                    <span class="t-year lang" data-en="2023 - NOW" data-es="2023 - PRESENTE">2023 -
+                                        NOW</span>
                                     <h4>Supervisor</h4>
                                     <span class="t-place">Cambridge Exams</span>
-                                    <p class="lang" data-en="Logistics & Security Protocol Enforcement." data-es="Logística y Cumplimiento de Protocolos de Seguridad.">Logistics & Security.</p>
+                                    <p class="lang"
+                                        data-en="Managing testing infrastructure logistics, securing physical materials, and enforcing international exam protocols."
+                                        data-es="Gestión de logística de infraestructura de exámenes, custodia de materiales y cumplimiento riguroso de protocolos internacionales.">
+                                        Managing testing infrastructure logistics, securing physical materials, and
+                                        enforcing international exam protocols.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="info-block glass-panel">
-                            <h3 class="block-title"><i class="fas fa-code"></i> <span class="lang" data-en="TECHNICAL STACK" data-es="ARSENAL TÉCNICO">TECHNICAL STACK</span></h3>
+                            <h3 class="block-title"><i class="fas fa-code"></i> <span class="lang"
+                                    data-en="TECHNICAL STACK" data-es="ARSENAL TÉCNICO">TECHNICAL STACK</span></h3>
                             <div class="skills-wrapper">
                                 <div class="skill-category">
-                                    <span>BACKEND & SYSTEMS</span>
+                                    <span class="lang" data-en="BACKEND & LOW-LEVEL"
+                                        data-es="BACKEND Y BAJO NIVEL">BACKEND & LOW-LEVEL</span>
                                     <div class="icons">
-                                        <i class="devicon-go-original-wordmark"></i> 
-                                        <i class="devicon-java-plain"></i>
-                                        <i class="devicon-python-plain"></i>
-                                        <i class="devicon-c-plain"></i>
-                                        <i class="devicon-mysql-plain"></i>
+                                        <i class="devicon-go-original-wordmark" title="Go (Golang)"></i>
+                                        <i class="devicon-c-plain" title="C Language"></i>
+                                        <i class="devicon-python-plain" title="Python"></i>
+                                        <i class="devicon-java-plain" title="Java"></i>
+                                        <i class="devicon-mysql-plain" title="MySQL"></i>
+                                        <i class="devicon-redis-plain" title="Redis"></i>
                                     </div>
                                 </div>
                                 <div class="skill-category">
-                                    <span>FRONTEND</span>
+                                    <span class="lang" data-en="FRONTEND & INFRASTRUCTURE"
+                                        data-es="FRONTEND E INFRAESTRUCTURA">FRONTEND & INFRASTRUCTURE</span>
                                     <div class="icons">
-                                        <i class="devicon-javascript-plain"></i>
-                                        <i class="devicon-react-original"></i>
-                                        <i class="devicon-html5-plain"></i>
-                                        <i class="devicon-css3-plain"></i>
+                                        <i class="devicon-react-original" title="React"></i>
+                                        <i class="devicon-javascript-plain" title="JavaScript"></i>
+                                        <i class="devicon-docker-plain" title="Docker"></i>
+                                        <i class="devicon-linux-plain" title="Linux"></i>
+                                        <i class="devicon-git-plain" title="Git"></i>
                                     </div>
                                 </div>
                             </div>
@@ -327,37 +556,49 @@
             </div>
         </section>
 
+        <!-- CONTACT SECTION -->
         <section id="view-contact" class="view hidden-view">
             <div class="container padded">
                 <div class="contact-flex">
                     <div class="contact-form-box">
-                        <h2 class="section-title lang" data-en="INITIATE UPLINK" data-es="INICIAR ENLACE">INITIATE UPLINK</h2>
-                        <p class="text-muted mb-4 lang" data-en="Send a secure transmission." data-es="Envía una transmisión segura.">Send a secure transmission.</p>
-                        
-                        <form action="https://formsubmit.co/luislazaropimentel@gmail.com" method="POST" class="cyber-form">
+                        <h2 class="section-title lang" data-en="INITIATE UPLINK" data-es="INICIAR CONEXIÓN">INITIATE
+                            UPLINK</h2>
+                        <p class="text-muted lang" data-en="Send an encrypted message directly into my terminal."
+                            data-es="Envía un mensaje cifrado directo a mi terminal.">Send an encrypted message directly
+                            into my terminal.</p>
+
+                        <form action="https://formsubmit.co/luislazaropimentel@gmail.com" method="POST"
+                            class="cyber-form">
                             <div class="input-row">
-                                <input type="text" name="name" required placeholder="IDENTIFIER (NAME)">
+                                <label for="form-name" class="sr-only">Name / Identifier</label>
+                                <input type="text" id="form-name" name="name" required placeholder="IDENTIFIER (NAME)">
                             </div>
                             <div class="input-row">
-                                <input type="email" name="email" required placeholder="RETURN ADDRESS (EMAIL)">
+                                <label for="form-email" class="sr-only">Email Address</label>
+                                <input type="email" id="form-email" name="email" required
+                                    placeholder="RETURN ADDRESS (EMAIL)">
                             </div>
                             <div class="input-row">
-                                <textarea name="message" rows="5" required placeholder="DATA PAYLOAD (MESSAGE)"></textarea>
+                                <label for="form-message" class="sr-only">Message Data</label>
+                                <textarea id="form-message" name="message" rows="5" required
+                                    placeholder="DATA PAYLOAD (MESSAGE)"></textarea>
                             </div>
                             <button type="submit" class="btn-mega primary full-w">
-                                <span class="btn-text lang" data-en="TRANSMIT DATA" data-es="TRANSMITIR DATOS">TRANSMIT DATA</span>
+                                <span class="btn-text lang" data-en="TRANSMIT PAYLOAD"
+                                    data-es="TRANSMITIR DATOS">TRANSMIT PAYLOAD</span>
                                 <div class="btn-fill"></div>
-                            </button> 
+                            </button>
                         </form>
                     </div>
 
                     <div class="contact-sidebar">
                         <div class="qr-box">
-                            <h3 class="lang" data-en="MOBILE LINK" data-es="ENLACE MÓVIL">MOBILE LINK</h3>
+                            <h3 class="lang" data-en="MOBILE SYNC" data-es="ENLACE MÓVIL">MOBILE SYNC</h3>
                             <div class="qr-border">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://github.com/Thepimen&color=00f3ff&bgcolor=000000" alt="QR">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://github.com/Thepimen&color=00f3ff&bgcolor=000000"
+                                    alt="GitHub Profile QR Code">
                             </div>
-                            <p class="lang" data-en="SCAN TO CONNECT" data-es="ESCANEAR PARA CONECTAR">SCAN TO CONNECT</p>
+                            <p class="lang" data-en="SCAN FOR GITHUB" data-es="ESCANEAR PARA GITHUB">SCAN FOR GITHUB</p>
                         </div>
                     </div>
                 </div>
@@ -365,10 +606,12 @@
         </section>
     </main>
 
-    <div id="cyber-lightbox" class="lightbox-overlay" onclick="ui.closeLightbox()">
+    <!-- Visual Lightbox -->
+    <div id="cyber-lightbox" class="lightbox-overlay" onclick="ui.closeLightbox()" role="dialog" aria-modal="true"
+        aria-label="Image Preview">
         <div class="lightbox-container" onclick="event.stopPropagation()">
             <div class="lightbox-header">
-                <span class="lightbox-title">/// IMG_PREVIEW_MODE</span>
+                <span class="lightbox-title">/// PREVIEW_MODE // DETAILED_ANALYSIS</span>
                 <button class="lightbox-close" onclick="ui.closeLightbox()">[CLOSE_X]</button>
             </div>
             <div class="lightbox-frame">
@@ -381,7 +624,8 @@
         </div>
     </div>
 
-    <div id="toast" class="toast hidden">
+    <!-- Active Toast -->
+    <div id="toast" class="toast hidden" role="alert" aria-live="assertive">
         <i class="fas fa-check-circle"></i> <span id="toast-msg">SYSTEM OPTIMAL</span>
     </div>
 
@@ -389,4 +633,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

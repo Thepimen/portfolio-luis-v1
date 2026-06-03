@@ -1,59 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 0. LOADER FALSO
-    const loaderText = document.querySelector('.loader-per');
-    let load = 0;
-    const interval = setInterval(() => {
-        load += Math.floor(Math.random() * 20);
-        if(load > 100) load = 100;
-        loaderText.innerText = load + '%';
-        if(load === 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 500);
-        }
-    }, 100);
+    // 0. MOBILE & PERFORMANCE DETECTION
+    const isMobile = window.matchMedia("(max-width: 900px)").matches || 
+                     ('ontouchstart' in window) || 
+                     (navigator.maxTouchPoints > 0);
 
-    // 1. VANTA FOG BACKGROUND
-    try {
-        if (window.VANTA) {
-            VANTA.FOG({
-                el: "#vanta-bg",
-                mouseControls: true, touchControls: true, gyroControls: false,
-                minHeight: 200.00, minWidth: 200.00,
-                highlightColor: 0x00f3ff,
-                midtoneColor: 0x050505,
-                lowlightColor: 0x000000,
-                baseColor: 0x000000,
-                blurFactor: 0.6,
-                speed: 1.5,
-                zoom: 0.8
-            })
-        }
-    } catch (e) { console.log(e) }
+    if (isMobile) {
+        document.body.classList.add('is-mobile');
+    }
 
-    // 2. ROUTER & LÓGICA DE NAVEGACIÓN
+    // Immediately show site content (no false preloader delays)
+    document.body.classList.add('loaded');
+
+    // 1. VANTA FOG BACKGROUND (DESKTOP ONLY FOR BATTERY & PERFORMANCE)
+    let vantaEffect = null;
+    if (!isMobile) {
+        try {
+            if (window.VANTA) {
+                vantaEffect = VANTA.FOG({
+                    el: "#vanta-bg",
+                    mouseControls: true,
+                    touchControls: false,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    highlightColor: 0x00f3ff,
+                    midtoneColor: 0x0a0515, // Violet tone midtone
+                    lowlightColor: 0x000000,
+                    baseColor: 0x050505,
+                    blurFactor: 0.5,
+                    speed: 1.2,
+                    zoom: 0.95
+                });
+            }
+        } catch (e) { 
+            console.warn("Vanta.js failed to initialize:", e); 
+        }
+    }
+
+    // 2. ROUTER & NAVEGACIÓN
     const pages = ['home', 'work', 'about', 'contact'];
     
     window.router = {
         navigate: function(pageId) {
             const targetView = document.getElementById(`view-${pageId}`);
-            if(targetView) targetView.scrollTop = 0;
+            if (targetView) targetView.scrollTop = 0;
             
             document.querySelectorAll('.nav-item').forEach(el => {
                 el.classList.remove('active');
-                if(el.dataset.target === pageId) el.classList.add('active');
+                if (el.dataset.target === pageId) el.classList.add('active');
             });
 
             pages.forEach(p => {
                 const el = document.getElementById(`view-${p}`);
-                if(p === pageId) {
+                if (p === pageId) {
                     el.classList.remove('hidden-view');
-                    setTimeout(() => el.classList.add('active-view'), 10);
+                    // Small delay to trigger transition opacity
+                    setTimeout(() => el.classList.add('active-view'), 20);
                 } else {
                     el.classList.remove('active-view');
-                    setTimeout(() => el.classList.add('hidden-view'), 800);
+                    setTimeout(() => el.classList.add('hidden-view'), 600);
                 }
             });
         }
@@ -78,27 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
 
-        // --- LÓGICA DEL VISOR TÁCTICO (LIGHTBOX) ---
+        // --- VISOR TÁCTICO (LIGHTBOX) ---
         openLightbox: function(src) {
             const lightbox = document.getElementById('cyber-lightbox');
             const img = document.getElementById('lightbox-img');
             img.src = src;
             lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Lock background scroll
         },
 
         closeLightbox: function() {
             const lightbox = document.getElementById('cyber-lightbox');
             lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Release scroll
             setTimeout(() => {
                 document.getElementById('lightbox-img').src = "";
             }, 300);
         },
 
-        // --- MENÚ MÓVIL SIMPLE ---
+        // --- MENÚ MÓVIL (HAMBURGER ANIMADO) ---
         toggleMobileMenu: function() {
             const menu = document.getElementById('mobile-menu');
+            const btn = document.querySelector('.mobile-menu-btn');
             if (menu) {
                 menu.classList.toggle('active');
+                btn.classList.toggle('active');
             }
         }
     };
@@ -106,41 +116,86 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateText(lang) {
         document.querySelectorAll('.lang').forEach(item => {
             const txt = item.getAttribute(`data-${lang}`);
-            if(txt) item.innerHTML = txt;
+            if (txt) item.innerHTML = txt;
         });
         
         document.querySelectorAll('input, textarea').forEach(input => {
-            if(lang === 'es' && input.name === 'name') input.placeholder = 'IDENTIFICADOR (NOMBRE)';
-            if(lang === 'en' && input.name === 'name') input.placeholder = 'IDENTIFIER (NAME)';
-            if(lang === 'es' && input.name === 'email') input.placeholder = 'DIRECCIÓN DE RETORNO (EMAIL)';
-            if(lang === 'en' && input.name === 'email') input.placeholder = 'RETURN ADDRESS (EMAIL)';
-            if(lang === 'es' && input.name === 'message') input.placeholder = 'CARGA DE DATOS (MENSAJE)';
-            if(lang === 'en' && input.name === 'message') input.placeholder = 'DATA PAYLOAD (MESSAGE)';
+            if (lang === 'es') {
+                if (input.name === 'name') input.placeholder = 'IDENTIFICADOR (NOMBRE)';
+                if (input.name === 'email') input.placeholder = 'DIRECCIÓN DE CORREO (EMAIL)';
+                if (input.name === 'message') input.placeholder = 'CARGA DE DATOS (MENSAJE)';
+            } else {
+                if (input.name === 'name') input.placeholder = 'IDENTIFIER (NAME)';
+                if (input.name === 'email') input.placeholder = 'RETURN ADDRESS (EMAIL)';
+                if (input.name === 'message') input.placeholder = 'DATA PAYLOAD (MESSAGE)';
+            }
         });
+
+        // Update document lang attribute
+        document.documentElement.lang = lang;
     }
 
-    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER
+    // 3. CURSOR PERSONALIZADO & EFECTOS HOVER (DESKTOP ONLY)
     const dot = document.querySelector('.cursor-dot');
     const out = document.querySelector('.cursor-outline');
 
-    if (window.matchMedia("(min-width: 992px)").matches) {
+    if (!isMobile && dot && out) {
         window.addEventListener('mousemove', (e) => {
             const x = e.clientX;
             const y = e.clientY;
-            dot.style.left = `${x}px`; dot.style.top = `${y}px`;
-            out.animate({ left: `${x}px`, top: `${y}px` }, { duration: 500, fill: "forwards" });
+            dot.style.left = `${x}px`; 
+            dot.style.top = `${y}px`;
+            out.animate({ left: `${x}px`, top: `${y}px` }, { duration: 350, fill: "forwards" });
         });
 
-        document.querySelectorAll('a, button, .nav-item, input, .lang-toggle-wrapper, .logo-container').forEach(el => {
+        document.querySelectorAll('a, button, .nav-item, input, textarea, .lang-toggle-wrapper, .logo-container, .work-img').forEach(el => {
             el.addEventListener('mouseenter', () => {
                 out.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                out.style.background = 'rgba(0,243,255,0.1)';
+                out.style.background = 'rgba(0, 243, 255, 0.08)';
+                out.style.borderColor = 'var(--accent-cyan)';
             });
             el.addEventListener('mouseleave', () => {
                 out.style.transform = 'translate(-50%, -50%) scale(1)';
                 out.style.background = 'transparent';
+                out.style.borderColor = 'var(--accent-cyan)';
             });
         });
     }
 
-}); 
+    // 4. ACCESSIBILITY - KEYBOARD SHORTCUTS
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            // Close lightbox
+            const lightbox = document.getElementById('cyber-lightbox');
+            if (lightbox && lightbox.classList.contains('active')) {
+                ui.closeLightbox();
+            }
+            // Close mobile menu
+            const menu = document.getElementById('mobile-menu');
+            if (menu && menu.classList.contains('active')) {
+                ui.toggleMobileMenu();
+            }
+        }
+    });
+
+    // 5. TOAST NOTIFICATION UTILITY
+    window.showToast = function(msg) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-msg');
+        if (toast && toastMsg) {
+            toastMsg.innerText = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.classList.add('hidden'), 500);
+            }, 3000);
+        }
+    };
+
+    // Clean memory if window unloaded
+    window.addEventListener('unload', () => {
+        if (vantaEffect) vantaEffect.destroy();
+    });
+
+});
