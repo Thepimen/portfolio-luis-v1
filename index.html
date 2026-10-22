@@ -1,637 +1,558 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Personal portfolio of Luis Lázaro, a Systems Developer and Cybersecurity Enthusiast specializing in low-level programming, secure systems, and high-performance backends.">
-    <meta name="keywords"
-        content="Luis Lazaro, Systems Architect, Cybersecurity, Software Developer, C Programming, Go, Python, Madrid">
-    <meta name="author" content="Luis Lázaro">
-    <meta property="og:title" content="Luis Lázaro | Systems Architect & Security Engineer">
-    <meta property="og:description"
-        content="Personal portfolio of Luis Lázaro. Architecting high-performance systems and building secure backend software.">
-    <meta property="og:image" content="assets/profile.png">
-    <meta property="og:type" content="website">
-
-    <title>Luis Lázaro | Systems Architect & Security Engineer</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Lázaro Pimentel · Software Engineer · DAM & Ciberseguridad</title>
+  <meta name="description" content="Portfolio de Luis Lázaro Pimentel: ingeniería de software, desarrollo multiplataforma (DAM), backend y ciberseguridad. Proyectos, trayectoria, laboratorio interactivo y contacto.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#090A0F">
+  <script>
+    /* Pre-paint: resolve theme + base URL before any stylesheet loads (avoids FOUC). */
+    (function () {
+      var d = document.documentElement, t = 'dark';
+      try {
+        t = localStorage.getItem('llp-theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      } catch (e) {}
+      d.setAttribute('data-theme', t);
+      d.classList.add('js');
+      if (location.protocol !== 'file:') {
+        var b = document.createElement('base'); b.href = '/';
+        document.head.appendChild(b);
+      }
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.5 21.8c.6.1.8-.2.8-.5v-2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.2-3-.1-.3-.5-1.4.1-3 0 0 .9-.3 3.1 1.2a10.6 10.6 0 0 1 5.6 0c2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.7.1 3 .7.8 1.2 1.8 1.2 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2v3c0 .3.2.6.8.5A11.2 11.2 0 0 0 12 .8Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2ZM8 19H5V9.5h3V19ZM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5V19Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M4.5 19.5h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-commit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 12h5.9M15.6 12h5.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-repo" viewBox="0 0 24 24"><path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H19v16H7.5A2.5 2.5 0 0 0 5 20.5v-16Zm0 16A2.5 2.5 0 0 0 7.5 23H19v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-12Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6v-19Z M14 2.5V7h4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m6.5 9 3 3-3 3M12 15h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12.5" height="12.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V5.5A2 2 0 0 0 14 3.5H5.5a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2H8" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="6" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M6 7.2v9.6M18 9.2c0 5-12 2.5-12 7.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.3l1.6 4.2-2.2 1.4a11.5 11.5 0 0 0 7.2 7.2l1.4-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  </svg>
 
-    <div id="vanta-bg"></div>
-    <div class="noise-overlay"></div>
-    <div class="vignette"></div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    <div class="hud-corner top-left desktop-only"></div>
-    <div class="hud-corner top-right desktop-only"></div>
-    <div class="hud-corner bottom-left desktop-only"></div>
-    <div class="hud-corner bottom-right">
-        <span class="sys-status">SYS_STATUS // SECURE</span>
-    </div>
+  <!-- ================================================================
+       TOP BAR · IDE-STYLE NAVIGATION
+       ================================================================ -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="brand" data-link aria-label="Luis Lázaro Pimentel · Inicio">
+        <span class="brand-mark" aria-hidden="true">LL</span>
+        <span class="brand-text">
+          <span class="brand-name">luis.lazaro</span>
+          <span class="brand-path">~/portfolio</span>
+        </span>
+      </a>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+      <nav class="tabs" aria-label="Navegación principal" id="tabs">
+        <a href="/" class="tab" data-link data-route="/" title="Inicio · G H">
+          <span class="tab-dot" style="--c:#34D399"></span><span class="tab-label">Inicio</span>
+        </a>
+        <a href="/projects" class="tab" data-link data-route="/projects" title="Proyectos · G P">
+          <span class="tab-dot" style="--c:#22D3EE"></span><span class="tab-label">Proyectos</span>
+        </a>
+        <a href="/trajectory" class="tab" data-link data-route="/trajectory" title="Trayectoria · G T">
+          <span class="tab-dot" style="--c:#A78BFA"></span><span class="tab-label">Trayectoria</span>
+        </a>
+        <a href="/lab" class="tab" data-link data-route="/lab" title="Lab · G L">
+          <span class="tab-dot" style="--c:#FBBF24"></span><span class="tab-label">Lab</span>
+        </a>
+        <a href="/contact" class="tab" data-link data-route="/contact" title="Contacto · G C">
+          <span class="tab-dot" style="--c:#F472B6"></span><span class="tab-label">Contacto</span>
+        </a>
+        <span class="tab-indicator" aria-hidden="true"></span>
+      </nav>
 
-    <header class="crystal-nav">
-        <div class="nav-container">
-            <div class="logo-container" onclick="router.navigate('home')" role="button" aria-label="Go to Home">
-                <span class="logo-symbol">///</span>
-                <span class="logo-text">LÁZARO<span class="accent">.DEV</span></span>
-            </div>
-
-            <nav class="desktop-nav" aria-label="Main Navigation">
-                <ul class="nav-links">
-                    <li class="nav-item active" data-target="home" onclick="router.navigate('home')">
-                        <span class="nav-num">01</span> <span class="lang" data-en="HOME" data-es="INICIO">HOME</span>
-                    </li>
-                    <li class="nav-item" data-target="work" onclick="router.navigate('work')">
-                        <span class="nav-num">02</span> <span class="lang" data-en="PROJECTS"
-                            data-es="PROYECTOS">PROJECTS</span>
-                    </li>
-                    <li class="nav-item" data-target="about" onclick="router.navigate('about')">
-                        <span class="nav-num">03</span> <span class="lang" data-en="PROFILE"
-                            data-es="PERFIL">PROFILE</span>
-                    </li>
-                    <li class="nav-item" data-target="contact" onclick="router.navigate('contact')">
-                        <span class="nav-num">04</span> <span class="lang" data-en="CONTACT"
-                            data-es="CONTACTO">CONTACT</span>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <div class="lang-toggle-wrapper" onclick="ui.toggleLang()" role="button" aria-label="Toggle Language"
-                    tabindex="0">
-                    <span class="lang-option en active">EN</span>
-                    <div class="toggle-track">
-                        <div class="toggle-pill"></div>
-                    </div>
-                    <span class="lang-option es">ES</span>
-                </div>
-
-                <a href="https://github.com/Thepimen" target="_blank" class="nav-icon" aria-label="GitHub Profile"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank" class="nav-icon"
-                    aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-
-                <button class="mobile-menu-btn" onclick="ui.toggleMobileMenu()" aria-label="Open Menu">
-                    <span class="hamburger-line line-1"></span>
-                    <span class="hamburger-line line-2"></span>
-                    <span class="hamburger-line line-3"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <div class="mobile-menu-overlay" id="mobile-menu">
-        <button class="mobile-menu-close" onclick="ui.toggleMobileMenu()" aria-label="Close Menu">
-            <i class="fas fa-times"></i>
+      <div class="topbar-actions">
+        <button type="button" class="cmdk-trigger" id="cmdk-trigger" aria-label="Abrir paleta de comandos (Ctrl + K)">
+          <svg class="ico"><use href="#i-search"/></svg>
+          <span class="cmdk-trigger-text">Buscar…</span>
+          <kbd class="kbd" data-mod-key>Ctrl K</kbd>
         </button>
-        <ul class="mobile-nav-links">
-            <li onclick="router.navigate('home'); ui.toggleMobileMenu()">01 // <span class="lang" data-en="HOME"
-                    data-es="INICIO">HOME</span></li>
-            <li onclick="router.navigate('work'); ui.toggleMobileMenu()">02 // <span class="lang" data-en="PROJECTS"
-                    data-es="PROYECTOS">PROJECTS</span></li>
-            <li onclick="router.navigate('about'); ui.toggleMobileMenu()">03 // <span class="lang" data-en="PROFILE"
-                    data-es="PERFIL">PROFILE</span></li>
-            <li onclick="router.navigate('contact'); ui.toggleMobileMenu()">04 // <span class="lang" data-en="CONTACT"
-                    data-es="CONTACTO">CONTACT</span></li>
-        </ul>
-        <div class="mobile-menu-socials">
-            <a href="https://github.com/Thepimen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank" aria-label="LinkedIn"><i
-                    class="fab fa-linkedin"></i></a>
+        <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Cambiar a modo claro" title="Cambiar tema">
+          <svg class="ico ico-sun"><use href="#i-sun"/></svg>
+          <svg class="ico ico-moon"><use href="#i-moon"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ================================================================
+         VIEW · HOME  ( / )
+         ================================================================ -->
+    <section class="view" data-view="/" aria-labelledby="home-title" data-title="Luis Lázaro Pimentel · Software Engineer">
+      <div class="wrap">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="hero-badges">
+              <span class="status-pill"><span class="pulse" aria-hidden="true"></span>Disponible para proyectos</span>
+              <span class="loc-badge mono">📍 Madrid, ES · <span data-utc-offset>UTC+1</span></span>
+            </div>
+            <h1 id="home-title" class="hero-title">
+              Luis Lázaro<br><span class="grad-text">Pimentel</span>
+            </h1>
+            <p class="hero-role mono">
+              <span class="tok-k">const</span> role = <span class="tok-s">"Software Engineer"</span>;
+              <span class="hero-role-sep">// DAM · Backend · Ciberseguridad</span>
+            </p>
+            <p class="hero-lead">
+              Mi paso por la <strong>etapa universitaria en Ingeniería</strong> forjó una base sólida en <strong>bajo nivel, lógica computacional, matemática discreta y diseño de algoritmos</strong>, que hoy combino con el desarrollo práctico de <strong>aplicaciones multiplataforma (DAM)</strong> y <strong>ciberseguridad</strong>.
+            </p>
+            <div class="hero-cta">
+              <a href="/projects" data-link class="btn btn-primary">Ver proyectos <kbd class="kbd kbd-on-accent">G P</kbd></a>
+              <a href="/lab" data-link class="btn btn-ghost">
+                <svg class="ico"><use href="#i-terminal"/></svg> Abrir terminal <kbd class="kbd">`</kbd>
+              </a>
+              <a href="assets/cv.pdf" download="CV_Luis_Lazaro_Pimentel.pdf" class="btn btn-ghost">
+                <svg class="ico"><use href="#i-download"/></svg> CV
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-editor spot" aria-label="Fragmento de código con el perfil técnico">
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title mono">luis.config.ts</span>
+              <span class="win-meta mono">TS · UTF-8</span>
+            </div>
+            <pre class="code mono" aria-hidden="true"><code><span class="ln"><span class="tok-c">// perfil técnico · 2026</span></span>
+<span class="ln"><span class="tok-k">export const</span> <span class="tok-v">luis</span> = {</span>
+<span class="ln">  role:     <span class="tok-s">"Software Engineer"</span>,</span>
+<span class="ln">  focus:    [<span class="tok-s">"DAM"</span>, <span class="tok-s">"Backend"</span>, <span class="tok-s">"Cybersecurity"</span>],</span>
+<span class="ln">  base:     [<span class="tok-s">"low-level"</span>, <span class="tok-s">"logic"</span>, <span class="tok-s">"discrete-math"</span>, <span class="tok-s">"algorithms"</span>],</span>
+<span class="ln">  stack:    [<span class="tok-s">"Java"</span>, <span class="tok-s">"TypeScript"</span>, <span class="tok-s">"C"</span>, <span class="tok-s">"Go"</span>, <span class="tok-s">"SQL"</span>, <span class="tok-s">"Android"</span>],</span>
+<span class="ln">  shipping: <span class="tok-s">"VulnFollowUp"</span>, <span class="tok-c">// DevSecOps · EU DORA</span></span>
+<span class="ln">  available: <span class="tok-b">true</span>,</span>
+<span class="ln">} <span class="tok-k">as const</span>;<span class="caret" aria-hidden="true"></span></span></code></pre>
+          </div>
         </div>
-    </div>
 
-    <main id="app">
-
-        <!-- HOME SECTION -->
-        <section id="view-home" class="view active-view">
-            <div class="container hero-container">
-                <div class="status-pill fade-up">
-                    <span class="status-light"></span>
-                    <span class="lang" data-en="AVAILABLE FOR SECURE TRANSMISSION"
-                        data-es="DISPONIBLE PARA TRANSMISIÓN SEGURA">AVAILABLE FOR SECURE TRANSMISSION</span>
-                </div>
-
-                <div class="hero-main-text">
-                    <h1 class="glitch-title" data-text="LUIS LÁZARO">LUIS LÁZARO</h1>
-                    <div class="hero-bg-text lang" data-en="SYSTEMS" data-es="SISTEMAS">SYSTEMS</div>
-                </div>
-
-                <h2 class="hero-subtitle fade-up delay-1">
-                    <span class="lang" data-en="Systems Developer" data-es="Desarrollador de Sistemas">Systems
-                        Developer</span>
-                    <span class="separator">/</span>
-                    <span class="lang" data-en="Security Enthusiast" data-es="Entusiasta de la Seguridad">Security
-                        Enthusiast</span>
-                </h2>
-
-                <p class="hero-desc fade-up delay-2 lang"
-                    data-en="I architect <strong>high-performance backends</strong> and build secure, resilient software. Specializing in bridging the gap between low-level system efficiency and robust web applications."
-                    data-es="Diseño <strong>backends de alto rendimiento</strong> y desarrollo software seguro y resiliente. Especializado en conectar la eficiencia de bajo nivel con aplicaciones web robustas.">
-                    I architect <strong>high-performance backends</strong> and build secure, resilient software.
-                    Specializing in bridging the gap between low-level system efficiency and robust web applications.
-                </p>
-
-                <div class="stats-bar fade-up delay-3">
-                    <div class="stat-item">
-                        <span class="stat-val">DAM</span>
-                        <span class="stat-key lang" data-en="STUDENT" data-es="ESTUDIANTE">STUDENT</span>
-                    </div>
-                    <div class="stat-sep"></div>
-                    <div class="stat-item">
-                        <span class="stat-val">SYSTEMS</span>
-                        <span class="stat-key">C / GO / PY</span>
-                    </div>
-                    <div class="stat-sep"></div>
-                    <div class="stat-item">
-                        <span class="stat-val">MADRID</span>
-                        <span class="stat-key lang" data-en="BASED" data-es="RESIDENCIA">BASED</span>
-                    </div>
-                </div>
-
-                <div class="hero-cta fade-up delay-4">
-                    <button class="btn-mega primary" onclick="router.navigate('work')">
-                        <span class="btn-text lang" data-en="EXPLORE WORK" data-es="EXPLORAR SISTEMAS">EXPLORE
-                            WORK</span> <i class="fas fa-arrow-right"></i>
-                        <div class="btn-fill"></div>
-                    </button>
-                    <button class="btn-mega secondary" onclick="router.navigate('contact')">
-                        <span class="btn-text lang" data-en="ESTABLISH UPLINK" data-es="INICIAR CONEXIÓN">ESTABLISH
-                            UPLINK</span>
-                        <div class="btn-fill"></div>
-                    </button>
-                </div>
+        <!-- Bento overview -->
+        <div class="bento" aria-label="Resumen visual">
+          <article class="card spot bento-feature">
+            <header class="card-head">
+              <span class="eyebrow mono"><span class="dot dot-accent"></span>Proyecto estrella</span>
+              <span class="chip mono">EU 2022/2554</span>
+            </header>
+            <h2 class="card-title">VulnFollowUp</h2>
+            <p class="card-sub">Gestión de vulnerabilidades y resiliencia operativa alineada con DORA.</p>
+            <div class="diagram-host" data-diagram="vulnfollowup" aria-hidden="true"></div>
+            <ul class="badge-row" aria-label="Tecnologías">
+              <li class="badge">Java 17 REST</li><li class="badge">Android · Room</li><li class="badge">CVSS 3.1 / 4.0</li><li class="badge">RBAC · JWT</li><li class="badge">WCAG 2.1 AA</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-sm btn-primary" href="https://github.com/Thepimen/VulnFollowUp" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-github"/></svg> View Code</a>
+              <button type="button" class="btn btn-sm btn-ghost" data-arch="vulnfollowup">Architecture</button>
             </div>
+          </article>
 
-            <div class="marquee-wrapper">
-                <div class="marquee-content">
-                    GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ C / C++ ✦ REDIS ✦ PYTHON ✦ EXPRESS ✦
-                    WEBSOCKETS ✦ GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SECURITY ✦ RAW SOCKETS ✦ C / C++ ✦ REDIS ✦ PYTHON
-                    ✦ EXPRESS ✦ WEBSOCKETS ✦
-                </div>
+          <article class="card spot bento-metrics" aria-label="Métricas">
+            <div class="metric">
+              <span class="metric-val mono" data-count="25" data-live="repos">25</span>
+              <span class="metric-lbl">repos públicos</span>
             </div>
-        </section>
-
-        <!-- PROJECTS SECTION -->
-        <section id="view-work" class="view hidden-view">
-            <div class="container padded">
-                <div class="section-head">
-                    <span class="section-idx">02</span>
-                    <h2 class="section-title lang" data-en="DEPLOYED SYSTEMS" data-es="SISTEMAS DESPLEGADOS">DEPLOYED
-                        SYSTEMS</h2>
-                </div>
-
-                <div class="work-grid">
-
-                    <!-- PROJECT 1: DBD RPG POO -->
-                    <article class="work-card">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">rpg-poo // dbd_combat_3vs3</span>
-                                </div>
-                                <img src="assets/dbd_rpg.png" alt="Dead by Daylight 3vs3 Turn-Based RPG" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2026</span>
-                                <span class="work-status game lang" data-en="CLASS INTERMODULAR" data-es="TRABAJO INTERMODULAR">CLASS INTERMODULAR</span>
-                            </div>
-                            <h3 class="work-title">Dead by Daylight 3vs3 RPG</h3>
-                            <p class="lang"
-                                data-en="A turn-based 3vs3 RPG combat engine themed around Dead by Daylight, developed as a collaborative intermodular project at Nebrija. Built to showcase clean Object-Oriented Programming (OOP) and design patterns, it features a Java Spring Boot 3.2 REST & WebSockets backend, and an interactive Next.js user interface."
-                                data-es="Motor de combate RPG táctico 3vs3 por turnos ambientado en Dead by Daylight, desarrollado como proyecto intermodular colaborativo en Nebrija. Diseñado para demostrar principios de POO y patrones de diseño, cuenta con un backend Java Spring Boot 3.2 (REST & WebSockets) y una interfaz Next.js.">
-                                A turn-based 3vs3 RPG combat engine themed around Dead by Daylight, developed as a collaborative
-                                intermodular project at Nebrija. Built to showcase clean Object-Oriented Programming (OOP)
-                                and design patterns, it features a Java Spring Boot 3.2 REST & WebSockets backend, and an
-                                interactive Next.js user interface.
-                            </p>
-                            <div class="tech-row">
-                                <span>Java (Spring Boot)</span><span>Next.js</span><span>WebSockets</span><span>OOP Patterns</span><span>MariaDB / JDBC</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/NoeCB/rpg-poo" target="_blank"
-                                    class="link-btn lang" data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT 2: OMNILENS -->
-                    <article class="work-card reversed">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">omnilens.dev — active</span>
-                                </div>
-                                <img src="assets/omnilens.png" alt="OmniLens SaaS Platform" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2026</span>
-                                <span class="work-status live">LIVE TELEMETRY</span>
-                            </div>
-                            <h3 class="work-title">OmniLens SaaS</h3>
-                            <p class="lang"
-                                data-en="A real-time telemetry analytics platform integrating OpenAI diagnostics. Designed with highly-responsive WebSockets for low-latency data pipelines and structured around an elegant, interactive glassmorphic dashboard."
-                                data-es="Plataforma de analítica de telemetría en tiempo real integrada con diagnóstico de OpenAI. Diseñada con WebSockets de alta velocidad para pipelines de baja latencia y un elegante panel glassmorphism.">
-                                A real-time telemetry analytics platform integrating OpenAI diagnostics. Designed with
-                                highly-responsive WebSockets for low-latency data pipelines and structured around an
-                                elegant, interactive glassmorphic dashboard.
-                            </p>
-                            <div class="tech-row">
-                                <span>React</span><span>Node.js</span><span>WebSockets</span><span>AI
-                                    Diagnostic</span><span>CSS Grid</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/Thepimen/OmniLens" target="_blank" class="link-btn lang"
-                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT 3: SHADOWAUDIT -->
-                    <article class="work-card">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">audit_worker_01 // nmap_scan</span>
-                                </div>
-                                <img src="assets/shadowaudit.png" alt="ShadowAudit Monorepo" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2025</span>
-                                <span class="work-status test">AUDITING PROTOCOL</span>
-                            </div>
-                            <h3 class="work-title">ShadowAudit Security Monorepo</h3>
-                            <p class="lang"
-                                data-en="An automated security auditing monorepo managing multi-stage Nmap scanners. Built with an Express gateway, a fast Redis queue, and distributed Python workers to capture, analyze, and report network vulnerabilities."
-                                data-es="Monorepo de auditoría de seguridad automatizada que gestiona escáneres Nmap multietapa. Construido con un gateway Express, una cola rápida en Redis y workers distribuidos en Python para captura de vulnerabilidades.">
-                                An automated security auditing monorepo managing multi-stage Nmap scanners. Built with
-                                an Express gateway, a fast Redis queue, and distributed Python workers to capture,
-                                analyze, and report network vulnerabilities.
-                            </p>
-                            <div class="tech-row">
-                                <span>Express</span><span>Redis Queues</span><span>Python Workers</span><span>Nmap
-                                    Engine</span><span>Docker</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/Thepimen/ShadowAudit" target="_blank" class="link-btn lang"
-                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT 4: NANOKV -->
-                    <article class="work-card reversed">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">cluster_status // running</span>
-                                </div>
-                                <img src="assets/NanoKV.jpeg" alt="NanoKV Distributed DB" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2025</span>
-                                <span class="work-status database">STABLE RELEASE</span>
-                            </div>
-                            <h3 class="work-title">NanoKV Distributed DB</h3>
-                            <p class="lang"
-                                data-en="A light, high-performance distributed key-value store. Featuring consistent hashing and partition sharding to ensure balanced cluster distribution, and protected by a robust Write-Ahead Log (WAL) to guarantee crash-safe data persistence."
-                                data-es="Base de datos clave-valor distribuida ligera y de alto rendimiento. Implementa sharding y hashing consistente para una distribución equilibrada en el clúster, con recuperación robusta mediante Write-Ahead Log (WAL).">
-                                A light, high-performance distributed key-value store. Featuring consistent hashing and
-                                partition sharding to ensure balanced cluster distribution, and protected by a robust
-                                Write-Ahead Log (WAL) to guarantee crash-safe data persistence.
-                            </p>
-                            <div class="tech-row">
-                                <span>Go (Golang)</span><span>Distributed Systems</span><span>Consistent
-                                    Hashing</span><span>WAL</span><span>Network Sockets</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/Thepimen/NanoKV" target="_blank" class="link-btn lang"
-                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT 5: PYSNIFF -->
-                    <article class="work-card">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">bash — traffic_analyzer.py</span>
-                                </div>
-                                <img src="assets/GIF1.gif" alt="PySniff Packets" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2024</span>
-                                <span class="work-status network">STABLE CLI</span>
-                            </div>
-                            <h3 class="work-title">PySniff Network Analyzer</h3>
-                            <p class="lang"
-                                data-en="A production-ready CLI for real-time network traffic auditing. Accesses physical interfaces directly using Raw Sockets, parses layers from Ethernet frames down to application payload bytes, and detects unencrypted flows."
-                                data-es="Herramienta CLI para auditoría de tráfico en tiempo real. Accede a interfaces físicas directamente mediante Raw Sockets, analiza capas desde tramas Ethernet hasta payloads de aplicación y detecta transmisiones inseguras.">
-                                A production-ready CLI for real-time network traffic auditing. Accesses physical
-                                interfaces directly using Raw Sockets, parses layers from Ethernet frames down to
-                                application payload bytes, and detects unencrypted flows.
-                            </p>
-                            <div class="tech-row">
-                                <span>Python</span><span>Raw Sockets</span><span>Scapy</span><span>Threat
-                                    Auditing</span><span>System Interfaces</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/Thepimen/PySniff" target="_blank" class="link-btn lang"
-                                    data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT 6: MEMORY ALLOCATOR -->
-                    <article class="work-card reversed">
-                        <div class="work-visual">
-                            <div class="browser-mockup">
-                                <div class="browser-bar">
-                                    <div class="window-btn red"></div>
-                                    <div class="window-btn yellow"></div>
-                                    <div class="window-btn green"></div>
-                                    <span class="addr">./allocator_test</span>
-                                </div>
-                                <img src="assets/GIF2.gif" alt="Allocator Heap" class="work-img"
-                                    onclick="ui.openLightbox(this.src)">
-                            </div>
-                        </div>
-                        <div class="work-details">
-                            <div class="work-meta">
-                                <span class="work-year">2023</span>
-                                <span class="work-status secure">LOW-LEVEL</span>
-                            </div>
-                            <h3 class="work-title">Secure C Memory Allocator</h3>
-                            <p class="lang"
-                                data-en="A customized heap memory manager implementing malloc, realloc, and free from scratch. Enhances system safety by placing validation guards and heap-boundary check canaries to detect overflow leaks during runtime."
-                                data-es="Gestor de memoria de pila personalizado que implementa malloc, realloc y free desde cero. Mejora la seguridad usando guardias de validación y canarios de límites de heap para mitigar desbordamientos.">
-                                A customized heap memory manager implementing malloc, realloc, and free from scratch.
-                                Enhances system safety by placing validation guards and heap-boundary check canaries to
-                                detect overflow leaks during runtime.
-                            </p>
-                            <div class="tech-row">
-                                <span>C Language</span><span>Memory Management</span><span>Low-Level OS</span><span>Heap
-                                    Vulnerability Mitigations</span>
-                            </div>
-                            <div class="card-links">
-                                <a href="https://github.com/Thepimen/MemoryAllocator" target="_blank"
-                                    class="link-btn lang" data-en="SOURCE CODE" data-es="CÓDIGO FUENTE">SOURCE CODE <i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div class="future-project-hint">
-                        <i class="fas fa-plus"></i> <span class="lang" data-en="More projects coming soon..."
-                            data-es="Más proyectos próximamente...">More projects coming soon...</span>
-                    </div>
-
-                </div>
+            <div class="metric">
+              <span class="metric-val mono">&lt;1.5<small>%</small></span>
+              <span class="metric-lbl">CPU · sonda eBPF</span>
             </div>
-        </section>
-
-        <!-- PROFILE SECTION -->
-        <section id="view-about" class="view hidden-view">
-            <div class="container padded">
-                <div class="about-grid">
-                    <div class="about-left">
-                        <div class="profile-card">
-                            <div class="profile-frame">
-                                <img src="assets/profile.png" alt="Luis Lázaro profile picture" class="profile-pic">
-                                <div class="scan-line"></div>
-                            </div>
-                            <h2 class="about-name">Luis Lázaro</h2>
-                            <span class="about-role lang" data-en="Systems & Backend Developer"
-                                data-es="Desarrollador de Sistemas y Backend">Systems & Backend Developer</span>
-
-                            <div class="about-actions-fixed">
-                                <a href="assets/cv.pdf" download class="btn-mega full-w primary"
-                                    aria-label="Download Curriculum Vitae">
-                                    <span class="btn-text lang" data-en="DOWNLOAD CV" data-es="DESCARGAR CV"><i
-                                            class="fas fa-download"></i> DOWNLOAD CV</span>
-                                    <div class="btn-fill"></div>
-                                </a>
-                                <div class="socials-grid">
-                                    <a href="https://github.com/Thepimen" target="_blank" class="social-btn-big"
-                                        aria-label="GitHub Profile">
-                                        <i class="fab fa-github"></i> <span>GITHUB</span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/luis-lázaro-pimentel/" target="_blank"
-                                        class="social-btn-big" aria-label="LinkedIn Profile">
-                                        <i class="fab fa-linkedin-in"></i> <span>LINKEDIN</span>
-                                    </a>
-                                    <a href="mailto:luislazaropimentel@gmail.com" class="social-btn-big"
-                                        aria-label="Email Contact">
-                                        <i class="fas fa-envelope"></i> <span>EMAIL</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-right">
-                        <div class="info-block glass-panel">
-                            <h3 class="block-title"><i class="fas fa-stream"></i> <span class="lang" data-en="TIMELINE"
-                                    data-es="TRAYECTORIA">TIMELINE</span></h3>
-                            <div class="timeline">
-                                <div class="t-item active">
-                                    <span class="t-year lang" data-en="2025 - NOW" data-es="2025 - PRESENTE">2025 -
-                                        NOW</span>
-                                    <h4>DAM (Multiplatform Dev)</h4>
-                                    <span class="t-place">Universidad Nebrija</span>
-                                    <p class="lang"
-                                        data-en="Focussing on enterprise software architecture, full-stack pipelines, database safety, and native mobile system deployments."
-                                        data-es="Enfocado en arquitectura de software empresarial, pipelines full-stack, seguridad de bases de datos y despliegue móvil nativo.">
-                                        Focussing on enterprise software architecture, full-stack pipelines, database
-                                        safety, and native mobile system deployments.</p>
-                                </div>
-                                <div class="t-item">
-                                    <span class="t-year">2023 - 2025</span>
-                                    <h4>Software Engineering</h4>
-                                    <span class="t-place">U-TAD</span>
-                                    <p class="lang"
-                                        data-en="Built deep foundational knowledge in low-level C development, complex algorithms, system virtualization, and discrete mathematics."
-                                        data-es="Desarrollo de conocimientos profundos en C de bajo nivel, análisis de algoritmos complejos, virtualización de sistemas y matemáticas discretas.">
-                                        Built deep foundational knowledge in low-level C development, complex
-                                        algorithms, system virtualization, and discrete mathematics.</p>
-                                </div>
-                                <div class="t-item">
-                                    <span class="t-year lang" data-en="2023 - NOW" data-es="2023 - PRESENTE">2023 -
-                                        NOW</span>
-                                    <h4>Supervisor</h4>
-                                    <span class="t-place">Cambridge Exams</span>
-                                    <p class="lang"
-                                        data-en="Managing testing infrastructure logistics, securing physical materials, and enforcing international exam protocols."
-                                        data-es="Gestión de logística de infraestructura de exámenes, custodia de materiales y cumplimiento riguroso de protocolos internacionales.">
-                                        Managing testing infrastructure logistics, securing physical materials, and
-                                        enforcing international exam protocols.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="info-block glass-panel">
-                            <h3 class="block-title"><i class="fas fa-code"></i> <span class="lang"
-                                    data-en="TECHNICAL STACK" data-es="ARSENAL TÉCNICO">TECHNICAL STACK</span></h3>
-                            <div class="skills-wrapper">
-                                <div class="skill-category">
-                                    <span class="lang" data-en="BACKEND & LOW-LEVEL"
-                                        data-es="BACKEND Y BAJO NIVEL">BACKEND & LOW-LEVEL</span>
-                                    <div class="icons">
-                                        <i class="devicon-go-original-wordmark" title="Go (Golang)"></i>
-                                        <i class="devicon-c-plain" title="C Language"></i>
-                                        <i class="devicon-python-plain" title="Python"></i>
-                                        <i class="devicon-java-plain" title="Java"></i>
-                                        <i class="devicon-mysql-plain" title="MySQL"></i>
-                                        <i class="devicon-redis-plain" title="Redis"></i>
-                                    </div>
-                                </div>
-                                <div class="skill-category">
-                                    <span class="lang" data-en="FRONTEND & INFRASTRUCTURE"
-                                        data-es="FRONTEND E INFRAESTRUCTURA">FRONTEND & INFRASTRUCTURE</span>
-                                    <div class="icons">
-                                        <i class="devicon-react-original" title="React"></i>
-                                        <i class="devicon-javascript-plain" title="JavaScript"></i>
-                                        <i class="devicon-docker-plain" title="Docker"></i>
-                                        <i class="devicon-linux-plain" title="Linux"></i>
-                                        <i class="devicon-git-plain" title="Git"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="metric">
+              <span class="metric-val mono" data-count="4">4</span>
+              <span class="metric-lbl">capas en VulnFollowUp</span>
             </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="view-contact" class="view hidden-view">
-            <div class="container padded">
-                <div class="contact-flex">
-                    <div class="contact-form-box">
-                        <h2 class="section-title lang" data-en="INITIATE UPLINK" data-es="INICIAR CONEXIÓN">INITIATE
-                            UPLINK</h2>
-                        <p class="text-muted lang" data-en="Send an encrypted message directly into my terminal."
-                            data-es="Envía un mensaje cifrado directo a mi terminal.">Send an encrypted message directly
-                            into my terminal.</p>
-
-                        <form action="https://formsubmit.co/luislazaropimentel@gmail.com" method="POST"
-                            class="cyber-form">
-                            <div class="input-row">
-                                <label for="form-name" class="sr-only">Name / Identifier</label>
-                                <input type="text" id="form-name" name="name" required placeholder="IDENTIFIER (NAME)">
-                            </div>
-                            <div class="input-row">
-                                <label for="form-email" class="sr-only">Email Address</label>
-                                <input type="email" id="form-email" name="email" required
-                                    placeholder="RETURN ADDRESS (EMAIL)">
-                            </div>
-                            <div class="input-row">
-                                <label for="form-message" class="sr-only">Message Data</label>
-                                <textarea id="form-message" name="message" rows="5" required
-                                    placeholder="DATA PAYLOAD (MESSAGE)"></textarea>
-                            </div>
-                            <button type="submit" class="btn-mega primary full-w">
-                                <span class="btn-text lang" data-en="TRANSMIT PAYLOAD"
-                                    data-es="TRANSMITIR DATOS">TRANSMIT PAYLOAD</span>
-                                <div class="btn-fill"></div>
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="contact-sidebar">
-                        <div class="qr-box">
-                            <h3 class="lang" data-en="MOBILE SYNC" data-es="ENLACE MÓVIL">MOBILE SYNC</h3>
-                            <div class="qr-border">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://github.com/Thepimen&color=00f3ff&bgcolor=000000"
-                                    alt="GitHub Profile QR Code">
-                            </div>
-                            <p class="lang" data-en="SCAN FOR GITHUB" data-es="ESCANEAR PARA GITHUB">SCAN FOR GITHUB</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="metric">
+              <span class="metric-val mono" data-count="8">8</span>
+              <span class="metric-lbl">lenguajes en producción</span>
             </div>
-        </section>
-    </main>
+          </article>
 
-    <!-- Visual Lightbox -->
-    <div id="cyber-lightbox" class="lightbox-overlay" onclick="ui.closeLightbox()" role="dialog" aria-modal="true"
-        aria-label="Image Preview">
-        <div class="lightbox-container" onclick="event.stopPropagation()">
-            <div class="lightbox-header">
-                <span class="lightbox-title">/// PREVIEW_MODE // DETAILED_ANALYSIS</span>
-                <button class="lightbox-close" onclick="ui.closeLightbox()">[CLOSE_X]</button>
+          <article class="card spot bento-base">
+            <header class="card-head"><span class="eyebrow mono">base.ingenieria</span></header>
+            <h3 class="card-title-sm">Fundamentos que no caducan</h3>
+            <svg class="graph-viz" viewBox="0 0 220 90" aria-hidden="true">
+              <g class="graph-edges">
+                <path d="M20 45 L70 18 L125 30 L180 16"/><path d="M20 45 L70 70 L125 58 L180 72"/><path d="M70 18 L70 70"/><path d="M125 30 L125 58"/><path d="M125 30 L180 72"/><path d="M180 16 L205 45 L180 72"/>
+              </g>
+              <g class="graph-path"><path d="M20 45 L70 18 L125 30 L180 72 L205 45"/></g>
+              <g class="graph-nodes">
+                <circle cx="20" cy="45" r="4.5"/><circle cx="70" cy="18" r="4"/><circle cx="70" cy="70" r="4"/><circle cx="125" cy="30" r="4"/><circle cx="125" cy="58" r="4"/><circle cx="180" cy="16" r="4"/><circle cx="180" cy="72" r="4"/><circle cx="205" cy="45" r="4.5"/>
+              </g>
+            </svg>
+            <ul class="chip-list">
+              <li class="chip mono">bajo nivel</li><li class="chip mono">lógica computacional</li><li class="chip mono">matemática discreta</li><li class="chip mono">algoritmos</li>
+            </ul>
+          </article>
+
+          <article class="card spot bento-term" data-href="/lab" role="link" tabindex="0" aria-label="Abrir el laboratorio con la terminal interactiva">
+            <div class="win-bar win-bar-sm">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title mono">zsh — lab</span>
+              <kbd class="kbd">`</kbd>
             </div>
-            <div class="lightbox-frame">
-                <img id="lightbox-img" src="" alt="Preview">
-                <div class="corner l-top"></div>
-                <div class="corner r-top"></div>
-                <div class="corner l-bot"></div>
-                <div class="corner r-bot"></div>
-            </div>
+            <pre class="mini-term mono" id="mini-term" aria-hidden="true"></pre>
+            <span class="card-link mono">Abrir terminal interactiva <svg class="ico"><use href="#i-arrow"/></svg></span>
+          </article>
+
+          <article class="card spot bento-stack">
+            <header class="card-head"><span class="eyebrow mono">stack.json</span><a href="/trajectory" data-link class="mini-link mono">ver todo →</a></header>
+            <ul class="icon-grid" id="home-stack" aria-label="Stack tecnológico"></ul>
+          </article>
+
+          <article class="card spot bento-activity">
+            <header class="card-head">
+              <span class="eyebrow mono"><span class="dot dot-live"></span>git log --recent</span>
+              <span class="chip mono" id="activity-source">api.github.com</span>
+            </header>
+            <ol class="activity" id="activity-list">
+              <li class="activity-item"><span class="mono">VulnFollowUp</span><span class="activity-time mono">—</span></li>
+              <li class="activity-item"><span class="mono">dam-crm-app</span><span class="activity-time mono">—</span></li>
+              <li class="activity-item"><span class="mono">kshield</span><span class="activity-time mono">—</span></li>
+            </ol>
+          </article>
+
+          <article class="card spot bento-clock">
+            <span class="eyebrow mono">local_time</span>
+            <span class="clock mono" id="clock">--:--:--</span>
+            <span class="mono clock-meta">Europe/Madrid · <span data-utc-offset>UTC+1</span></span>
+            <span class="mono clock-meta">Respuesta &lt; 24 h</span>
+          </article>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Active Toast -->
-    <div id="toast" class="toast hidden" role="alert" aria-live="assertive">
-        <i class="fas fa-check-circle"></i> <span id="toast-msg">SYSTEM OPTIMAL</span>
-    </div>
+    <!-- ================================================================
+         VIEW · PROJECTS  ( /projects )
+         ================================================================ -->
+    <section class="view" data-view="/projects" aria-labelledby="projects-title" data-title="Proyectos · Luis Lázaro Pimentel">
+      <div class="wrap">
+        <header class="view-head">
+          <p class="crumb mono">luis@portfolio:<span class="crumb-path">~/projects</span>$ ls -la</p>
+          <h1 id="projects-title" class="view-title">Proyectos &amp; GitHub</h1>
+          <p class="view-sub">Repos reales, lenguajes medidos por GitHub y arquitectura de cada sistema.</p>
+        </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script src="script.js"></script>
+        <div class="filter-bar" role="toolbar" aria-label="Filtrar por tecnología" id="project-filters">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="count mono"></span></button>
+          <button type="button" class="filter" data-filter="backend" aria-pressed="false">Backend &amp; Low-Level <span class="count mono"></span></button>
+          <button type="button" class="filter" data-filter="frontend" aria-pressed="false">Frontend &amp; UI <span class="count mono"></span></button>
+          <button type="button" class="filter" data-filter="security" aria-pressed="false">Cybersecurity <span class="count mono"></span></button>
+          <label class="filter-search">
+            <svg class="ico"><use href="#i-search"/></svg>
+            <span class="sr-only">Buscar repositorio</span>
+            <input type="search" id="project-search" placeholder="grep repo…" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+
+        <div class="projects-layout">
+          <aside class="explorer" aria-label="Explorador de repositorios">
+            <div class="explorer-head mono">EXPLORER <span class="explorer-sub">Thepimen</span></div>
+            <div class="explorer-tree mono" id="explorer-tree"></div>
+          </aside>
+          <div class="repo-grid" id="repo-grid" aria-live="polite"></div>
+        </div>
+        <noscript><p class="view-sub">Activa JavaScript para ver las tarjetas o visita <a href="https://github.com/Thepimen">github.com/Thepimen</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         VIEW · TRAJECTORY  ( /trajectory )
+         ================================================================ -->
+    <section class="view" data-view="/trajectory" aria-labelledby="traj-title" data-title="Trayectoria & Stack · Luis Lázaro Pimentel">
+      <div class="wrap">
+        <header class="view-head">
+          <p class="crumb mono">luis@portfolio:<span class="crumb-path">~/trajectory</span>$ git log --graph</p>
+          <h1 id="traj-title" class="view-title">Trayectoria &amp; Stack</h1>
+          <p class="view-sub">De la teoría de ingeniería a sistemas multiplataforma seguros.</p>
+        </header>
+
+        <div class="traj-layout">
+          <div class="timeline-col">
+            <div class="filter-bar filter-bar-sm" role="toolbar" aria-label="Filtrar trayectoria" id="timeline-filters">
+              <button type="button" class="filter" data-track="all" aria-pressed="true">Todo</button>
+              <button type="button" class="filter" data-track="edu" aria-pressed="false">Formación</button>
+              <button type="button" class="filter" data-track="eng" aria-pressed="false">Ingeniería</button>
+              <button type="button" class="filter" data-track="work" aria-pressed="false">Experiencia</button>
+            </div>
+            <ol class="timeline" id="timeline"></ol>
+          </div>
+
+          <aside class="stack-col">
+            <article class="card spot">
+              <header class="card-head"><span class="eyebrow mono">skills --level</span></header>
+              <ul class="skill-bars" id="skill-bars"></ul>
+            </article>
+            <article class="card spot">
+              <header class="card-head"><span class="eyebrow mono">toolchain</span></header>
+              <ul class="icon-grid icon-grid-lg" id="full-stack"></ul>
+            </article>
+          </aside>
+        </div>
+
+        <section class="inspector-section" aria-labelledby="inspector-title">
+          <div class="section-row">
+            <div>
+              <p class="crumb mono">// honor a la base matemática</p>
+              <h2 id="inspector-title" class="section-title">Inspector de algoritmos</h2>
+            </div>
+            <p class="view-sub">Ejecuta, pausa o avanza paso a paso. Comparaciones y escrituras contadas en vivo.</p>
+          </div>
+          <div class="algo card" data-algo="sort"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         VIEW · LAB  ( /lab )
+         ================================================================ -->
+    <section class="view" data-view="/lab" aria-labelledby="lab-title" data-title="Interactive Dev Lab · Luis Lázaro Pimentel">
+      <div class="wrap">
+        <header class="view-head">
+          <p class="crumb mono">luis@portfolio:<span class="crumb-path">~/lab</span>$ ./start.sh</p>
+          <h1 id="lab-title" class="view-title">Interactive Dev Lab</h1>
+          <p class="view-sub">Una terminal real en JavaScript y demos en vivo. Escribe <code class="inline-code">help</code>.</p>
+        </header>
+
+        <div class="lab-layout">
+          <div class="terminal card" id="terminal" role="region" aria-label="Terminal interactiva">
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title mono">luis@portfolio: ~/lab — zsh</span>
+              <span class="win-meta mono">Tab · ↑↓ · Ctrl+L</span>
+            </div>
+            <div class="term-body mono" id="term-body">
+              <div class="term-output" id="term-output" aria-live="polite"></div>
+              <form class="term-line" id="term-form" autocomplete="off">
+                <label for="term-input" class="term-prompt"><span class="p-user">luis@portfolio</span><span class="p-sep">:</span><span class="p-path">~/lab</span><span class="p-sign">$</span></label>
+                <input id="term-input" class="term-input" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Comando de terminal">
+              </form>
+            </div>
+          </div>
+
+          <aside class="lab-side">
+            <article class="card spot">
+              <header class="card-head"><span class="eyebrow mono">quick_run</span></header>
+              <div class="quick-cmds" id="quick-cmds">
+                <button type="button" class="chip chip-btn mono" data-cmd="help">help</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="whoami">whoami</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="skills">skills</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="projects">projects</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="neofetch">neofetch</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="theme toggle">theme toggle</button>
+                <button type="button" class="chip chip-btn mono" data-cmd="matrix">matrix</button>
+                <button type="button" class="chip chip-btn mono chip-accent" data-cmd="sudo hire">sudo hire</button>
+              </div>
+            </article>
+
+            <article class="card spot hashring" id="hashring">
+              <header class="card-head"><span class="eyebrow mono">nanokv::router · FNV-1a</span></header>
+              <label class="field-inline mono">
+                <span>key</span>
+                <input type="text" id="hash-key" value="session:904" spellcheck="false" autocomplete="off" aria-label="Clave para el anillo de hash consistente">
+              </label>
+              <svg class="ring" id="ring-svg" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <dl class="hash-out mono" id="hash-out"></dl>
+            </article>
+          </aside>
+        </div>
+
+        <section class="inspector-section" aria-labelledby="path-title">
+          <div class="section-row">
+            <div>
+              <p class="crumb mono">// grafos en tiempo real</p>
+              <h2 id="path-title" class="section-title">Pathfinding visual</h2>
+            </div>
+            <p class="view-sub">Dibuja muros con el cursor y compara A*, Dijkstra y BFS.</p>
+          </div>
+          <div class="algo card" data-algo="path"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         VIEW · CONTACT  ( /contact )
+         ================================================================ -->
+    <section class="view" data-view="/contact" aria-labelledby="contact-title" data-title="Contacto · Luis Lázaro Pimentel">
+      <div class="wrap">
+        <header class="view-head">
+          <p class="crumb mono">luis@portfolio:<span class="crumb-path">~/contact</span>$ curl -X POST</p>
+          <h1 id="contact-title" class="view-title">Hablemos</h1>
+          <p class="view-sub">Prácticas, puesto junior, freelance o colaboración. Respondo en menos de 24 h.</p>
+        </header>
+
+        <div class="contact-layout">
+          <form class="card contact-form" id="contact-form" novalidate>
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title mono">POST /api/message</span>
+              <span class="win-meta mono" id="form-state">draft</span>
+            </div>
+            <div class="form-body">
+              <div class="field" data-field="name">
+                <label for="f-name" class="mono">name<span class="req">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" placeholder="Ada Lovelace">
+                <p class="field-msg mono" aria-live="polite"></p>
+              </div>
+              <div class="field" data-field="email">
+                <label for="f-email" class="mono">email<span class="req">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="ada@empresa.com">
+                <p class="field-msg mono" aria-live="polite"></p>
+              </div>
+              <div class="field" data-field="subject">
+                <label for="f-subject" class="mono">subject<span class="req">*</span></label>
+                <select id="f-subject" name="subject" required>
+                  <option value="">— selecciona —</option>
+                  <option>Oferta de empleo</option>
+                  <option>Prácticas</option>
+                  <option>Proyecto freelance</option>
+                  <option>Colaboración open source</option>
+                  <option>Otro</option>
+                </select>
+                <p class="field-msg mono" aria-live="polite"></p>
+              </div>
+              <div class="field field-full" data-field="message">
+                <label for="f-message" class="mono">message<span class="req">*</span> <span class="counter" id="msg-counter">0 / 1000</span></label>
+                <textarea id="f-message" name="message" rows="6" required minlength="20" maxlength="1000" placeholder="Cuéntame el contexto, el stack y los plazos…"></textarea>
+                <p class="field-msg mono" aria-live="polite"></p>
+              </div>
+              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="form-foot">
+                <pre class="form-log mono" id="form-log" aria-live="polite">$ awaiting input…</pre>
+                <button type="submit" class="btn btn-primary" id="form-submit">Enviar mensaje <kbd class="kbd kbd-on-accent">Ctrl ↵</kbd></button>
+              </div>
+            </div>
+          </form>
+
+          <aside class="contact-side">
+            <button type="button" class="link-card spot" data-copy-email>
+              <span class="link-ico"><svg class="ico"><use href="#i-mail"/></svg></span>
+              <span class="link-body"><span class="link-k mono">email</span><span class="link-v">luislazaropimentel@gmail.com</span></span>
+              <span class="link-act mono"><svg class="ico"><use href="#i-copy"/></svg>copiar</span>
+            </button>
+            <a class="link-card spot" href="https://github.com/Thepimen" target="_blank" rel="noopener noreferrer">
+              <span class="link-ico"><svg class="ico"><use href="#i-github"/></svg></span>
+              <span class="link-body"><span class="link-k mono">github</span><span class="link-v">@Thepimen</span></span>
+              <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-card spot" href="https://www.linkedin.com/in/luis-l%C3%A1zaro-pimentel/" target="_blank" rel="noopener noreferrer">
+              <span class="link-ico"><svg class="ico"><use href="#i-linkedin"/></svg></span>
+              <span class="link-body"><span class="link-k mono">linkedin</span><span class="link-v">in/luis-lázaro-pimentel</span></span>
+              <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-card spot" href="assets/cv.pdf" download="CV_Luis_Lazaro_Pimentel.pdf">
+              <span class="link-ico"><svg class="ico"><use href="#i-download"/></svg></span>
+              <span class="link-body"><span class="link-k mono">cv.pdf</span><span class="link-v">Descargar currículum</span></span>
+              <span class="link-act mono">PDF</span>
+            </a>
+            <a class="link-card spot" href="tel:+34626015723">
+              <span class="link-ico"><svg class="ico"><use href="#i-phone"/></svg></span>
+              <span class="link-body"><span class="link-k mono">tel</span><span class="link-v">+34 626 01 57 23</span></span>
+              <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+            <div class="card availability">
+              <span class="status-pill"><span class="pulse" aria-hidden="true"></span>Disponible para proyectos</span>
+              <ul class="avail-list mono">
+                <li><span>modalidad</span><span>presencial · híbrido · remoto</span></li>
+                <li><span>zona</span><span>📍 Madrid, ES · <span data-utc-offset>UTC+1</span></span></li>
+                <li><span>idiomas</span><span>ES nativo · EN B2–C1</span></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       STATUS BAR (IDE)
+       ================================================================ -->
+  <footer class="statusbar mono" aria-label="Barra de estado">
+    <div class="sb-left">
+      <span class="sb-item sb-accent"><svg class="ico"><use href="#i-branch"/></svg>main</span>
+      <span class="sb-item"><span class="pulse pulse-sm" aria-hidden="true"></span>available</span>
+      <span class="sb-item" id="sb-route">~/</span>
+    </div>
+    <div class="sb-right">
+      <span class="sb-item" id="sb-cursor">Ln 0, Col 0</span>
+      <span class="sb-item">UTF-8</span>
+      <span class="sb-item" id="sb-theme">dark</span>
+      <button type="button" class="sb-item sb-btn" data-open-palette><span data-mod-key>Ctrl K</span></button>
+      <span class="sb-item">© 2026 Luis Lázaro Pimentel</span>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       OVERLAYS: command palette · architecture dialog · matrix · HUD · toast
+       ================================================================ -->
+  <div class="palette-backdrop" id="palette" hidden>
+    <div class="palette" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
+      <div class="palette-input-row">
+        <svg class="ico"><use href="#i-search"/></svg>
+        <input type="text" id="palette-input" placeholder="Escribe un comando o busca…" autocomplete="off" spellcheck="false"
+               role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list">
+        <kbd class="kbd">Esc</kbd>
+      </div>
+      <ul class="palette-list" id="palette-list" role="listbox"></ul>
+      <div class="palette-foot mono"><span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd> navegar</span><span><kbd class="kbd">↵</kbd> ejecutar</span><span><kbd class="kbd">Esc</kbd> cerrar</span></div>
+    </div>
+  </div>
+
+  <dialog class="arch-dialog" id="arch-dialog" aria-labelledby="arch-title">
+    <div class="arch-inner">
+      <header class="arch-head">
+        <div>
+          <p class="crumb mono" id="arch-crumb">architecture.md</p>
+          <h2 id="arch-title" class="section-title">—</h2>
+        </div>
+        <button type="button" class="icon-btn" id="arch-close" aria-label="Cerrar"><svg class="ico"><use href="#i-close"/></svg></button>
+      </header>
+      <div class="arch-diagram diagram-host" id="arch-diagram"></div>
+      <div class="arch-body" id="arch-body"></div>
+    </div>
+  </dialog>
+
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="hud mono" id="hud" hidden aria-live="off">
+    <div class="hud-head"><span>OVERCLOCK://telemetry</span><button type="button" class="hud-close" id="hud-close" aria-label="Salir del modo overclock">ESC</button></div>
+    <dl class="hud-grid" id="hud-grid"></dl>
+  </div>
+  <div class="access-flash" id="access-flash" hidden><span class="mono">ACCESS GRANTED</span><small class="mono">opening ~/contact …</small></div>
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/diagram.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/trajectory.js" defer></script>
+  <script src="js/algo.js" defer></script>
+  <script src="js/terminal.js" defer></script>
+  <script src="js/lab.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/palette.js" defer></script>
+  <script src="js/overclock.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>

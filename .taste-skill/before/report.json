@@ -1,0 +1,1580 @@
+{
+ "url": "index.html",
+ "at": "2026-10-21T11:24:16.412Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.27
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 130,
+     "img": 9,
+     "video": 0,
+     "canvas": 1,
+     "svg": 0,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://127.0.0.1:55731/index.html"
+     ],
+     "emoji": [
+      "✦"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "SYSTEMS",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 158.4,
+     "vw": 11,
+     "font": "Inter",
+     "weight": 900,
+     "tracking": -0.013,
+     "leading": 1.5,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.52,
+     "top": 231,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LUIS LÁZARO",
+     "words": 2,
+     "lines": 1,
+     "size": 104,
+     "font": "Space Grotesk"
+    },
+    "headings": [
+     {
+      "text": "01 // HOME",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": -628,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "02 // PROJECTS",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": -554,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "03 // PROFILE",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": -480,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "04 // CONTACT",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": -406,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "SYSTEMS",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 158.4,
+      "vw": 11,
+      "font": "Inter",
+      "weight": 900,
+      "tracking": -0.013,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.52,
+      "top": 231,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "LUIS LÁZARO",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 104,
+      "vw": 7.2,
+      "font": "Space Grotesk",
+      "weight": 900,
+      "tracking": -0.019,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 261,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Systems Developer / Security Enthusiast",
+      "words": 5,
+      "chars": 39,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Space Grotesk",
+      "weight": 400,
+      "tracking": -0.018,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 376,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 4,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "JetBrains Mono",
+       "share": 0.58,
+       "mono": true
+      },
+      {
+       "family": "Inter",
+       "share": 0.25,
+       "mono": false
+      },
+      {
+       "family": "Space Grotesk",
+       "share": 0.17,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      17,
+      20,
+      22,
+      28,
+      104,
+      158
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "JetBrains Mono",
+      "size": 12,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0.167,
+      "contrast": null
+     },
+     "measureChars": 351,
+     "max": {
+      "size": 158.4,
+      "vw": 11,
+      "font": "Inter",
+      "text": "SYSTEMS"
+     },
+     "monoShare": 0.58,
+     "monoProseShare": 0.58,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "SYS_STATUS // SECURE",
+      "///",
+      "01",
+      "HOME",
+      "02",
+      "PROJECTS"
+     ],
+     "microLabels": 3,
+     "microLabelShare": 0.393,
+     "microSamples": [
+      "SYS_STATUS // SECURE",
+      "GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SEC",
+      "/// PREVIEW_MODE // DETAILED_ANALYSIS"
+     ],
+     "upperShare": 0.66,
+     "centerShare": 0.12,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "AVAILABLE FOR SECURE TRANSMISSION",
+      "above": "SYSTEMS",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": true,
+      "size": 11.2,
+      "top": 206
+     },
+     {
+      "text": "AVAILABLE FOR SECURE TRANSMISSION",
+      "above": "LUIS LÁZARO",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": true,
+      "size": 11.2,
+      "top": 206
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 10.4,
+      "top": 33
+     },
+     {
+      "text": "02",
+      "size": 10.4,
+      "top": 33
+     },
+     {
+      "text": "03",
+      "size": 10.4,
+      "top": 33
+     },
+     {
+      "text": "04",
+      "size": 10.4,
+      "top": 33
+     }
+    ],
+    "color": {
+     "bodyBg": "#050409",
+     "bodyBgHsl": {
+      "h": 252,
+      "s": 0.38,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#030206",
+       "top": -900,
+       "hsl": {
+        "h": 255,
+        "s": 0.5,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.31
+      },
+      {
+       "color": "#94a3b8",
+       "share": 0.29
+      },
+      {
+       "color": "#00f3ff",
+       "share": 0.2
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.19
+      },
+      {
+       "color": "#64748b",
+       "share": 0
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 6,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 2,
+     "upper": 0,
+     "heroLabels": [
+      "EXPLORE WORK",
+      "ESTABLISH UPLINK"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.crystal-nav 1440px",
+      "div.marquee-wrapper 1440px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 1,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "jetbrains mono",
+     "space grotesk",
+     "font awesome 6 brands",
+     "font awesome 6 free"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 900,
+    "margins": {
+     "left": 108,
+     "right": 578
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LUIS LÁZARO",
+      "size": 104,
+      "top": 261,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 118,
+      "n": 3
+     },
+     {
+      "x": 407,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 12,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.19
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1024,
+     "screens": 1,
+     "words": 118,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://127.0.0.1:55731/index.html"
+     ],
+     "emoji": [
+      "✦"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "LUIS LÁZARO",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 57.6,
+     "vw": 7.5,
+     "font": "Space Grotesk",
+     "weight": 900,
+     "tracking": -0.035,
+     "leading": 0.95,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 191,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LUIS LÁZARO",
+     "words": 2,
+     "lines": 1,
+     "size": 57.6,
+     "font": "Space Grotesk"
+    },
+    "headings": [
+     {
+      "text": "01 // HOME",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.27,
+      "top": -690,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "02 // PROJECTS",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.27,
+      "top": -616,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "03 // PROFILE",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.27,
+      "top": -542,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "04 // CONTACT",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.27,
+      "top": -468,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "LUIS LÁZARO",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 7.5,
+      "font": "Space Grotesk",
+      "weight": 900,
+      "tracking": -0.035,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 191,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 4,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "JetBrains Mono",
+       "share": 0.55,
+       "mono": true
+      },
+      {
+       "family": "Inter",
+       "share": 0.26,
+       "mono": false
+      },
+      {
+       "family": "Space Grotesk",
+       "share": 0.18,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      15,
+      19,
+      20,
+      22,
+      28,
+      58
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "JetBrains Mono",
+      "size": 12,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0.167,
+      "contrast": 20.4
+     },
+     "measureChars": 351,
+     "max": {
+      "size": 57.6,
+      "vw": 7.5,
+      "font": "Space Grotesk",
+      "text": "LUIS LÁZARO"
+     },
+     "monoShare": 0.55,
+     "monoProseShare": 0.55,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "///",
+      "EN",
+      "ES",
+      "AVAILABLE FOR SECURE TRANSMISSION",
+      "STUDENT",
+      "C / GO / PY"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.399,
+     "microSamples": [
+      "GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SEC",
+      "/// PREVIEW_MODE // DETAILED_ANALYSIS"
+     ],
+     "upperShare": 0.64,
+     "centerShare": 0.13,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "AVAILABLE FOR SECURE TRANSMISSION",
+      "above": "LUIS LÁZARO",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": true,
+      "size": 11.2,
+      "top": 135
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#050409",
+     "bodyBgHsl": {
+      "h": 252,
+      "s": 0.38,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#030206",
+       "top": -1024,
+       "hsl": {
+        "h": 255,
+        "s": 0.5,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.34
+      },
+      {
+       "color": "#94a3b8",
+       "share": 0.28
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.2
+      },
+      {
+       "color": "#00f3ff",
+       "share": 0.18
+      },
+      {
+       "color": "#64748b",
+       "share": 0
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 6,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 2,
+     "upper": 0,
+     "heroLabels": [
+      "EXPLORE WORK",
+      "ESTABLISH UPLINK"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.crystal-nav 768px",
+      "div.marquee-wrapper 768px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 1,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "jetbrains mono",
+     "space grotesk",
+     "font awesome 6 brands",
+     "font awesome 6 free"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1024,
+    "margins": {
+     "left": 38,
+     "right": 38
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LUIS LÁZARO",
+      "size": 58,
+      "top": 191,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 38,
+      "n": 3
+     },
+     {
+      "x": 239,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.46
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 844,
+     "screens": 1,
+     "words": 118,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [
+      "http://127.0.0.1:55731/index.html"
+     ],
+     "emoji": [
+      "✦"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "LUIS LÁZARO",
+     "words": 2,
+     "chars": 11,
+     "lines": 1,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Space Grotesk",
+     "weight": 900,
+     "tracking": -0.05,
+     "leading": 0.95,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 191,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "LUIS LÁZARO",
+     "words": 2,
+     "lines": 1,
+     "size": 40,
+     "font": "Space Grotesk"
+    },
+    "headings": [
+     {
+      "text": "01 // HOME",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": -600,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "02 // PROJECTS",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": -526,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "03 // PROFILE",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": -452,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "04 // CONTACT",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Space Grotesk",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": -378,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "LUIS LÁZARO",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Space Grotesk",
+      "weight": 900,
+      "tracking": -0.05,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 191,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 4,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "JetBrains Mono",
+       "share": 0.55,
+       "mono": true
+      },
+      {
+       "family": "Inter",
+       "share": 0.26,
+       "mono": false
+      },
+      {
+       "family": "Space Grotesk",
+       "share": 0.18,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      15,
+      18,
+      20,
+      22,
+      28,
+      40
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "JetBrains Mono",
+      "size": 12,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0.167,
+      "contrast": 20.4
+     },
+     "measureChars": 351,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Space Grotesk",
+      "text": "LUIS LÁZARO"
+     },
+     "monoShare": 0.55,
+     "monoProseShare": 0.55,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "///",
+      "EN",
+      "ES",
+      "AVAILABLE FOR SECURE TRANSMISSION",
+      "STUDENT",
+      "C / GO / PY"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.399,
+     "microSamples": [
+      "GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SEC",
+      "/// PREVIEW_MODE // DETAILED_ANALYSIS"
+     ],
+     "upperShare": 0.64,
+     "centerShare": 0.13,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "AVAILABLE FOR SECURE TRANSMISSION",
+      "above": "LUIS LÁZARO",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": true,
+      "size": 11.2,
+      "top": 135
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#050409",
+     "bodyBgHsl": {
+      "h": 252,
+      "s": 0.38,
+      "l": 0.03
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#030206",
+       "top": -844,
+       "hsl": {
+        "h": 255,
+        "s": 0.5,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.34
+      },
+      {
+       "color": "#94a3b8",
+       "share": 0.28
+      },
+      {
+       "color": "#f8fafc",
+       "share": 0.2
+      },
+      {
+       "color": "#00f3ff",
+       "share": 0.18
+      },
+      {
+       "color": "#64748b",
+       "share": 0
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 6,
+     "height": 46,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 2,
+     "upper": 0,
+     "heroLabels": [
+      "EXPLORE WORK",
+      "ESTABLISH UPLINK"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.crystal-nav 390px",
+      "div.marquee-wrapper 390px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 1,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "jetbrains mono",
+     "space grotesk",
+     "font awesome 6 brands",
+     "font awesome 6 free"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 844,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "LUIS LÁZARO",
+      "size": 40,
+      "top": 191,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"AVAILABLE FOR SECURE TRANSMISSION\" (pill) above \"SYSTEMS\"; \"AVAILABLE FOR SECURE TRANSMISSION\" (pill) above \"LUIS LÁZARO\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: JetBrains Mono — e.g. \"SYS_STATUS // SECURE\", \"///\", \"01\", \"HOME\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\", \"04\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>."
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "3 tiny uppercase letter-spaced labels (e.g. \"SYS_STATUS // SECURE\", \"GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SEC\", \"/// PREVIEW_MODE // DETAILED_ANALYSIS\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: ✦",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "text-shadow",
+   "width": 1440,
+   "message": "1 text-shadow(s).",
+   "fix": "Remove; fix legibility with a scrim or a different crop.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "2 thin rule(s)/divider line(s): header.crystal-nav 1440px | div.marquee-wrapper 1440px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "3 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (JetBrains Mono, Inter, Space Grotesk).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (9, 10, 11, 12, 13, 17, 20, 22, 28, 104, 158).",
+   "fix": "A page needs about five: display, heading, lead, body, small."
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 12px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 351 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "6 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "broken-image",
+   "width": 1440,
+   "message": "Broken image(s): http://127.0.0.1:55731/index.html",
+   "fix": "Fix the URL or replace the asset.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 108px from the left edge but only to 578px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"LUIS LÁZARO\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"LUIS LÁZARO\" (screen 1, 100% hidden); \"SYSTEMS\" (screen 1, 100% hidden); \"Systems Developer\" (screen 1, 100% hidden); \"Security Enthusiast\" (screen 1, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 7 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 768,
+   "message": "2 tiny uppercase letter-spaced label(s): \"GO ✦ DOCKER ✦ LINUX KERNEL ✦ NETWORK SEC\", \"/// PREVIEW_MODE // DETAILED_ANALYSIS\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "reduced-hidden",
+   "width": 1440,
+   "message": "With reduced motion requested, 2 text block(s) on the first screen stay invisible: \"/// PREVIEW_MODE // DETAILED_ANALYSIS\", \"[CLOSE_X]\"",
+   "fix": "Put every hidden starting state inside @media (prefers-reduced-motion: no-preference); the reduced page is the finished page (references/motion.md §8)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\luisl\\OneDrive\\Escritorio\\Programacion y proyectos\\portfolio-luis-v1\\.taste-skill\\before\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
