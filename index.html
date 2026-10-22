@@ -128,9 +128,14 @@
               <a href="/lab" data-link class="btn btn-ghost">
                 <svg class="ico"><use href="#i-terminal"/></svg> Abrir terminal <kbd class="kbd">`</kbd>
               </a>
-              <a href="assets/cv.pdf" download="CV_Luis_Lazaro_Pimentel.pdf" class="btn btn-ghost">
-                <svg class="ico"><use href="#i-download"/></svg> CV
-              </a>
+              <div class="cv-dropdown-group" role="group" aria-label="Descargar CV">
+                <a href="assets/cv_es.pdf" download="CV_Luis_Lazaro_Pimentel_ES.pdf" class="btn btn-ghost" title="Descargar CV en Español (ATS-friendly)">
+                  <svg class="ico"><use href="#i-download"/></svg> CV <span class="chip-lang mono">ES</span>
+                </a>
+                <a href="assets/cv_en.pdf" download="CV_Luis_Lazaro_Pimentel_EN.pdf" class="btn btn-ghost" title="Download CV in English (ATS-friendly)">
+                  <svg class="ico"><use href="#i-download"/></svg> CV <span class="chip-lang mono">EN</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -144,9 +149,11 @@
 <span class="ln"><span class="tok-k">export const</span> <span class="tok-v">luis</span> = {</span>
 <span class="ln">  role:     <span class="tok-s">"Software Engineer"</span>,</span>
 <span class="ln">  focus:    [<span class="tok-s">"DAM"</span>, <span class="tok-s">"Backend"</span>, <span class="tok-s">"Cybersecurity"</span>],</span>
-<span class="ln">  base:     [<span class="tok-s">"low-level"</span>, <span class="tok-s">"logic"</span>, <span class="tok-s">"discrete-math"</span>, <span class="tok-s">"algorithms"</span>],</span>
-<span class="ln">  stack:    [<span class="tok-s">"Java"</span>, <span class="tok-s">"TypeScript"</span>, <span class="tok-s">"C"</span>, <span class="tok-s">"Go"</span>, <span class="tok-s">"SQL"</span>, <span class="tok-s">"Android"</span>],</span>
+<span class="ln">  base:     [<span class="tok-s">"low-level (C)"</span>, <span class="tok-s">"logic"</span>, <span class="tok-s">"discrete-math"</span>, <span class="tok-s">"algorithms"</span>],</span>
+<span class="ln">  stack:    [<span class="tok-s">"C"</span>, <span class="tok-s">"Java"</span>, <span class="tok-s">"TypeScript"</span>, <span class="tok-s">"Python"</span>, <span class="tok-s">"SQL"</span>, <span class="tok-s">"Android"</span>],</span>
+<span class="ln">  learning: [<span class="tok-s">"Go (basics/prototypes)"</span>],</span>
 <span class="ln">  shipping: <span class="tok-s">"VulnFollowUp"</span>, <span class="tok-c">// DevSecOps · EU DORA</span></span>
+<span class="ln">  english:  <span class="tok-s">"B2 accredited · Aptis Advanced"</span>,</span>
 <span class="ln">  available: <span class="tok-b">true</span>,</span>
 <span class="ln">} <span class="tok-k">as const</span>;<span class="caret" aria-hidden="true"></span></span></code></pre>
           </div>
@@ -462,11 +469,17 @@
               <span class="link-body"><span class="link-k mono">linkedin</span><span class="link-v">in/luis-lázaro-pimentel</span></span>
               <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
             </a>
-            <a class="link-card spot" href="assets/cv.pdf" download="CV_Luis_Lazaro_Pimentel.pdf">
+            <div class="link-card spot cv-card-dual">
               <span class="link-ico"><svg class="ico"><use href="#i-download"/></svg></span>
-              <span class="link-body"><span class="link-k mono">cv.pdf</span><span class="link-v">Descargar currículum</span></span>
-              <span class="link-act mono">PDF</span>
-            </a>
+              <div class="link-body">
+                <span class="link-k mono">curriculum vitae</span>
+                <span class="link-v">Descargar CV (ATS 1-columna)</span>
+                <div class="cv-buttons-row">
+                  <a class="chip chip-btn mono" href="assets/cv_es.pdf" download="CV_Luis_Lazaro_Pimentel_ES.pdf" title="Descargar CV en Español">ES (PDF)</a>
+                  <a class="chip chip-btn mono" href="assets/cv_en.pdf" download="CV_Luis_Lazaro_Pimentel_EN.pdf" title="Download CV in English">EN (PDF)</a>
+                </div>
+              </div>
+            </div>
             <a class="link-card spot" href="tel:+34626015723">
               <span class="link-ico"><svg class="ico"><use href="#i-phone"/></svg></span>
               <span class="link-body"><span class="link-k mono">tel</span><span class="link-v">+34 626 01 57 23</span></span>
@@ -477,7 +490,7 @@
               <ul class="avail-list mono">
                 <li><span>modalidad</span><span>presencial · híbrido · remoto</span></li>
                 <li><span>zona</span><span>📍 Madrid, ES · <span data-utc-offset>UTC+1</span></span></li>
-                <li><span>idiomas</span><span>ES nativo · EN B2–C1</span></li>
+                <li><span>idiomas</span><span>ES nativo · EN B2 acreditado (Aptis Advanced)</span></li>
               </ul>
             </div>
           </aside>

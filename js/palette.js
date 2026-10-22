@@ -24,11 +24,22 @@
       { id: 'act-hire', group: 'Acciones rápidas', label: 'Ejecutar sudo hire (Contratar / Contacto)', kbd: 'sudo', run: () => LLP.triggerHireFlash ? LLP.triggerHireFlash() : LLP.router.navigate('/contact') },
       { id: 'act-matrix', group: 'Easter Eggs', label: 'Activar Modo Matrix + Telemetría Overclock (60fps)', kbd: 'matrix', run: () => LLP.toggleOverclock && LLP.toggleOverclock() },
       {
-        id: 'act-cv', group: 'Acciones rápidas', label: 'Descargar CV en PDF', kbd: 'PDF',
+        id: 'act-cv-es', group: 'Acciones rápidas', label: 'Descargar CV en Español (PDF · ATS 1-col)', kbd: 'CV ES',
         run: () => {
           const a = document.createElement('a');
-          a.href = LLP.profile.cv;
-          a.download = 'CV_Luis_Lazaro_Pimentel.pdf';
+          a.href = LLP.profile.cv_es || 'assets/cv_es.pdf';
+          a.download = 'CV_Luis_Lazaro_Pimentel_ES.pdf';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
+      },
+      {
+        id: 'act-cv-en', group: 'Acciones rápidas', label: 'Download CV in English (PDF · ATS 1-col)', kbd: 'CV EN',
+        run: () => {
+          const a = document.createElement('a');
+          a.href = LLP.profile.cv_en || 'assets/cv_en.pdf';
+          a.download = 'CV_Luis_Lazaro_Pimentel_EN.pdf';
           document.body.appendChild(a);
           a.click();
           a.remove();

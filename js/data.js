@@ -16,8 +16,10 @@ LLP.profile = {
   phone: '+34 626 01 57 23',
   github: 'https://github.com/Thepimen',
   linkedin: 'https://www.linkedin.com/in/luis-l%C3%A1zaro-pimentel/',
-  cv: 'assets/cv.pdf',
-  languages: ['ES (nativo)', 'EN (B2–C1)'],
+  cv: 'assets/cv_es.pdf',
+  cv_es: 'assets/cv_es.pdf',
+  cv_en: 'assets/cv_en.pdf',
+  languages: ['ES (nativo)', 'EN (B2 acreditado · Aptis Advanced)'],
   available: true
 };
 
@@ -163,12 +165,13 @@ LLP.skills = [
 
 /* Devicon slugs → https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/<slug>/<slug>-<variant>.svg */
 LLP.stack = [
-  { n: 'Java', i: 'java', home: true }, { n: 'TypeScript', i: 'typescript', home: true },
-  { n: 'JavaScript', i: 'javascript' }, { n: 'C', i: 'c', home: true }, { n: 'Go', i: 'go', home: true },
+  { n: 'C (Bajo nivel)', i: 'c', home: true }, { n: 'Java', i: 'java', home: true },
+  { n: 'TypeScript', i: 'typescript', home: true }, { n: 'JavaScript', i: 'javascript' },
   { n: 'Python', i: 'python', home: true }, { n: 'Android', i: 'android', home: true },
+  { n: 'SQL', i: 'mysql', home: true }, { n: 'Go (básico)', i: 'go', home: false },
   { n: 'Kotlin', i: 'kotlin' }, { n: 'Spring', i: 'spring' }, { n: 'Node.js', i: 'nodejs' },
   { n: 'React', i: 'react' }, { n: 'Angular', i: 'angular' }, { n: 'Ionic', i: 'ionic' },
-  { n: 'MySQL', i: 'mysql', home: true }, { n: 'PostgreSQL', i: 'postgresql' }, { n: 'Redis', i: 'redis' },
+  { n: 'MySQL', i: 'mysql' }, { n: 'PostgreSQL', i: 'postgresql' }, { n: 'Redis', i: 'redis' },
   { n: 'Docker', i: 'docker', home: true }, { n: 'Linux', i: 'linux', home: true },
   { n: 'Bash', i: 'bash' }, { n: 'Git', i: 'git' }
 ];

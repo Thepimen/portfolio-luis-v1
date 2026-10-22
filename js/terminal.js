@@ -23,7 +23,7 @@
     ls: 'Lista las secciones y archivos del workspace',
     cd: 'Navega a una vista: cd projects | trajectory | lab | contact | ~',
     cat: 'Muestra un archivo (ej. cat luis.config.ts | cat README.md)',
-    cv: 'Descarga directa de mi CV en PDF',
+    cv: 'Descarga directa del CV en PDF: cv [es|en] (ATS 1-columna)',
     contact: 'Copia mi email al portapapeles y muestra enlaces',
     clear: 'Limpia la pantalla de la terminal (o Ctrl+L)'
   };
@@ -33,7 +33,7 @@
     'theme dark', 'theme light', 'theme toggle',
     'sudo hire', 'matrix', 'neofetch', 'clear',
     'ls', 'cd /', 'cd projects', 'cd trajectory', 'cd lab', 'cd contact',
-    'cat luis.config.ts', 'cat README.md', 'cv', 'contact'
+    'cat luis.config.ts', 'cat README.md', 'cv', 'cv es', 'cv en', 'contact'
   ];
 
   function bar(pct, width = 22) {
@@ -227,7 +227,8 @@
           '   / /  \\ \\     Host: Madrid, ES · UTC+1',
           '  / /    \\ \\    Kernel: eBPF CO-RE + Go + JVM 17',
           ' / /      \\ \\   Base: Low-Level C · Logic · Discrete Math · Algorithms',
-          '/_/        \\_\\  Stack: Java · TS/JS · C · Go · Python · SQL · Android',
+          '/_/        \\_\\  Stack: C (Core) · Java · TS/JS · Python · SQL · Android (Go: basic)',
+          `                English: Aptis Advanced CEFR B2 accredited`,
           `                Theme: ${LLP.theme.get()} · Viewport: ${window.innerWidth}x${window.innerHeight}`,
           `                JS Heap: ${mem}`
         ].join('\n');
@@ -276,11 +277,21 @@
         }
       },
 
-      cv() {
-        printHTML(`<span class="t-accent">✓</span> Descargando <a class="term-link" href="assets/cv.pdf" download="CV_Luis_Lazaro_Pimentel.pdf">CV_Luis_Lazaro_Pimentel.pdf</a>…`);
+      cv(arg) {
+        const lang = (arg || '').trim().toLowerCase();
+        const isEn = lang === 'en';
+        const file = isEn ? 'assets/cv_en.pdf' : 'assets/cv_es.pdf';
+        const downloadName = isEn ? 'CV_Luis_Lazaro_Pimentel_EN.pdf' : 'CV_Luis_Lazaro_Pimentel_ES.pdf';
+        const label = isEn ? 'English (ATS 1-col)' : 'Español (ATS 1-col)';
+        printHTML(
+          `<span class="t-accent">✓</span> Descargando <b>${esc(downloadName)}</b> (${esc(label)})…\n` +
+          `<div class="t-muted">Descargas directas disponibles: ` +
+          `<a class="term-link" href="assets/cv_es.pdf" download="CV_Luis_Lazaro_Pimentel_ES.pdf">[CV Español (PDF)]</a> · ` +
+          `<a class="term-link" href="assets/cv_en.pdf" download="CV_Luis_Lazaro_Pimentel_EN.pdf">[CV English (PDF)]</a></div>`
+        );
         const a = document.createElement('a');
-        a.href = 'assets/cv.pdf';
-        a.download = 'CV_Luis_Lazaro_Pimentel.pdf';
+        a.href = file;
+        a.download = downloadName;
         document.body.appendChild(a);
         a.click();
         a.remove();

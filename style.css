@@ -633,6 +633,19 @@ html[data-theme="light"] .btn-primary {
   gap: 10px;
 }
 
+.cv-dropdown-group {
+  display: inline-flex;
+  gap: 8px;
+}
+.chip-lang {
+  font-size: 0.68rem;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-strong);
+  color: var(--accent-bright);
+}
+
 /* Code Window */
 .hero-editor {
   background: var(--bg-elev);
@@ -1789,6 +1802,24 @@ html[data-theme="light"] .btn-primary {
   background: var(--bg-elev);
   border: 1px solid var(--border);
   text-align: left;
+}
+.cv-card-dual {
+  align-items: flex-start;
+}
+.cv-buttons-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.cv-buttons-row .chip-btn {
+  padding: 3px 10px;
+  font-size: 0.74rem;
+  border-color: var(--border-strong);
+  color: var(--accent-bright);
+}
+.cv-buttons-row .chip-btn:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent);
 }
 .link-ico {
   width: 36px;
