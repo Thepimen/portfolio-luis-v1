@@ -114,11 +114,11 @@ def build_cv(lang="es", output_path=None):
         add_section_divider("Perfil Profesional")
         profile_text = (
             "Desarrollador de software orientado a Ingeniería de Software, Desarrollo de Aplicaciones Multiplataforma (DAM), "
-            "Backend y Ciberseguridad. Mi paso previo por la <b>etapa universitaria en Ingeniería</b> me proporcionó una <b>base sólida "
-            "en programación de bajo nivel (C y gestión manual de memoria), lógica computacional, matemática discreta y diseño de algoritmos</b>, "
+            "Backend y Ciberseguridad. Mi paso previo por la etapa universitaria en Ingeniería me proporcionó una base sólida "
+            "en programación de bajo nivel (C y gestión manual de memoria), lógica computacional, matemática discreta y diseño de algoritmos, "
             "la cual combino actualmente con el desarrollo práctico de aplicaciones empresariales en el 2.º curso del CFGS DAM (Instituto Nebrija). "
-            "Experiencia laboral continuada desde 2023 en <b>Cambridge Assessment English</b> coordinando logística y seguridad bajo protocolos internacionales. "
-            "<b>Nivel B2 de inglés acreditado mediante APTIS ADVANCED (British Council)</b> con fluidez técnica y operativa."
+            "Experiencia laboral continuada desde 2023 en Cambridge Assessment English coordinando logística y seguridad bajo protocolos internacionales. "
+            "Nivel B2 de inglés acreditado mediante APTIS ADVANCED (British Council) con fluidez técnica y operativa."
         )
         story.append(Paragraph(profile_text, body_style))
         story.append(Spacer(1, 2))
@@ -228,7 +228,7 @@ def build_cv(lang="es", output_path=None):
             [Paragraph("<b>Lenguajes en Práctica:</b>", body_style), Paragraph("Go (sintaxis y fundamentos aplicados en prototipos de sistemas y daemons).", body_style)],
             [Paragraph("<b>Desarrollo & Backend:</b>", body_style), Paragraph("Android nativo (Room/SQLite), Node.js, Express, Next.js, React, WebSockets, REST APIs, Redis, PostgreSQL, MySQL.", body_style)],
             [Paragraph("<b>Sistemas & Seguridad:</b>", body_style), Paragraph("Linux (Ubuntu/Debian, WSL 2), Docker, Docker Compose, Git, eBPF (CO-RE), Raw Sockets, Wireshark, Nmap, Wazuh XDR.", body_style)],
-            [Paragraph("<b>Idiomas & Certificación:</b>", body_style), Paragraph("<b>Inglés: Nivel B2 acreditado mediante APTIS ADVANCED (British Council)</b>. Fluidez profesional y técnica. · <b>Español:</b> Nativo.", body_style)]
+            [Paragraph("<b>Idiomas & Certificación:</b>", body_style), Paragraph("Inglés: Nivel B2 acreditado mediante APTIS ADVANCED (British Council) con fluidez profesional y técnica. · Español: Nativo.", body_style)]
         ]
         t_skills = Table(skills_data, colWidths=[130, 394])
         t_skills.setStyle(TableStyle([
@@ -256,11 +256,11 @@ def build_cv(lang="es", output_path=None):
         add_section_divider("Professional Summary")
         profile_text = (
             "Software developer specialized in software engineering, multiplatform applications (DAM), backend systems, "
-            "and cybersecurity. Previous <b>university studies in Engineering</b> provided a rigorous foundation in <b>low-level C programming, "
-            "manual memory management, computational logic, discrete mathematics, and algorithm design</b>. Currently combining these core fundamentals "
+            "and cybersecurity. Previous university studies in Engineering provided a rigorous foundation in low-level C programming, "
+            "manual memory management, computational logic, discrete mathematics, and algorithm design. Currently combining these core fundamentals "
             "with hands-on enterprise application development (2nd year Higher Diploma in DAM at Instituto Nebrija). "
-            "Consistent professional track record since 2023 at <b>Cambridge Assessment English</b> coordinating operational security under strict international audit standards. "
-            "<b>Accredited Level B2 in English via APTIS ADVANCED (British Council)</b> with professional technical fluency."
+            "Consistent professional track record since 2023 at Cambridge Assessment English coordinating operational security under strict international audit standards. "
+            "Accredited Level B2 in English via APTIS ADVANCED (British Council) with professional technical fluency."
         )
         story.append(Paragraph(profile_text, body_style))
         story.append(Spacer(1, 2))
@@ -370,7 +370,7 @@ def build_cv(lang="es", output_path=None):
             [Paragraph("<b>Foundational / Familiar:</b>", body_style), Paragraph("Go (syntax and fundamentals applied to prototypes and background daemons).", body_style)],
             [Paragraph("<b>Fullstack & Mobile:</b>", body_style), Paragraph("Native Android (Room/SQLite), Node.js, Express, Next.js, React, WebSockets, REST APIs, Redis, PostgreSQL, MySQL.", body_style)],
             [Paragraph("<b>Systems & Security:</b>", body_style), Paragraph("Linux (Ubuntu/Debian, WSL 2), Docker, Docker Compose, Git, eBPF (CO-RE), Raw Sockets, Wireshark, Nmap, Wazuh XDR.", body_style)],
-            [Paragraph("<b>Languages & Credentials:</b>", body_style), Paragraph("<b>English: Level B2 Accredited — APTIS ADVANCED (British Council)</b>. Professional and operational fluency. · <b>Spanish:</b> Native.", body_style)]
+            [Paragraph("<b>Languages & Credentials:</b>", body_style), Paragraph("English: Level B2 Accredited — APTIS ADVANCED (British Council) with professional and operational fluency. · Spanish: Native.", body_style)]
         ]
         t_skills_en = Table(skills_data_en, colWidths=[130, 394])
         t_skills_en.setStyle(TableStyle([
