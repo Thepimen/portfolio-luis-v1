@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Luis Lázaro Pimentel</title>
+<style>
+  @page {
+    size: A4;
+    margin: 9mm 12mm 9mm 12mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    font-size: 8.55pt;
+    line-height: 1.29;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ==========================================================================
+     CABECERA EJECUTIVA
+     ========================================================================== */
+  header {
+    margin-bottom: 5px;
+  }
+
+  h1.name {
+    font-size: 19.5pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  .role {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #0284c7;
+    margin-bottom: 3.5px;
+    letter-spacing: -0.01em;
+  }
+
+  .contact-bar {
+    font-size: 8.2pt;
+    color: #475569;
+    line-height: 1.35;
+  }
+
+  .contact-bar a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  .contact-bar a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-sep {
+    color: #94a3b8;
+    margin: 0 4px;
+  }
+
+  /* ==========================================================================
+     SECCIONES Y DIVISORES
+     ========================================================================== */
+  section {
+    margin-top: 5.5px;
+    margin-bottom: 2px;
+    page-break-inside: avoid;
+  }
+
+  h2.section-title {
+    font-size: 9.4pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+    border-bottom: 1.2px solid #0284c7;
+    padding-bottom: 1.5px;
+    margin-bottom: 3.5px;
+  }
+
+  p.summary {
+    color: #1e293b;
+    text-align: justify;
+    font-size: 8.5pt;
+    line-height: 1.29;
+  }
+
+  /* ==========================================================================
+     ITEMS Y PROYECTOS
+     ========================================================================== */
+  .item {
+    margin-bottom: 3.5px;
+    page-break-inside: avoid;
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .item-title-line {
+    font-size: 8.55pt;
+    line-height: 1.27;
+    margin-bottom: 1px;
+  }
+
+  .item-title-line strong {
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .item-title-line a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  .item-title-line a:hover {
+    text-decoration: underline;
+  }
+
+  .item-title-line em {
+    font-style: italic;
+    color: #334155;
+  }
+
+  /* ==========================================================================
+     LISTAS CON VIÑETAS COMPACTAS
+     ========================================================================== */
+  ul.bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1px;
+    margin-bottom: 0;
+  }
+
+  ul.bullets li {
+    position: relative;
+    padding-left: 11px;
+    margin-bottom: 1.2px;
+    text-align: justify;
+    font-size: 8.45pt;
+    line-height: 1.28;
+    color: #1e293b;
+  }
+
+  ul.bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: #0f172a;
+    font-size: 8.2pt;
+  }
+
+  ul.bullets li:last-child {
+    margin-bottom: 0;
+  }
+
+  code.inline {
+    font-family: inherit;
+    font-style: italic;
+  }
+
+  /* ==========================================================================
+     FILAS A DOS COLUMNAS (FORMACIÓN Y EXPERIENCIA)
+     ========================================================================== */
+  .entry-header,
+  .entry-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .entry-title {
+    font-size: 8.55pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .entry-date {
+    font-size: 8pt;
+    font-style: italic;
+    color: #475569;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .entry-org {
+    font-size: 8.45pt;
+    color: #334155;
+  }
+
+  .entry-location {
+    font-size: 8pt;
+    font-style: italic;
+    color: #475569;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* ==========================================================================
+     TABLA DE HABILIDADES Y STACK TÉCNICO
+     ========================================================================== */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1px;
+  }
+
+  .skills-table tr {
+    page-break-inside: avoid;
+  }
+
+  .skills-table td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    vertical-align: top;
+    font-size: 8.45pt;
+    line-height: 1.27;
+  }
+
+  .skills-table td.skill-label {
+    width: 150px;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+    padding-right: 8px;
+  }
+
+  .skills-table td.skill-value {
+    color: #1e293b;
+    text-align: justify;
+  }
+
+  .skills-table td.skill-value strong {
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* ==========================================================================
+     AJUSTES ESTRICTOS PARA IMPRESIÓN Y PDF
+     ========================================================================== */
+  @media print {
+    body {
+      background: #ffffff;
+      color: #1e293b;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0284c7;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header>
+    <h1 class="name">Luis Lázaro Pimentel</h1>
+    <div class="role">Ingeniería de Software · Desarrollo Multiplataforma (DAM), Backend &amp; Ciberseguridad</div>
+    <div class="contact-bar">
+      Madrid, España<span class="contact-sep">|</span><a href="mailto:luislazaropimentel@gmail.com">luislazaropimentel@gmail.com</a><span class="contact-sep">|</span><a href="tel:+34626015723">+34 626 01 57 23</a><span class="contact-sep">|</span><a href="https://luislazaro-dev.netlify.app" target="_blank" rel="noopener noreferrer">luislazaro-dev.netlify.app</a><span class="contact-sep">|</span><a href="https://github.com/Thepimen" target="_blank" rel="noopener noreferrer">github.com/Thepimen</a><span class="contact-sep">|</span><a href="https://www.linkedin.com/in/luis-l%C3%A1zaro-pimentel/" target="_blank" rel="noopener noreferrer">linkedin.com/in/luis-lázaro-pimentel</a>
+    </div>
+  </header>
+
+  <!-- 1. PERFIL PROFESIONAL -->
+  <section>
+    <h2 class="section-title">Perfil Profesional</h2>
+    <p class="summary">
+      Desarrollador de software orientado a Ingeniería de Software, Arquitecturas Backend, Desarrollo Multiplataforma (DAM) y Ciberseguridad. Mi etapa universitaria previa en Ingeniería de Software me proporcionó una base rigurosa en programación de bajo nivel (C y gestión manual de memoria), estructuras de datos, lógica computacional y diseño de algoritmos, que combino actualmente con el desarrollo de soluciones empresariales, integraciones ERP y aplicaciones multiplataforma en el 2.º curso del CFGS DAM (Instituto Nebrija). Experiencia profesional continuada desde 2023 en Cambridge Assessment English gestionando operativa crítica, trazabilidad y seguridad bajo auditoría internacional. Nivel B2 de inglés acreditado oficialmente mediante APTIS (British Council) con solvencia técnica y comunicativa en entornos internacionales.
+    </p>
+  </section>
+
+  <!-- 2. PROYECTOS TÉCNICOS DESTACADOS -->
+  <section>
+    <h2 class="section-title">Proyectos Técnicos Destacados</h2>
+
+    <div class="item">
+      <div class="item-title-line">
+        <strong>VulnFollowUp · Plataforma DevSecOps &amp; Cumplimiento DORA</strong> (<a href="https://github.com/Thepimen/VulnFollowUp" target="_blank" rel="noopener noreferrer">github.com/Thepimen/VulnFollowUp</a>) — <em>Java 17 REST, Android (Room Offline-First), TypeScript/JS SPA (WCAG 2.1 AA), SQL, CVSS v3.1/v4.0</em>
+      </div>
+      <ul class="bullets">
+        <li>Plataforma integral de gobierno de vulnerabilidades, auditoría y resiliencia operativa digital alineada con el reglamento europeo DORA (EU 2022/2554).</li>
+        <li>Motor de cálculo y validación de vectores CVSS v3.1/v4.0, control de acceso basado en roles (RBAC) con BCrypt/Argon2, concurrencia en servidor y cliente móvil Android con sincronización offline-first.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title-line">
+        <strong>kshield · Agente de Observabilidad eBPF en Kernel de Linux</strong> (<a href="https://github.com/Thepimen/kshield" target="_blank" rel="noopener noreferrer">github.com/Thepimen/kshield</a>) — <em>C, eBPF CO-RE (BTF), Go (userspace daemon), Linux Internals, Clang/LLVM, Docker</em>
+      </div>
+      <ul class="bullets">
+        <li>Agente de telemetría de seguridad y detección de intrusiones en espacio de kernel con impacto mínimo de rendimiento (&lt; 1.5% CPU) mediante instrumentación eBPF CO-RE en C.</li>
+        <li>Monitorización de llamadas al sistema (<code class="inline">sys_enter_execve</code>, <code class="inline">sys_enter_connect</code>, <code class="inline">sys_enter_openat</code>) con transporte zero-copy vía BPF Ring Buffers hacia un demonio concurrente en Go.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title-line">
+        <strong>ShadowAudit · Escáner Distribuido de Red y Vulnerabilidades</strong> (<a href="https://github.com/Thepimen/ShadowAudit" target="_blank" rel="noopener noreferrer">github.com/Thepimen/ShadowAudit</a>) — <em>TypeScript, Next.js, Express, Python, Redis, Docker, Nmap, Raw Sockets</em>
+      </div>
+      <ul class="bullets">
+        <li>Arquitectura desacoplada orientada a microservicios: API Gateway en Express orquestando colas de mensajería en Redis hacia workers asíncronos de auditoría en Python.</li>
+        <li>Reconocimiento de activos, puertos y servicios combinando programación de bajo nivel con Raw Sockets y barridos estructurados mediante Nmap.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title-line">
+        <strong>NanoKV · Motor Distribuido Clave-Valor</strong> (<a href="https://github.com/Thepimen/NanoKV" target="_blank" rel="noopener noreferrer">github.com/Thepimen/NanoKV</a>) — <em>Go, Consistent Hashing (FNV-1a), Sharding con VNodes, Write-Ahead Log (WAL)</em>
+      </div>
+      <ul class="bullets">
+        <li>Almacén de datos distribuido en Go diseñado para alta disponibilidad, implementando particionamiento consistente mediante nodos virtuales y persistencia transaccional WAL append-only.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title-line">
+        <strong>πDiaDownloader · Automatización Multimedia Desktop</strong> (<a href="https://github.com/Thepimen/PiDiaDownloader" target="_blank" rel="noopener noreferrer">github.com/Thepimen/PiDiaDownloader</a>) — <em>Python 3.11+, CustomTkinter, yt-dlp, FFmpeg, PyInstaller</em>
+      </div>
+      <ul class="bullets">
+        <li>Herramienta nativa de escritorio para procesamiento, extracción y multiplexado local de flujos multimedia DASH/HLS multicanal sin telemetría externa.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. FORMACIÓN ACADÉMICA -->
+  <section>
+    <h2 class="section-title">Formación Académica</h2>
+
+    <div class="item">
+      <div class="entry-header">
+        <div class="entry-title">CFGS en Desarrollo de Aplicaciones Multiplataforma (DAM) – 2.º Curso</div>
+        <div class="entry-date">2025 – Actualidad</div>
+      </div>
+      <div class="entry-sub">
+        <div class="entry-org">Instituto Nebrija de Formación Profesional</div>
+        <div class="entry-location">Madrid, España</div>
+      </div>
+      <ul class="bullets">
+        <li>Especialización técnica: Acceso a Datos y Persistencia (SQL/JDBC/ORM), Programación de Servicios y Procesos (concurrencia, hilos y sockets en red), Desarrollo Móvil (Android), Desarrollo de Interfaces y Sistemas de Gestión Empresarial (ERP/Odoo).</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="entry-header">
+        <div class="entry-title">Etapa Universitaria en Ingeniería de Software (2 cursos / ~48 ECTS)</div>
+        <div class="entry-date">2023 – 2025</div>
+      </div>
+      <div class="entry-sub">
+        <div class="entry-org">Formación Universitaria en Fundamentos de Ingeniería</div>
+        <div class="entry-location">Madrid, España</div>
+      </div>
+      <ul class="bullets">
+        <li>Fundamentos avanzados de ingeniería: programación de sistemas en bajo nivel (C, aritmética de punteros y memoria dinámica), estructuras de datos y complejidad algorítmica, matemática discreta, sistemas operativos y arquitectura de redes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. EXPERIENCIA LABORAL -->
+  <section>
+    <h2 class="section-title">Experiencia Laboral</h2>
+
+    <div class="item">
+      <div class="entry-header">
+        <div class="entry-title">Supervisor y Logística de Exámenes Oficiales</div>
+        <div class="entry-date">2023 – Actualidad</div>
+      </div>
+      <div class="entry-sub">
+        <div class="entry-org">Cambridge Assessment English</div>
+        <div class="entry-location">Madrid, España</div>
+      </div>
+      <ul class="bullets">
+        <li>Custodia, control de cadena de seguridad, trazabilidad y transporte de documentación confidencial bajo auditoría y normativas internacionales de cumplimiento.</li>
+        <li>Coordinación de equipos de supervisión en sede y resolución de incidencias técnicas en infraestructuras y plataformas digitales de evaluación en tiempo real.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. HABILIDADES Y STACK TÉCNICO -->
+  <section>
+    <h2 class="section-title">Habilidades y Stack Técnico</h2>
+
+    <table class="skills-table">
+      <tbody>
+        <tr>
+          <td class="skill-label">Lenguajes Principales:</td>
+          <td class="skill-value">C (bajo nivel y gestión de memoria), Java (17+ / Spring Boot), TypeScript, JavaScript, Python, SQL, Bash.</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Sistemas y Concurrencia:</td>
+          <td class="skill-value">Go (desarrollo de daemons de sistema, concurrencia y prototipos distribuidos).</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Backend, Web &amp; Mobile:</td>
+          <td class="skill-value">Node.js, Express, Next.js, React, Android Nativo (Room/SQLite), REST APIs, WebSockets, ERP/Odoo, Redis, PostgreSQL, MySQL.</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Infraestructura &amp; CyberSec:</td>
+          <td class="skill-value">Linux (Ubuntu/Debian, WSL 2), Docker, Docker Compose, Git, eBPF (CO-RE), Raw Sockets, Wireshark, Nmap, Wazuh XDR, CVSS / DORA Compliance.</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Idiomas &amp; Certificación:</td>
+          <td class="skill-value"><strong>Inglés:</strong> Nivel B2 acreditado oficialmente (Certificación APTIS – British Council), fluidez técnica y operativa en entorno laboral internacional. <strong>Español:</strong> Nativo.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
