@@ -50,7 +50,7 @@
       if (gChord) {
         gChord = false;
         clearTimeout(gTimer);
-        const routes = { h: '/', p: '/projects', t: '/trajectory', l: '/lab', c: '/contact' };
+        const routes = { h: '/', p: '/projects', t: '/trajectory', l: '/lab', s: '/solutions', c: '/contact' };
         if (routes[k]) {
           e.preventDefault();
           LLP.router.navigate(routes[k]);

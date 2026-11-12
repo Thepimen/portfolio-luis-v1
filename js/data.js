@@ -16,6 +16,7 @@ LLP.profile = {
   phone: '+34 626 01 57 23',
   github: 'https://github.com/Thepimen',
   linkedin: 'https://www.linkedin.com/in/luis-l%C3%A1zaro-pimentel/',
+  fiverr: 'https://www.fiverr.com/thepimen',
   cv: 'assets/cv_es.pdf',
   cv_es: 'assets/cv_es.pdf',
   cv_en: 'assets/cv_en.pdf',
@@ -65,6 +66,7 @@ LLP.projects = [
   {
     id: 'kshield', name: 'kshield', repo: 'Thepimen/kshield',
     cats: ['backend', 'security'], year: 2026,
+    fiverrUrl: 'https://www.fiverr.com/thepimen/dockerize-applications-and-build-microservices-on-linux-servers',
     tagline: 'Agente de observabilidad e IDS en espacio de kernel con eBPF CO-RE y Go.',
     badges: ['eBPF CO-RE', 'BPF Ring Buffer', 'MITRE ATT&CK', '<1.5% CPU'],
     langs: { Go: 48704, C: 14759, Shell: 6433, Makefile: 3344 },
@@ -75,6 +77,7 @@ LLP.projects = [
   {
     id: 'shadowaudit', name: 'ShadowAudit', repo: 'Thepimen/ShadowAudit',
     cats: ['security', 'frontend'], year: 2026,
+    fiverrUrl: 'https://www.fiverr.com/thepimen/dockerize-applications-and-build-microservices-on-linux-servers',
     tagline: 'Escáner de vulnerabilidades distribuido: gateway, colas Redis y workers aislados.',
     badges: ['Microservicios', 'Redis queues', 'Raw sockets', 'Nmap', 'Docker'],
     langs: { TypeScript: 28013, Python: 12752, CSS: 1726, Dockerfile: 1093, JavaScript: 559 },
@@ -85,6 +88,7 @@ LLP.projects = [
   {
     id: 'nanokv', name: 'NanoKV', repo: 'Thepimen/NanoKV',
     cats: ['backend'], year: 2025,
+    fiverrUrl: 'https://www.fiverr.com/thepimen/develop-scalable-rest-apis-with-nodejs-typescript-or-spring-boot',
     tagline: 'Base de datos clave-valor distribuida en Go con hashing consistente y WAL.',
     badges: ['Consistent hashing', 'FNV-1a', 'Write-Ahead Log', 'TCP'],
     langs: { Go: 8447 },
@@ -95,6 +99,7 @@ LLP.projects = [
   {
     id: 'omnilens', name: 'OmniLens', repo: 'Thepimen/OmniLens',
     cats: ['frontend', 'backend'], year: 2026,
+    fiverrUrl: 'https://www.fiverr.com/thepimen/build-real-time-web-apps-with-react-nodejs-websockets-and-openai',
     tagline: 'Telemetría y diagnóstico de excepciones de red en tiempo real vía WebSockets.',
     badges: ['WebSockets', 'React + TS', 'LLM playbooks', 'Docker'],
     langs: { TypeScript: 59386, Python: 29818, JavaScript: 6929, Dockerfile: 2028, Shell: 1990, CSS: 1957, Batchfile: 1939, PowerShell: 800 },
@@ -105,6 +110,7 @@ LLP.projects = [
   {
     id: 'pidiadownloader', name: 'πDiaDownloader', repo: 'Thepimen/PiDiaDownloader',
     cats: ['frontend'], year: 2026,
+    fiverrUrl: 'https://www.fiverr.com/thepimen/build-custom-python-automation-scripts-and-standalone-desktop-apps',
     tagline: 'App de escritorio nativa para extracción y multiplexado DASH/HLS.',
     badges: ['CustomTkinter', 'yt-dlp', 'FFmpeg', 'PyInstaller'],
     langs: { Python: 81844 },

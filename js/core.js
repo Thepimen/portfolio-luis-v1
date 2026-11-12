@@ -89,8 +89,26 @@
   /* ======================================================================
      ROUTER · History API (http/https) with hash fallback (file://)
      ====================================================================== */
-  const ROUTES = ['/', '/projects', '/trajectory', '/lab', '/contact'];
-  const ALIASES = { '/terminal': '/lab', '/home': '/', '/index.html': '/', '/about': '/trajectory' };
+  const ROUTES = ['/', '/projects', '/trajectory', '/lab', '/solutions', '/contact'];
+  const ALIASES = {
+    '/terminal': '/lab',
+    '/home': '/',
+    '/index.html': '/',
+    '/about': '/trajectory',
+    '/soluciones': '/solutions',
+    '/services': '/solutions',
+    '/servicios': '/solutions',
+    '/propuestas': '/solutions',
+    '/fiverr': '/solutions'
+  };
+  const BRAND_PATHS = {
+    '/': '~/portfolio',
+    '/projects': '~/portfolio/proyectos',
+    '/trajectory': '~/portfolio/trayectoria',
+    '/lab': '~/portfolio/lab',
+    '/solutions': '~/portfolio/soluciones',
+    '/contact': '~/portfolio/contacto'
+  };
   const useHash = location.protocol === 'file:';
 
   function normalize(p) {
@@ -122,6 +140,13 @@
         LLP.$$('a[data-link]').forEach((a) => a.setAttribute('href', '#' + normalize(a.getAttribute('href'))));
       }
       document.addEventListener('click', (e) => {
+        const scrollBtn = e.target.closest('[data-scroll-to]');
+        if (scrollBtn) {
+          e.preventDefault();
+          const el = LLP.$(scrollBtn.getAttribute('data-scroll-to'));
+          if (el) el.scrollIntoView({ behavior: LLP.reducedMotion ? 'auto' : 'smooth', block: 'start' });
+          return;
+        }
         const a = e.target.closest('a[data-link]');
         if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         e.preventDefault();
@@ -159,6 +184,8 @@
     moveIndicator();
     const sb = LLP.$('#sb-route');
     if (sb) sb.textContent = '~' + (path === '/' ? '/' : path);
+    const bp = LLP.$('.brand-path');
+    if (bp) bp.textContent = BRAND_PATHS[path] || '~/portfolio';
     if (!first) {
       window.scrollTo(0, 0);
       LLP.$('#main').focus({ preventScroll: true });

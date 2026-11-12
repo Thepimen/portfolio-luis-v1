@@ -80,6 +80,9 @@
         <a href="/lab" class="tab" data-link data-route="/lab" title="Lab · G L">
           <span class="tab-dot" style="--c:#FBBF24"></span><span class="tab-label">Lab</span>
         </a>
+        <a href="/solutions" class="tab" data-link data-route="/solutions" title="Soluciones & Propuestas · G S">
+          <span class="tab-dot" style="--c:#F97316"></span><span class="tab-label">Soluciones</span>
+        </a>
         <a href="/contact" class="tab" data-link data-route="/contact" title="Contacto · G C">
           <span class="tab-dot" style="--c:#F472B6"></span><span class="tab-label">Contacto</span>
         </a>
@@ -400,6 +403,195 @@
     </section>
 
     <!-- ================================================================
+         VIEW · SOLUTIONS & CUSTOM PROPOSALS  ( /solutions )
+         ================================================================ -->
+    <section class="view" data-view="/solutions" aria-labelledby="solutions-title" data-title="Soluciones & Propuestas a Medida · Luis Lázaro Pimentel" hidden>
+      <div class="wrap">
+        <!-- Bloque 1: Hero de Servicios y Soluciones -->
+        <header class="solutions-hero card spot">
+          <div class="solutions-hero-top">
+            <span class="status-pill"><span class="pulse" aria-hidden="true"></span>Disponible para proyectos rápidos y desarrollo a medida</span>
+            <span class="chip mono">Fiverr Verified · ES / EN</span>
+          </div>
+          <p class="crumb mono">luis@portfolio:<span class="crumb-path">~/portfolio/soluciones</span>$ fiverr --list-services --custom-offers</p>
+          <h1 id="solutions-title" class="solutions-title">
+            Soluciones de Ingeniería de Software &amp; <span class="grad-text">Propuestas a Medida</span>
+          </h1>
+          <p class="solutions-lead">
+            ¿Tienes un cuello de botella técnico, necesitas automatizar un flujo de trabajo complejo, desplegar tu infraestructura en contenedores o lanzar un producto desde cero? Ofrezco tanto <strong>soluciones cerradas listas para contratar en 1 clic</strong> a través de Fiverr como <strong>propuestas personalizadas</strong> para resolver problemas generales y específicos de arquitectura, backend y sistemas.
+          </p>
+          <div class="solutions-cta">
+            <a href="https://www.fiverr.com/thepimen" target="_blank" rel="noopener noreferrer" class="btn btn-fiverr-primary">
+              Ver Perfil y Servicios en Fiverr <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#custom-proposals" data-scroll-to="#custom-proposals" class="btn btn-ghost">
+              Solicitar propuesta personalizada <kbd class="kbd">↓</kbd>
+            </a>
+          </div>
+        </header>
+
+        <!-- Bloque 2: Grid de 4 Tarjetas de Servicios Cerrados (Gigs de Fiverr) -->
+        <div class="solutions-section-head">
+          <div>
+            <p class="crumb mono">// paquetes cerrados · contratación en 1 clic</p>
+            <h2 class="section-title">Servicios Activos en Fiverr (Gigs Especializados)</h2>
+          </div>
+          <p class="view-sub">Selecciona la tarjeta que mejor encaje con tu proyecto para ver entregables, plazos y paquetes en Fiverr.</p>
+        </div>
+
+        <div class="solutions-grid" role="list" aria-label="Servicios activos en Fiverr">
+          <!-- Servicio 1: Python Automation & .EXE -->
+          <a class="card spot solution-card" role="listitem" href="https://www.fiverr.com/thepimen/build-custom-python-automation-scripts-and-standalone-desktop-apps" target="_blank" rel="noopener noreferrer">
+            <div class="solution-card-head">
+              <span class="solution-tag mono"><span class="dot dot-accent"></span>Entrega Express 24h disponible</span>
+              <span class="solution-price mono">Desde <strong>$30</strong></span>
+            </div>
+            <h3 class="solution-card-title">Automatización en Python &amp; Apps de Escritorio (<code class="inline-code">.EXE</code>)</h3>
+            <p class="solution-card-desc">
+              Scripts de automatización a medida, extracción y procesamiento de datos, pipelines multimedia con FFmpeg/yt-dlp, arreglo de bugs e interfaces nativas modernas en CustomTkinter compiladas a ejecutable <code class="inline-code">.exe</code> independiente para Windows sin necesidad de instalar Python.
+            </p>
+            <ul class="badge-row solution-badges" aria-label="Tecnologías">
+              <li class="badge">Python 3.11+</li>
+              <li class="badge">CustomTkinter</li>
+              <li class="badge">FFmpeg</li>
+              <li class="badge">PyInstaller</li>
+              <li class="badge">Multithreading</li>
+            </ul>
+            <div class="solution-card-foot">
+              <span class="solution-meta mono">fiverr.com/thepimen · Gig #01</span>
+              <span class="solution-cta mono">Ver propuesta en Fiverr <span class="solution-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- Servicio 2: Docker, Microservices & Linux Servers -->
+          <a class="card spot solution-card" role="listitem" href="https://www.fiverr.com/thepimen/dockerize-applications-and-build-microservices-on-linux-servers" target="_blank" rel="noopener noreferrer">
+            <div class="solution-card-head">
+              <span class="solution-tag mono"><span class="dot dot-cyan"></span>Setup en 1 Día disponible</span>
+              <span class="solution-price mono">Desde <strong>$35</strong></span>
+            </div>
+            <h3 class="solution-card-title">Contenerización con Docker, Microservicios &amp; Servidores Linux</h3>
+            <p class="solution-card-desc">
+              Creación de <code class="inline-code">Dockerfile</code> multi-etapa limpios y <code class="inline-code">docker-compose.yml</code> listos para producción, orquestación de bases de datos SQL y colas Redis con <em>healthchecks</em>, automatización CI/CD con GitHub Actions y despliegue en servidores VPS Ubuntu/Debian.
+            </p>
+            <ul class="badge-row solution-badges" aria-label="Tecnologías">
+              <li class="badge">Docker</li>
+              <li class="badge">Docker Compose</li>
+              <li class="badge">Linux VPS</li>
+              <li class="badge">Redis</li>
+              <li class="badge">GitHub Actions</li>
+            </ul>
+            <div class="solution-card-foot">
+              <span class="solution-meta mono">fiverr.com/thepimen · Gig #02</span>
+              <span class="solution-cta mono">Ver propuesta en Fiverr <span class="solution-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- Servicio 3: Scalable REST APIs -->
+          <a class="card spot solution-card" role="listitem" href="https://www.fiverr.com/thepimen/develop-scalable-rest-apis-with-nodejs-typescript-or-spring-boot" target="_blank" rel="noopener noreferrer">
+            <div class="solution-card-head">
+              <span class="solution-tag mono"><span class="dot dot-violet"></span>Arquitectura Limpia &amp; Segura</span>
+              <span class="solution-price mono">Desde <strong>$35</strong></span>
+            </div>
+            <h3 class="solution-card-title">Desarrollo y Optimización de APIs REST Escalables</h3>
+            <p class="solution-card-desc">
+              Diseño de APIs RESTful desde cero o depuración de cuellos de botella en backends existentes. Autenticación segura con JWT/RBAC, optimización de consultas SQL (PostgreSQL, MySQL, MariaDB), caché/colas con Redis y documentación completa.
+            </p>
+            <ul class="badge-row solution-badges" aria-label="Tecnologías">
+              <li class="badge">Node.js</li>
+              <li class="badge">TypeScript</li>
+              <li class="badge">Express</li>
+              <li class="badge">Java 17</li>
+              <li class="badge">Spring Boot</li>
+              <li class="badge">PostgreSQL</li>
+            </ul>
+            <div class="solution-card-foot">
+              <span class="solution-meta mono">fiverr.com/thepimen · Gig #03</span>
+              <span class="solution-cta mono">Ver propuesta en Fiverr <span class="solution-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- Servicio 4: Real-Time Web Apps, WebSockets & OpenAI -->
+          <a class="card spot solution-card" role="listitem" href="https://www.fiverr.com/thepimen/build-real-time-web-apps-with-react-nodejs-websockets-and-openai" target="_blank" rel="noopener noreferrer">
+            <div class="solution-card-head">
+              <span class="solution-tag mono"><span class="dot dot-amber"></span>Full-Stack &amp; IA en Tiempo Real</span>
+              <span class="solution-price mono">Desde <strong>$90</strong></span>
+            </div>
+            <h3 class="solution-card-title">Aplicaciones Web en Tiempo Real, WebSockets &amp; Integración OpenAI</h3>
+            <p class="solution-card-desc">
+              Integración en producción de la API de OpenAI/LLMs con salidas JSON estructuradas, reparación e implementación de canales WebSockets bidireccionales de baja latencia y paneles interactivos en vivo sin recargas de página.
+            </p>
+            <ul class="badge-row solution-badges" aria-label="Tecnologías">
+              <li class="badge">React</li>
+              <li class="badge">Next.js</li>
+              <li class="badge">Node.js</li>
+              <li class="badge">WebSockets</li>
+              <li class="badge">OpenAI API</li>
+            </ul>
+            <div class="solution-card-foot">
+              <span class="solution-meta mono">fiverr.com/thepimen · Gig #04</span>
+              <span class="solution-cta mono">Ver propuesta en Fiverr <span class="solution-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bloque 3: Sección de Propuestas a Medida (Custom Offers) -->
+        <section class="custom-proposals-section card spot" id="custom-proposals" aria-labelledby="custom-proposals-title">
+          <header class="custom-proposals-head">
+            <div>
+              <span class="eyebrow mono"><span class="dot dot-accent"></span>Presupuesto a Medida · Custom Offer</span>
+              <h2 id="custom-proposals-title" class="section-title">¿Tu problema no encaja en un paquete estándar? Soluciones a Problemas Generales y Específicos</h2>
+            </div>
+            <p class="view-sub">
+              Puedes escribirme directamente por Fiverr o por contacto directo para solicitar un <strong>Presupuesto a Medida (Custom Offer)</strong> adaptado exactamente a tu arquitectura y plazos.
+            </p>
+          </header>
+
+          <div class="custom-proposals-grid">
+            <article class="custom-col">
+              <span class="custom-step-num mono">01 // DIAGNÓSTICO &amp; REFACTORING</span>
+              <h3 class="custom-col-title">1. Diagnóstico y Reparación de Código (Bug Fixing &amp; Refactoring)</h3>
+              <p class="custom-col-desc">
+                Arreglo de errores críticos en aplicaciones existentes (Python, C, Java, TypeScript/Node.js), fugas de memoria, concurrencia o proyectos generados con IA que fallan al pasar a producción.
+              </p>
+            </article>
+
+            <article class="custom-col">
+              <span class="custom-step-num mono">02 // HERRAMIENTAS &amp; PIPELINES</span>
+              <h3 class="custom-col-title">2. Herramientas Internas y Procesamiento de Datos</h3>
+              <p class="custom-col-desc">
+                Creación de utilidades CLI/GUI a medida, subtítulos y pipelines de audio/vídeo (<code class="inline-code">PiSubtitles</code> / <code class="inline-code">PiDiaDownloader</code>), parsers complejos y demonios en Linux.
+              </p>
+            </article>
+
+            <article class="custom-col">
+              <span class="custom-step-num mono">03 // PROCESO EN 3 PASOS</span>
+              <h3 class="custom-col-title">3. Cómo funciona el proceso en 3 pasos</h3>
+              <ol class="custom-steps-list">
+                <li><strong>(1)</strong> Elige el anuncio más cercano en Fiverr y pulsa en <em>"Contact me"</em>.</li>
+                <li><strong>(2)</strong> Cuéntame tu problema técnico o pásame las especificaciones.</li>
+                <li><strong>(3)</strong> Te envío una <strong>Propuesta a Medida (Custom Offer)</strong> con precio cerrado, entregables claros y garantía de plataforma.</li>
+              </ol>
+            </article>
+          </div>
+
+          <footer class="custom-proposals-foot">
+            <div class="custom-foot-note mono">
+              <span class="pulse pulse-sm" aria-hidden="true"></span> Respuesta habitual en &lt; 2 horas · Soporte fluido en Español e Inglés (B2 Aptis Advanced)
+            </div>
+            <div class="custom-foot-actions">
+              <a href="https://www.fiverr.com/thepimen" target="_blank" rel="noopener noreferrer" class="btn btn-fiverr-primary">
+                Contactar en Fiverr (Custom Offer) <span aria-hidden="true">↗</span>
+              </a>
+              <a href="/contact" data-link class="btn btn-ghost">
+                O escribir por formulario directo →
+              </a>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================================================================
          VIEW · CONTACT  ( /contact )
          ================================================================ -->
     <section class="view" data-view="/contact" aria-labelledby="contact-title" data-title="Contacto · Luis Lázaro Pimentel">
@@ -462,6 +654,11 @@
             <a class="link-card spot" href="https://github.com/Thepimen" target="_blank" rel="noopener noreferrer">
               <span class="link-ico"><svg class="ico"><use href="#i-github"/></svg></span>
               <span class="link-body"><span class="link-k mono">github</span><span class="link-v">@Thepimen</span></span>
+              <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-card spot" href="https://www.fiverr.com/thepimen" target="_blank" rel="noopener noreferrer">
+              <span class="link-ico"><svg class="ico"><use href="#i-bolt"/></svg></span>
+              <span class="link-body"><span class="link-k mono">fiverr · servicios &amp; custom offers</span><span class="link-v">fiverr.com/thepimen</span></span>
               <span class="link-act"><svg class="ico"><use href="#i-arrow"/></svg></span>
             </a>
             <a class="link-card spot" href="https://www.linkedin.com/in/luis-l%C3%A1zaro-pimentel/" target="_blank" rel="noopener noreferrer">

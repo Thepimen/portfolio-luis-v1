@@ -51,6 +51,7 @@
           <span data-pushed>${p.year}</span>
         </div>
         <div class="repo-actions">
+          ${p.fiverrUrl ? `<a class="btn btn-sm btn-fiverr-pill" href="${p.fiverrUrl}" target="_blank" rel="noopener noreferrer" title="Solicitar desarrollo o versión personalizada en Fiverr">⚡ Solicitar versión a medida ↗</a>` : ''}
           <a class="btn btn-sm btn-ghost" href="${url}" target="_blank" rel="noopener noreferrer">${icon('github')} View Code</a>
           <button type="button" class="btn btn-sm btn-primary" data-arch="${p.id}">Architecture</button>
         </div>
@@ -177,6 +178,7 @@
           <ul class="badge-row">${p.badges.map((b) => `<li class="badge">${esc(b)}</li>`).join('')}</ul>
           <div class="card-actions">
             <a class="btn btn-sm btn-primary" href="${url}" target="_blank" rel="noopener noreferrer">${icon('github')} View Code</a>
+            ${p.fiverrUrl ? `<a class="btn btn-sm btn-fiverr-pill" href="${p.fiverrUrl}" target="_blank" rel="noopener noreferrer">⚡ Solicitar versión a medida ↗</a>` : ''}
           </div>
         </div>
       </div>`;

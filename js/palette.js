@@ -14,7 +14,39 @@
       { id: 'nav-projects', group: 'Navegación', label: 'Ir a Proyectos & GitHub', kbd: 'G P', run: () => LLP.router.navigate('/projects') },
       { id: 'nav-trajectory', group: 'Navegación', label: 'Ir a Trayectoria & Stack', kbd: 'G T', run: () => LLP.router.navigate('/trajectory') },
       { id: 'nav-lab', group: 'Navegación', label: 'Ir a Interactive Dev Lab (Terminal)', kbd: 'G L', run: () => LLP.router.navigate('/lab') },
+      { id: 'nav-solutions', group: 'Navegación', label: 'Ir a Soluciones & Propuestas a Medida (Servicios Fiverr)', kbd: 'G S', kw: 'soluciones servicios propuestas fiverr freelance contratar', run: () => LLP.router.navigate('/solutions') },
       { id: 'nav-contact', group: 'Navegación', label: 'Ir a Contacto', kbd: 'G C', run: () => LLP.router.navigate('/contact') },
+
+      {
+        id: 'fiverr-profile', group: 'Soluciones & Servicios (Fiverr)',
+        label: 'Fiverr · Ver Perfil Oficial y Propuestas a Medida (@thepimen)',
+        kbd: 'Fiverr ↗', kw: 'fiverr servicios soluciones propuestas custom offer freelance thepimen',
+        run: () => window.open('https://www.fiverr.com/thepimen', '_blank', 'noopener')
+      },
+      {
+        id: 'fiverr-gig-python', group: 'Soluciones & Servicios (Fiverr)',
+        label: 'Servicio Python, Automatización, FFmpeg & Apps .EXE (Desde $30 · 24h)',
+        kbd: '$30 ↗', kw: 'fiverr python automation scripts exe customtkinter ffmpeg yt-dlp pyinstaller servicios soluciones propuestas',
+        run: () => window.open('https://www.fiverr.com/thepimen/build-custom-python-automation-scripts-and-standalone-desktop-apps', '_blank', 'noopener')
+      },
+      {
+        id: 'fiverr-gig-docker', group: 'Soluciones & Servicios (Fiverr)',
+        label: 'Servicio Docker, Microservicios, Colas Redis & Servidores Linux (Desde $35 · 24h)',
+        kbd: '$35 ↗', kw: 'fiverr docker microservices linux vps redis github actions compose devops servicios soluciones propuestas',
+        run: () => window.open('https://www.fiverr.com/thepimen/dockerize-applications-and-build-microservices-on-linux-servers', '_blank', 'noopener')
+      },
+      {
+        id: 'fiverr-gig-api', group: 'Soluciones & Servicios (Fiverr)',
+        label: 'Servicio APIs REST Escalables con Node.js/TypeScript o Spring Boot (Desde $35)',
+        kbd: '$35 ↗', kw: 'fiverr api rest backend nodejs typescript express java spring boot postgresql jwt sql servicios soluciones propuestas',
+        run: () => window.open('https://www.fiverr.com/thepimen/develop-scalable-rest-apis-with-nodejs-typescript-or-spring-boot', '_blank', 'noopener')
+      },
+      {
+        id: 'fiverr-gig-realtime', group: 'Soluciones & Servicios (Fiverr)',
+        label: 'Servicio Web Apps en Tiempo Real, WebSockets & Integración OpenAI (Desde $90)',
+        kbd: '$90 ↗', kw: 'fiverr openai react nextjs nodejs websockets realtime llm ia fullstack servicios soluciones propuestas',
+        run: () => window.open('https://www.fiverr.com/thepimen/build-real-time-web-apps-with-react-nodejs-websockets-and-openai', '_blank', 'noopener')
+      },
 
       { id: 'act-theme-toggle', group: 'Tema & Apariencia', label: 'Alternar tema (Dark / Light Mode)', kbd: 'T', run: () => LLP.theme.toggle() },
       { id: 'act-theme-dark', group: 'Tema & Apariencia', label: 'Activar Modo Oscuro (IDE Dark)', kbd: 'dark', run: () => LLP.theme.set('dark') },
@@ -104,7 +136,7 @@
       const needle = (q || '').trim().toLowerCase();
       filtered = !needle
         ? actions.slice()
-        : actions.filter((a) => (a.label + ' ' + a.group + ' ' + a.kbd).toLowerCase().includes(needle));
+        : actions.filter((a) => (a.label + ' ' + a.group + ' ' + a.kbd + ' ' + (a.kw || '')).toLowerCase().includes(needle));
       activeIdx = 0;
       renderList();
     }

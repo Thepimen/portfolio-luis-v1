@@ -16,12 +16,13 @@
     about: 'Alias de whoami · resumen de ingeniería y enfoque',
     skills: 'Barras de progreso en texto de mi stack técnico',
     projects: 'Lista mis repositorios con enlaces clicables',
+    solutions: 'Lista mis servicios y soluciones a medida en Fiverr',
     theme: 'Cambia el tema: theme dark | theme light | theme toggle',
     'sudo hire': 'Dispara animación de acceso y abre ~/contact',
     matrix: 'Activa el modo secreto Matrix + telemetría Overclock',
     neofetch: 'Resumen del sistema y telemetría del entorno',
     ls: 'Lista las secciones y archivos del workspace',
-    cd: 'Navega a una vista: cd projects | trajectory | lab | contact | ~',
+    cd: 'Navega a una vista: cd projects | trajectory | lab | solutions | contact | ~',
     cat: 'Muestra un archivo (ej. cat luis.config.ts | cat README.md)',
     cv: 'Descarga directa del CV en PDF: cv [es|en] (ATS 1-columna)',
     contact: 'Copia mi email al portapapeles y muestra enlaces',
@@ -32,7 +33,8 @@
     'help', 'whoami', 'about', 'skills', 'projects',
     'theme dark', 'theme light', 'theme toggle',
     'sudo hire', 'matrix', 'neofetch', 'clear',
-    'ls', 'cd /', 'cd projects', 'cd trajectory', 'cd lab', 'cd contact',
+    'ls', 'cd /', 'cd projects', 'cd trajectory', 'cd lab', 'cd solutions', 'cd contact',
+    'solutions', 'fiverr',
     'cat luis.config.ts', 'cat README.md', 'cv', 'cv es', 'cv en', 'contact'
   ];
 
@@ -242,15 +244,32 @@
           `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd projects">projects/</button>    ` +
           `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd trajectory">trajectory/</button>\n` +
           `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd lab">lab/</button>         ` +
-          `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd contact">contact/</button>     ` +
+          `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd solutions">solutions/</button>   ` +
+          `<span class="t-accent">drwxr-xr-x</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cd contact">contact/</button>\n` +
           `<span class="t-muted">-rw-r--r--</span>  <button type="button" class="term-inline-cmd" data-run-cmd="cat luis.config.ts">luis.config.ts</button>` +
           `</pre>`
         );
       },
 
+      solutions() {
+        printHTML(
+          `<div class="t-head">Soluciones &amp; Servicios Activos en Fiverr (<a href="https://www.fiverr.com/thepimen" target="_blank" rel="noopener noreferrer" class="term-link">@thepimen ↗</a>):</div>` +
+          `<pre class="term-pre">` +
+          `  <span class="t-accent">01.</span> <a href="https://www.fiverr.com/thepimen/build-custom-python-automation-scripts-and-standalone-desktop-apps" target="_blank" rel="noopener noreferrer" class="term-link">Python Automation, FFmpeg &amp; Standalone .EXE Apps</a>     <span class="t-chip">[Desde $30 · 24h]</span>\n` +
+          `  <span class="t-accent">02.</span> <a href="https://www.fiverr.com/thepimen/dockerize-applications-and-build-microservices-on-linux-servers" target="_blank" rel="noopener noreferrer" class="term-link">Docker, Microservices, Redis Queues &amp; Linux VPS</a>      <span class="t-chip">[Desde $35 · 24h]</span>\n` +
+          `  <span class="t-accent">03.</span> <a href="https://www.fiverr.com/thepimen/develop-scalable-rest-apis-with-nodejs-typescript-or-spring-boot" target="_blank" rel="noopener noreferrer" class="term-link">Scalable REST APIs (Node.js/TS or Java Spring Boot)</a> <span class="t-chip">[Desde $35]</span>\n` +
+          `  <span class="t-accent">04.</span> <a href="https://www.fiverr.com/thepimen/build-real-time-web-apps-with-react-nodejs-websockets-and-openai" target="_blank" rel="noopener noreferrer" class="term-link">Real-Time Web Apps, WebSockets &amp; OpenAI API</a>          <span class="t-chip">[Desde $90]</span>` +
+          `</pre>`
+        );
+      },
+
+      fiverr() {
+        handlers.solutions();
+      },
+
       cd(arg) {
         const raw = (arg || '~').trim().toLowerCase().replace(/^\/+|\/+$/g, '');
-        const map = { '': '/', '~': '/', home: '/', projects: '/projects', trajectory: '/trajectory', lab: '/lab', terminal: '/lab', contact: '/contact' };
+        const map = { '': '/', '~': '/', home: '/', projects: '/projects', trajectory: '/trajectory', lab: '/lab', terminal: '/lab', solutions: '/solutions', soluciones: '/solutions', contact: '/contact' };
         const dest = map[raw];
         if (!dest) {
           printHTML(`<span class="t-err">cd: no existe el directorio '${esc(arg)}'</span>`);
